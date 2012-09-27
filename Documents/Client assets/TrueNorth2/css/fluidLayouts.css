@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		3;
+	dw-num-cols-tablet:		6;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	15;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95.6521%;
+	padding-left: 2.1739%;
+	padding-right: 2.1739%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #03C;
+}
+.logo_text {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 24px;
+	color: #0080FF;
+}
+
+#Mantra {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#Mantra p {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #143E70;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: -15px;
+}
+
+#Energy {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	font-size: 120%;
+}
+#Energy h1 {
+	font-family: "Source Sans Pro", "MS Sans Serif", sans-serif;
+	color: #143E70;
+	text-align: center;
+}
+.gridContainer.clearfix #Energy img {
+	float: left;
+}
+
+
+
+#Communities {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	font-size: 150%;
+}
+#Communities h1 {
+	font-family: "Source Sans Pro", "MS Sans Serif", sans-serif;
+	color: #143e70;
+	text-align: center;
+}
+
+#SupportSystems {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Footer {
+	clear: both;
+	float: right;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Footer p {
+	float: right;
+}
+
+#Nav {
+	clear: both;
+	float: right;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 97.826%;
+	padding-left: 1.0869%;
+	padding-right: 1.0869%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Mantra {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Energy {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 14.8148%;
+	display: block;
+}
+#Communities {
+	clear: none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 65.9259%;
+	display: block;
+}
+#SupportSystems {
+	clear: none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 14.8148%;
+	display: block;
+}
+#Footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Nav {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 98.913%;
+	max-width: 1232px;
+	padding-left: 0.5434%;
+	padding-right: 0.5434%;
+	margin: auto;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Mantra {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Energy {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 24.1758%;
+	display: block;
+}
+#Communities {
+	clear: none;
+	float: left;
+	margin-left: 1.0989%;
+	width: 49.4505%;
+	display: block;
+}
+#SupportSystems {
+	clear: none;
+	float: left;
+	margin-left: 1.0989%;
+	width: 24.1758%;
+	display: block;
+}
+#Footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#Nav {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+.gridContainer.clearfix #Energy {
+	text-align: left;
+}

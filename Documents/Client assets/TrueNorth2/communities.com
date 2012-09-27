@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=""><!-- InstanceBegin template="/Templates/MainTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>True North Composites</title>
+<!-- InstanceEndEditable -->
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/fluidLayouts.css" rel="stylesheet" type="text/css">
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="gridContainer clearfix">
+  <div class="logo_text" id="Header"><img src="images/LogoBackgroundx200.fw.png" alt="True North Logo"><img src="images/Title.fw.png" alt="True North Composites"></div>
+  <div id="Nav">
+    <nav>
+  	<a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Energy</a> |
+    <a href="#">Communities</a> |
+    <a href="#">Marine</a> |
+    <a href="#">Infrastructure</a> |
+    <a href="#">Contact</a>
+  </nav>
+  </div>
+  <div id="Mantra"><h2>Our Vision</h2>
+  <p>To provide people with the most responsible, highly innovative and infinite sustainable technology solutions that preserves and enhances human life.</p>
+  </div>
+  <!-- InstanceBeginEditable name="EditRegion1" -->
+  <div id="Energy">This is the content for Layout Div Tag "Energy"</div>
+  <div id="Communities">This is the content for Layout Div Tag "Communities"</div>
+  <div id="SupportSystems">This is the content for Layout Div Tag "SupportSystems"</div>
+  <!-- InstanceEndEditable -->
+  <div id="Footer"><p>Copyright &#169  2012
+    True North Composites</p></div>
+</div>
+</body>
+<!-- InstanceEnd --></html>
