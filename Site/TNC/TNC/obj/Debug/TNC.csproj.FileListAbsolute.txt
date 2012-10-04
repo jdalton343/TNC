@@ -1,0 +1,10 @@
+c:\users\amy\documents\visual studio 2010\Projects\TNC\TNC\bin\TNC.dll
+c:\users\amy\documents\visual studio 2010\Projects\TNC\TNC\bin\TNC.pdb
+c:\users\amy\documents\visual studio 2010\Projects\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
+c:\users\amy\documents\visual studio 2010\Projects\TNC\TNC\obj\Debug\TNC.dll
+c:\users\amy\documents\visual studio 2010\Projects\TNC\TNC\obj\Debug\TNC.pdb
+C:\Users\Aldo\Desktop\TNC\TNC\bin\TNC.dll
+C:\Users\Aldo\Desktop\TNC\TNC\bin\TNC.pdb
+C:\Users\Aldo\Desktop\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Aldo\Desktop\TNC\TNC\obj\Debug\TNC.dll
+C:\Users\Aldo\Desktop\TNC\TNC\obj\Debug\TNC.pdb
