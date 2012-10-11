@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script type="text/javascript" src="Scripts/jquery-1.4.1.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!--<script type="text/javascript" src="Scripts/jquery-1.4.1.js"></script>-->
     <style type="text/css">
        body { background-image:url("images/TNC-Home-Page.jpg"); }
  
@@ -122,7 +123,21 @@
         
       </style>
 </head>
-<body><div id = "container">
+<body><!--googleoff: all-->
+<div id="globalheader">
+<ul id="globalnav">
+	<li id="gn-home"><a href="">Home</a></li>
+	<li id="gn-press"><a href="pressrelease.aspx">Press</a></li>
+	<li id="gn-case"><a href="">Case Studies</a></li>
+	<li id="gn-gallery"><a href="">Gallery</a></li>
+	<li id="gn-bios"><a href="">Bios</a></li>
+	<li id="gn-contact"><a href="">Contact</a></li>
+	<li id="gn-blog"><a href="">Blog</a></li>
+</ul>
+</div><!--/globalheader-->
+<!--googleon: all-->
+<div id = "container">
+
 <div id = "waste" >Waste Collection &nbsp;&nbsp;&nbsp;& Recycling</div>
 <div id = "infra">Infrastructure</div>
 <div id= "trans">Transportation</div>
