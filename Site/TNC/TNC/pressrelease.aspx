@@ -25,22 +25,39 @@
                               left: 729px; 
                               font-size: 12px;
                           }
+                          #positioning
+                          {
+                              padding-bottom:11px;
+                          }
+                          #globalheader
+                          {
+                              left:-21px;
+                          }
  </style>
     <title></title>
 </head>
-<body><!--googleoff: all-->
-<div id="globalheader">
-<ul id="globalnav">
-	<li id="gn-home"><a href="">Home</a></li>
-	<li id="gn-press"><a href="pressrelease.aspx">Press</a></li>
-	<li id="gn-case"><a href="">Case Studies</a></li>
-	<li id="gn-gallery"><a href="">Gallery</a></li>
-	<li id="gn-bios"><a href="">Bios</a></li>
-	<li id="gn-contact"><a href="">Contact</a></li>
-	<li id="gn-blog"><a href="">Blog</a></li>
-</ul>
-</div><!--/globalheader-->
-<!--googleon: all-->
+<body><div id ="positioning">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    </div> <!--googleoff: all-->
+    <div id="globalheader">
+        <ul id="globalnav">
+            <li id="gn-home"><a href="Default.aspx" class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME</a></li>
+            <li id="gn-press"><a href="pressrelease.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESS</a></li>
+            <li id="gn-case"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STUDIES</a></li>
+            <li id="gn-gallery"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></li>
+            <li id="gn-bios"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIOS</a></li>
+            <li id="gn-contact"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</a></li>
+            <li id="gn-blog"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLOG</a></li>
+            
+        </ul>
+    </div>
+    <!--/globalheader-->
+    <!--googleon: all-->
     <form id="form1" runat="server">
     <div id="more" >
         <asp:HyperLink ID="HyperLink1" runat="server" 

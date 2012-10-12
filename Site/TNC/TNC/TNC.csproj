@@ -51,12 +51,15 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\btnbar2.jpg" />
     <Content Include="images\buttonbar.jpg" />
     <Content Include="images\dots.png" />
     <Content Include="images\globalnavbg.png" />
     <Content Include="images\map.png" />
     <Content Include="images\store.jpg" />
     <Content Include="images\suscyclea.png" />
+    <Content Include="images\TNC-Home-PagBackground.jpg" />
+    <Content Include="images\TNC-logo.jpg" />
     <Content Include="images\TNC-Press-Read-More.jpg" />
     <Content Include="images\TNC-Press.jpg" />
     <Content Include="images\TNC-Home-Page.jpg" />
