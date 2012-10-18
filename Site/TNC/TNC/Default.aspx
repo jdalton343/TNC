@@ -134,7 +134,7 @@
         {
             font-family: "Amaranth";
             left: 441px;
-            top: -349px;
+            top: 100px;
             position: relative;
             font-size: 20px;
             line-height: 35px;
@@ -219,25 +219,6 @@
             Energy</div>
         <div id="wind">
             Wind &amp; Hydro</div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <br />
         <br />
         <br />
