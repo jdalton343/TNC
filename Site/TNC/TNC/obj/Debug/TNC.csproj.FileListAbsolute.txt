@@ -8,3 +8,8 @@ C:\Users\Aldo\Desktop\TNC\TNC\bin\TNC.pdb
 C:\Users\Aldo\Desktop\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Aldo\Desktop\TNC\TNC\obj\Debug\TNC.dll
 C:\Users\Aldo\Desktop\TNC\TNC\obj\Debug\TNC.pdb
+C:\Users\Aldo\Documents\Aldo's Documents\Active projects\DeVryExt\TNC\Site\TNC\TNC\bin\TNC.dll
+C:\Users\Aldo\Documents\Aldo's Documents\Active projects\DeVryExt\TNC\Site\TNC\TNC\bin\TNC.pdb
+C:\Users\Aldo\Documents\Aldo's Documents\Active projects\DeVryExt\TNC\Site\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Aldo\Documents\Aldo's Documents\Active projects\DeVryExt\TNC\Site\TNC\TNC\obj\Debug\TNC.dll
+C:\Users\Aldo\Documents\Aldo's Documents\Active projects\DeVryExt\TNC\Site\TNC\TNC\obj\Debug\TNC.pdb
