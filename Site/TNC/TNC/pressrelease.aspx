@@ -4,13 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server"><link rel="stylesheet" href="style.css" type="text/css" /> <style type="text/css">
-       body { background-image:url("images/TNC-press.jpg");
-               background-repeat:no-repeat;}
+       body 
                           #more
                           {
-                              position: absolute; 
+                              position: relative; 
                               font-family: arial; 
-                              top: 799px; 
+                              top: 54px; 
                               font-size: 16px; 
                               font-weight: bold; 
                               left: 743px;
@@ -18,25 +17,50 @@
                           }
                           #seemore
                           {
-                              position: absolute; 
-                              top: 853px; 
+                              position: relative; 
+                              top: 64px; 
                               font-family: arial; 
                               font-weight: bold; 
                               left: 729px; 
                               font-size: 12px;
                           }
-                          #positioning
-                          {
-                              padding-bottom:11px;
-                          }
+
                           #globalheader
                           {
                               left:-21px;
                           }
+                          #logo
+        {
+            background: url("images/tnc-smalllogo.jpg");
+            background-repeat: no-repeat;
+            padding-bottom:11px;
+            position:relative;
+            
+        }
+        #textbox
+        {
+            border-color:Aqua;
+            padding-left:50px;
+            padding-right:350px;
+            background-color:lightblue;
+        }
+        #title
+        {
+            font-family: Times New Roman;
+            font-size:30px;
+            font-weight:bold;
+        }
+        
+        #authordate
+        {
+            font-family: Times New Roman;
+            font-size:20px;
+            font-weight:bold;
+        }
  </style>
     <title></title>
 </head>
-<body><div id ="positioning">
+<body><div id ="logo">
     <br />
     <br />
     <br />
@@ -59,13 +83,62 @@
     <!--/globalheader-->
     <!--googleon: all-->
     <form id="form1" runat="server">
+    <div id = "textbox"><div id = "title">&nbsp; Title<br /></div><div id = "authordate">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        Date<br /></div>
+        <br />
+        <br /><div id = "maintext">
+&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+        culpa qui officia deserunt mollit anim id est laborum.<br />
+&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor 
+        sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+        qui officia deserunt mollit anim id est laborum.<br />
+&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor 
+        sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+        qui officia deserunt mollit anim id est laborum.<br />
+&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor 
+        sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+        qui officia deserunt mollit anim id est laborum.</div></div>
     <div id="more" >
         <asp:HyperLink ID="HyperLink1" runat="server" 
             NavigateUrl="~/readmorerelease.aspx">READ MORE..</asp:HyperLink>
         
     
     </div>
-    <div id = "seemore"><asp:HyperLink ID = "HyperLink2" runat="server">SEE MORE PRESS RELEASES</asp:HyperLink></div>
+    <div id = "seemore"><asp:HyperLink ID = "HyperLink2" runat="server" 
+            NavigateUrl="~/Presslist.aspx">SEE MORE PRESS RELEASES</asp:HyperLink></div>
     <br />
     </form>
 </body>
