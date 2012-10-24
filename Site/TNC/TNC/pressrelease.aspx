@@ -139,7 +139,7 @@
         qui officia deserunt mollit anim id est laborum.</div></div>
     <div id="more" >
         <asp:HyperLink ID="HyperLink1" runat="server" 
-            NavigateUrl="~/readmorerelease.aspx">READ MORE..</asp:HyperLink>
+            NavigateUrl="~/pressmore.aspx">READ MORE..</asp:HyperLink>
         
     
     </div>

@@ -2,7 +2,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <style type="text/css">
@@ -122,7 +122,7 @@
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
         </div> <div id="more" >
         <asp:HyperLink ID="HyperLink1" runat="server" 
-            NavigateUrl="~/caselist.aspx">More Cast Studies</asp:HyperLink>
+            NavigateUrl="~/presslist.aspx">More Press Releases</asp:HyperLink>
         
     
     </div>

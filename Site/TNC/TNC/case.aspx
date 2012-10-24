@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title><link rel="stylesheet" href="style.css" type="text/css" /> <style type="text/css">     
+        #form1{padding-left:3em;padding-right:5em;}
          #logo
         {
             background: url("images/tnc-smalllogo.jpg");
@@ -13,13 +14,36 @@
             position:relative;
             
         }
-      
+      #more
+                          {
+                              position: relative; 
+                              font-family: arial; 
+                              top: 3em; 
+                              font-size: 16px; 
+                              font-weight: bold; 
+                              left: 46em;
+                              
+                          }
+                          #seemore
+                          {
+                              position: relative; 
+                              top: 5em; 
+                              font-family: arial; 
+                              font-weight: bold; 
+                              left: 61em; 
+                              font-size: 12px;
+                          }
                #container
                {
-                   padding-left:60px;
+                   border:solid;
+                   border-radius:5em;
+                   border-color:Blue;
+                   background-color:lightblue;
+                   padding-left:5em;
                    position:relative;
                    top:-5px;
                    padding-right:200px;
+                   height:52em;
                    
                }
                #title
@@ -34,10 +58,14 @@
                    position:relative;
                    top:40px;
                }
-                                                                                  .style1
-                                                                                  {
-                                                                                      text-align: right;
-                                                                                  }
+                  .style1
+                  {
+                   text-align: right;
+                 }
+                 #globalheader
+                 {
+                     left:2em;
+                 }
                </style>
 </head>
 <body> <div id = "logo">
@@ -64,7 +92,8 @@
     <!--googleon: all-->
     <form id="form1" runat="server">
     <div id = "container">
-    <div id = "title">Blah blah blah.</div>
+    <div id = "title">
+    <br /><br />Blah blah blah.</div>
     <div id = "authordate" class="style1">Billy Bob Thornton<br />
         April 2, 1998</div>
     <div id = "maintext">&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
@@ -93,6 +122,15 @@
         qui officia deserunt mollit anim id est laborum.<br />
         &nbsp;&nbsp;&nbsp; </div>
     </div>
+        <div id="more" >
+        <asp:HyperLink ID="HyperLink1" runat="server" 
+            NavigateUrl="~/casemore.aspx">READ MORE..</asp:HyperLink>
+        
+    
+    </div>
+    <div id = "seemore"><asp:HyperLink ID = "HyperLink2" runat="server" 
+            NavigateUrl="~/caselist.aspx">SEE MORE CASE STUDIES</asp:HyperLink></div>
+    <br />
     </form>
 </body>
 </html>

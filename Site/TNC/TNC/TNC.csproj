@@ -74,6 +74,7 @@
     <Content Include="images\tnc-suscycleb.png" />
     <Content Include="Global.asax" />
     <Content Include="Presslist.aspx" />
+    <Content Include="pressmore.aspx" />
     <Content Include="readmorerelease.aspx" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="Presslist.aspx.designer.cs">
       <DependentUpon>Presslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pressmore.aspx.cs">
+      <DependentUpon>pressmore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pressmore.aspx.designer.cs">
+      <DependentUpon>pressmore.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default.aspx.cs">
