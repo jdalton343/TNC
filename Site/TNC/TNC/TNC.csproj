@@ -51,9 +51,13 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bios.aspx" />
+    <Content Include="blog.aspx" />
     <Content Include="case.aspx" />
     <Content Include="caselist.aspx" />
     <Content Include="casemore.aspx" />
+    <Content Include="contactus.aspx" />
+    <Content Include="Gallery.aspx" />
     <Content Include="images\btnbar2.jpg" />
     <Content Include="images\buttonbar.jpg" />
     <Content Include="images\dots.png" />
@@ -88,6 +92,20 @@
     <Content Include="pressrelease.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bios.aspx.cs">
+      <DependentUpon>bios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bios.aspx.designer.cs">
+      <DependentUpon>bios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog.aspx.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blog.aspx.designer.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="case.aspx.cs">
       <DependentUpon>case.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,6 +126,20 @@
     </Compile>
     <Compile Include="casemore.aspx.designer.cs">
       <DependentUpon>casemore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactus.aspx.designer.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
