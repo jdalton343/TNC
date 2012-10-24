@@ -4,45 +4,51 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server"><link rel="stylesheet" href="style.css" type="text/css" /> <style type="text/css">
-       body 
+       body {padding-right:5em;}
                           #more
                           {
                               position: relative; 
                               font-family: arial; 
-                              top: 54px; 
+                              top: 3em; 
                               font-size: 16px; 
                               font-weight: bold; 
-                              left: 743px;
+                              left: 46em;
                               
                           }
                           #seemore
                           {
                               position: relative; 
-                              top: 64px; 
+                              top: 5em; 
                               font-family: arial; 
                               font-weight: bold; 
-                              left: 729px; 
+                              left: 61em; 
                               font-size: 12px;
                           }
 
                           #globalheader
                           {
-                              left:-21px;
+                              left:2em;
                           }
                           #logo
         {
             background: url("images/tnc-smalllogo.jpg");
             background-repeat: no-repeat;
-            padding-bottom:11px;
+            padding-bottom:1em;
+            left:0em;
             position:relative;
             
         }
         #textbox
         {
+            border: solid;
+            border-radius: 3em;
             border-color:Aqua;
-            padding-left:50px;
-            padding-right:350px;
+            padding-left:4em;
+            padding-right:4em;
             background-color:lightblue;
+            height:52em;
+            left: 2em;
+            position:relative;
         }
         #title
         {
