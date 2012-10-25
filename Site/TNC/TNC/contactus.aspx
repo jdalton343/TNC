@@ -8,8 +8,7 @@
     <style type="text/css">
         body
         {
-            padding-left: 2em;
-            padding-right: 2em;
+
         }
         #logo
         {
@@ -18,7 +17,60 @@
             padding-bottom: 11px;
             position: relative;
         }
-        
+        #name
+        {
+            border-radius: 3em;
+            background-color:lightblue;
+            width:20em;
+            position:relative;
+            padding: 1em;
+          
+        }
+        #email
+        {
+            border-radius: 3em;
+            background-color:lightblue;
+            width:20em;
+            position:relative;
+            padding: 1em;
+            
+        }
+        #content
+        {
+            border-radius: 3em;
+            background-color:lightblue;
+            width:20em;
+            position:relative;
+            padding: 1em;
+            
+        }
+
+        #btnReset
+        {
+            border-radius:3em;
+            background-color:LightBlue;
+           width:5em;
+            padding:1em;
+            float:left;
+        }
+        #btnSubmit
+        {
+            border-radius:3em;
+            background-color:LightBlue;
+            width:5em;
+            padding: 1em;
+            float:right;
+        }
+        #buttons
+        {
+            position:relative;
+          width:22em;
+        }
+        #form1
+        {
+            padding-right: 10em;
+            padding-left:10em;
+        }
         </style>
 </head>
 <body> <div id="logo">
@@ -46,8 +98,29 @@
     <!--googleon: all-->
 
     <form id="form1" runat="server">
-    <div>
-    Coming Soon
+    <div id = "name">
+        <asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>
+        &nbsp;&nbsp;
+        <asp:TextBox ID="TextBox1" runat="server" Width="243px"></asp:TextBox>
+    </div><br /><br />
+    <div id = "email">
+        <asp:Label ID="Label2" runat="server" Text="Email:"></asp:Label>
+&nbsp;
+&nbsp;
+        <asp:TextBox ID="TextBox2" runat="server" Width="251px"></asp:TextBox>
+    </div>
+    <br /><br />
+    <div id = "content">
+        <asp:TextBox ID="comments" runat="server" Height="208px" 
+        TextMode="MultiLine" Width="312px"></asp:TextBox></div>
+        <br /><br /><div id = "buttons">
+        <div id = "btnReset" class="style1">
+            <asp:Button ID="reset" runat="server" Text="Reset" width="61px" /></div>&nbsp;&nbsp&nbsp;&nbsp;&nbsp;<div id = "btnSubmit">
+            <asp:Button ID="Submit" runat="server"  Text="Submit" />
+    </div>
+        <br />
+        <br />
+        <br />
     </div>
     </form>
 </body>

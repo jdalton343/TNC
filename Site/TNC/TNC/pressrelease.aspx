@@ -46,7 +46,7 @@
             padding-left:4em;
             padding-right:4em;
             background-color:lightblue;
-            height:52em;
+            height:auto;
             left: 2em;
             position:relative;
         }
