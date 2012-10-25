@@ -65,6 +65,7 @@
     <Content Include="images\map.png" />
     <Content Include="images\store.jpg" />
     <Content Include="images\suscyclea.png" />
+    <Content Include="images\TNC-Gallery.jpg" />
     <Content Include="images\TNC-Case-List-More.jpg" />
     <Content Include="images\TNC-Case.jpg" />
     <Content Include="images\TNC-Home-PagBackground.jpg" />

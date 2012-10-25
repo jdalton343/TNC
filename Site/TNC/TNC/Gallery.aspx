@@ -18,7 +18,11 @@
             padding-bottom: 11px;
             position: relative;
         }
-        
+        #gallery
+        {
+            background: url("images/tnc-gallery.jpg");
+            background-repeat: no-repeat;
+        }
         </style>
 </head>
 <body> <div id="logo">
@@ -45,8 +49,49 @@
     <!--/globalheader-->
     <!--googleon: all-->
     <form id="form1" runat="server">
-    <div>
-    Coming Soon
+    <div id = "gallery">
+   
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+   
     </div>
     </form>
 </body>

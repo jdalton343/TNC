@@ -18,7 +18,11 @@
             padding-bottom: 11px;
             position: relative;
         }
-        
+        #bios
+        {
+            background: url("images/tnc-bios.jpg");
+            background-repeat: no-repeat;  
+        }
         </style>
 </head>
 <body> <div id="logo">
@@ -45,8 +49,47 @@
     <!--/globalheader-->
     <!--googleon: all-->
     <form id="form1" runat="server">
-    <div>
-    Coming Soon
+    <div id = "bios">
+    
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    
     </div>
     </form>
 </body>

@@ -26,7 +26,7 @@
             font-size:25px;
             padding-top:2em;
             line-height:23px;
-            
+            font-weight:bold;
             border:solid;
             border-radius: 3em;
             
@@ -107,7 +107,7 @@
     <!--googleon: all--> <div id = "bod1"><div id = "links">&nbsp;&nbsp;&nbsp;&nbsp;Press Links<br /><br />
     <div id = "link1">
          <br />
-          <a href="/pressmore.aspx" style = "text-decoration:none">Designs for Mumbai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John Hancock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10/4/1963</a>
+         <a href="/pressmore.aspx" style = "text-decoration:none">Designs for Mumbai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John Hancock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10/4/1963</a>
          <br />
          <br />
         </div><div id = "link2">
