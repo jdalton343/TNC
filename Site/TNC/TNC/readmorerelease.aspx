@@ -11,6 +11,7 @@
             {
                 background-image: url("images/TNC-press-read-more.jpg");
                 background-repeat: no-repeat;
+                margin:0;
             }
         </style>
         <title></title>

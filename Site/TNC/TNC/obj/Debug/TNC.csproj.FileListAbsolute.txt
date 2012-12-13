@@ -13,3 +13,8 @@ C:\Users\Amy\Documents\Git3\Site\TNC\TNC\bin\TNC.pdb
 C:\Users\Amy\Documents\Git3\Site\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Amy\Documents\Git3\Site\TNC\TNC\obj\Debug\TNC.dll
 C:\Users\Amy\Documents\Git3\Site\TNC\TNC\obj\Debug\TNC.pdb
+C:\Users\Havok\Documents\TNC\Site\TNC\TNC\bin\TNC.dll
+C:\Users\Havok\Documents\TNC\Site\TNC\TNC\bin\TNC.pdb
+C:\Users\Havok\Documents\TNC\Site\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Havok\Documents\TNC\Site\TNC\TNC\obj\Debug\TNC.dll
+C:\Users\Havok\Documents\TNC\Site\TNC\TNC\obj\Debug\TNC.pdb

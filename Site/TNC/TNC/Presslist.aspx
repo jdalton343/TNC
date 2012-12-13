@@ -5,18 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title><link rel="stylesheet" href="style.css" type="text/css" /> <style type="text/css">
-     body{padding-right:2em; padding-left: 2em;} 
+     body
+        {
+         margin:0;
+         } 
                #globalheader
                {
                    top:-17px;
                }
-                #logo
+        #logo
         {
             background: url("images/tnc-smalllogo.jpg");
+            background-color:#EFFDEE;
             background-repeat: no-repeat;
-            padding-bottom:11px;
+            padding:0px;
+            margin:0px;
             position:relative;
-            
         }
         #links
         {
@@ -93,16 +97,16 @@
     <br />
     </div><div id = "positioning"></div>
 <!--googleoff: all-->
-    <div id="globalheader">
+  <div id="globalheader">
         <ul id="globalnav">
             <li id="gn-home"><a href="Default.aspx" class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME</a></li>
             <li id="gn-press"><a href="pressrelease.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESS</a></li>
-             <li id="gn-case"><a href="case.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STUDIES</a></li>
-            <li id="gn-gallery"><a href="gallery.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></li>
+            <li id="gn-case"><a href="case.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STUDIES</a></li>
+           <li id="gn-gallery"><a href="gallery.aspx">&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></li>
             <li id="gn-bios"><a href="bios.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIOS</a></li>
-            <li id="gn-contact"><a href="contactus.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</a></li>
+            <li id="gn-contact"><a href="contactus.aspx">&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</a></li>
             <li id="gn-blog"><a href="blog.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLOG</a></li>
-            
         </ul>
     </div>    <!--/globalheader-->
     <!--googleon: all-->

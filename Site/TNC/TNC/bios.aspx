@@ -8,20 +8,20 @@
     <style type="text/css">
         body
         {
-            padding-left: 2em;
-            padding-right: 2em;
+         margin:0;
         }
-        #logo
+       #logo
         {
             background: url("images/tnc-smalllogo.jpg");
+            background-color:#EFFDEE;
             background-repeat: no-repeat;
-            padding-bottom: 11px;
-            position: relative;
+            padding:0px;
+            margin:0px;
+            position:relative;
         }
         #bios
         {
-            background: url("images/tnc-bios.jpg");
-            background-repeat: no-repeat;  
+           
         }
         </style>
 </head>
@@ -40,9 +40,9 @@
             <li id="gn-press"><a href="pressrelease.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESS</a></li>
             <li id="gn-case"><a href="case.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STUDIES</a></li>
-            <li id="gn-gallery"><a href="gallery.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></li>
+           <li id="gn-gallery"><a href="gallery.aspx">&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></li>
             <li id="gn-bios"><a href="bios.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIOS</a></li>
-            <li id="gn-contact"><a href="contactus.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</a></li>
+            <li id="gn-contact"><a href="contactus.aspx">&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</a></li>
             <li id="gn-blog"><a href="blog.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLOG</a></li>
         </ul>
     </div>
@@ -50,46 +50,7 @@
     <!--googleon: all-->
     <form id="form1" runat="server">
     <div id = "bios">
-    
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    
+        <img src="images/TNC-Bios.jpg" />
     </div>
     </form>
 </body>

@@ -6,43 +6,48 @@
 <head runat="server">
     <title></title><link rel="stylesheet" href="style.css" type="text/css" /> <style type="text/css">     
         #form1{padding-left:3em;padding-right:5em;}
+        body
+        {
+            margin:0;
+        }
          #logo
         {
             background: url("images/tnc-smalllogo.jpg");
+            background-color:#EFFDEE;
             background-repeat: no-repeat;
-            padding-bottom:11px;
+            padding:0px;
+            margin:0px;
             position:relative;
-            
         }
-      #more
+                          #more
                           {
                               position: relative; 
                               font-family: arial; 
-                              top: 3em; 
+                              <%--top: 3em; --%>
                               font-size: 16px; 
                               font-weight: bold; 
-                              left: 46em;
+                              <%--left: 46em;--%>
                               
                           }
                           #seemore
                           {
                               position: relative; 
-                              top: 5em; 
+                              <%--top: 5em; --%>
                               font-family: arial; 
                               font-weight: bold; 
-                              left: 61em; 
+                              <%--left: 61em;--%> 
                               font-size: 12px;
                           }
                #container
                {
                    border:solid;
                    border-radius:5em;
-                   border-color:Blue;
+                   border-color:#69A9CD;
                    background-color:lightblue;
                    padding-left:5em;
                    position:relative;
-                   top:-5px;
-                   padding-right:200px;
+                   top:15px;
+                   padding-right:5em;
                    height:52em;
                    
                }
@@ -57,10 +62,11 @@
                {
                    position:relative;
                    top:40px;
+                   font-size:1.5em;
                }
                   .style1
                   {
-                   text-align: right;
+                   text-align: auto;
                  }
                  #globalheader
                  {
@@ -80,12 +86,12 @@
         <ul id="globalnav">
             <li id="gn-home"><a href="Default.aspx" class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME</a></li>
             <li id="gn-press"><a href="pressrelease.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESS</a></li>
-              <li id="gn-case"><a href="case.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STUDIES</a></li>
-            <li id="gn-gallery"><a href="gallery.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></li>
+            <li id="gn-case"><a href="case.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STUDIES</a></li>
+           <li id="gn-gallery"><a href="gallery.aspx">&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></li>
             <li id="gn-bios"><a href="bios.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIOS</a></li>
-            <li id="gn-contact"><a href="contactus.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</a></li>
+            <li id="gn-contact"><a href="contactus.aspx">&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</a></li>
             <li id="gn-blog"><a href="blog.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLOG</a></li>
-            
         </ul>
     </div>
     <!--/globalheader-->
@@ -123,10 +129,9 @@
         &nbsp;&nbsp;&nbsp; </div>
     </div>
         <div id="more" >
+        <br />
         <asp:HyperLink ID="HyperLink1" runat="server" 
             NavigateUrl="~/casemore.aspx">READ MORE..</asp:HyperLink>
-        
-    
     </div>
     <div id = "seemore"><asp:HyperLink ID = "HyperLink2" runat="server" 
             NavigateUrl="~/caselist.aspx">SEE MORE CASE STUDIES</asp:HyperLink></div>
