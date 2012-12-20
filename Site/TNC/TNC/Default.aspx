@@ -21,6 +21,11 @@
             margin:0px;
             position:relative;
         }
+        /*
+        {
+            background-image: url("images/buttonbar3.gif");
+            background-repeat: repeat-x;
+        }*/
         #container
         {
             background-image: url("images/TNC-Home-Pagbackground.jpg");
@@ -173,7 +178,6 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
     <div id="logo">
     <br />
     <br />
@@ -264,6 +268,5 @@
             Homes &nbsp; Businesses &nbsp Communities</div>
         <br />
     </div>
-    </form>
 </body>
 </html>

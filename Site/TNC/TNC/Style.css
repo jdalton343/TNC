@@ -1,12 +1,12 @@
 ﻿body 
 {}
 /* GLOBALHEADER */
-#globalheader { width: 800px; height: 80px; margin-right:auto; margin-left:auto; }
+#globalheader { width: 964px; height: 80px; margin-right:auto; margin-left: auto; padding-left: 300px;background-image: url("images/buttonbar3.gif");background-repeat: repeat-x;}
 #globalheader #globalnav { margin: 0; padding: 0; }
 #globalheader #globalnav li { display: inline; }
 #globalheader #globalnav li a { float: left; width: 100px; height: 50px; padding-top: 15px;  overflow: hidden; text-decoration:none;}
 #globalheader #globalnav li a,
-#globalheader #globalsearch { background-image: url(images/buttonbar.jpg); _background-image: url(images/buttonbar.jpg); background-repeat: no-repeat; }
+#globalheader #globalsearch { background-image: url(images/buttonbar.jpg); background-image: url(images/buttonbar.jpg); background-repeat: repeat-x; }
 
 /* BUTTONS */
 #globalheader #globalnav li#gn-store a { background-position: 0 0; width:80px;}
