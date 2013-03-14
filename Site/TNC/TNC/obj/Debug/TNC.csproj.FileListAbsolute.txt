@@ -18,3 +18,13 @@ C:\Users\Havok\Documents\TNC\Site\TNC\TNC\bin\TNC.pdb
 C:\Users\Havok\Documents\TNC\Site\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Havok\Documents\TNC\Site\TNC\TNC\obj\Debug\TNC.dll
 C:\Users\Havok\Documents\TNC\Site\TNC\TNC\obj\Debug\TNC.pdb
+C:\Users\Havok\Downloads\devryext-true-north-composites-a954e7c67056\devryext-true-north-composites-a954e7c67056\Site\TNC\TNC\bin\TNC.dll
+C:\Users\Havok\Downloads\devryext-true-north-composites-a954e7c67056\devryext-true-north-composites-a954e7c67056\Site\TNC\TNC\bin\TNC.pdb
+C:\Users\Havok\Downloads\devryext-true-north-composites-a954e7c67056\devryext-true-north-composites-a954e7c67056\Site\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Havok\Downloads\devryext-true-north-composites-a954e7c67056\devryext-true-north-composites-a954e7c67056\Site\TNC\TNC\obj\Debug\TNC.dll
+C:\Users\Havok\Downloads\devryext-true-north-composites-a954e7c67056\devryext-true-north-composites-a954e7c67056\Site\TNC\TNC\obj\Debug\TNC.pdb
+C:\Users\Havok\Documents\TNC\TNC\bin\TNC.dll
+C:\Users\Havok\Documents\TNC\TNC\bin\TNC.pdb
+C:\Users\Havok\Documents\TNC\TNC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Havok\Documents\TNC\TNC\obj\Debug\TNC.dll
+C:\Users\Havok\Documents\TNC\TNC\obj\Debug\TNC.pdb

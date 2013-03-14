@@ -52,6 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bios.aspx" />
+    <Content Include="bios2.htm" />
+    <Content Include="bios3.htm" />
+    <Content Include="bios4.htm" />
+    <Content Include="bios5.htm" />
     <Content Include="blog.aspx" />
     <Content Include="case.aspx" />
     <Content Include="caselist.aspx" />

@@ -1,7 +1,7 @@
 ﻿body 
 {}
 /* GLOBALHEADER */
-#globalheader { width: 964px; height: 80px; margin-right:auto; margin-left: auto; padding-left: 300px;background-image: url("images/buttonbar3.gif");background-repeat: repeat-x;}
+#globalheader { width: 964px; height: 80px; margin-right:auto; margin-left: auto; padding-left: 24%;background-image: url("images/buttonbar3.gif");background-repeat: repeat-x;}
 #globalheader #globalnav { margin: 0; padding: 0; }
 #globalheader #globalnav li { display: inline; }
 #globalheader #globalnav li a { float: left; width: 100px; height: 50px; padding-top: 15px;  overflow: hidden; text-decoration:none;}
