@@ -1,0 +1,72 @@
+﻿@{ 
+    HttpBrowserCapabilitiesBase bc = Request.Browser;
+            string myBrowserInfo = bc.Browser;
+            ViewBag.Browser = myBrowserInfo;
+    
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="Responsive Image Gallery with jQuery"/>
+    <meta name="keywords" content="jquery, carousel, image gallery, slider, responsive, flexible, fluid, resize, css3"/>
+
+    <link href="@Url.Content("~/Assets/TNC/CSS/Style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Assets/TNC/CSS/Style1.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Assets/Elastislide/elastislide.css")" rel="stylesheet" type="text/css" />
+    <noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+    </script>
+</head>
+
+<body>
+ <div id="logo"></div>
+ <div id="globalheader">
+        <ul id="globalnav">
+            <li id="gn-home">@Html.Raw(ViewBag.Current == "Home" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/Home") + "\" >HOME</a>" : "<a href=\"" + Url.Content("~/Home/Home") + "\" >HOME</a>")</li>
+            <li id ="gn-circle">@Html.Raw(ViewBag.Current == "Sustainability" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/Default") + "\" >SUSTAINABILITY <br /> MODEL</a>" : "<a href=\"" + Url.Content("~/Home/Default") + "\" >SUSTAINABILITY <br /> MODEL</a>")</li>
+            <li id="gn-history">@Html.Raw(ViewBag.Current == "History" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/History") + "\" >HISTORY</a>" : "<a href=\"" + Url.Content("~/Home/History") + "\" >HISTORY</a>")</li>
+            <li class="selected" id="gn-tech">@Html.Raw(ViewBag.Current == "Technology" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/Technology") + "\" >TECHNOLOGY</a>" : "<a href=\"" + Url.Content("~/Home/Technology") + "\" >TECHNOLOGY</a>")</li></li>
+         
+  @*    <li id="gn-press"><a href="pressrelease.aspx">PRESS</a></li>
+            <li id="gn-case"><a href="case.aspx">CASE<br />STUDIES</a></li>*@
+            <li id="gn-gallery">@Html.Raw(ViewBag.Current == "Gallery" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/Gallery") + "\" >GALLERY</a>" : "<a href=\"" + Url.Content("~/Home/Gallery") + "\" >GALLERY</a>")</li>
+    @*    <li id="gn-bios"><a href="bios.aspx">BIOS</a></li>*@
+            <li id="gn-contact">@Html.Raw(ViewBag.Current == "Contact" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/Contact") + "\" >CONTACT US</a>" : "<a href=\"" + Url.Content("~/Home/Contact") + "\" >CONTACT US</a>")</li>
+            <li id="gn-blog">@Html.Raw(ViewBag.Current == "Blog" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/Blog") + "\" >BLOG</a>" : "<a href=\"" + Url.Content("~/Home/Blog") + "\" >BLOG</a>")</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+    @RenderBody()
+</body>
+</html>

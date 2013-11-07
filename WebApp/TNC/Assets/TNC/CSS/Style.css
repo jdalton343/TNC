@@ -1,0 +1,700 @@
+﻿body
+{
+}
+/* GLOBALHEADER */
+
+
+#globalheader
+{
+    background-image: url("../SiteImages/buttonbar3.gif");
+    background-repeat: repeat-x;
+    color: #004E81;
+    height: 80px;
+    font-size:14px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 102px;
+    width: 1251px;
+    font-weight:bold;
+}
+#globalheader #globalnav
+{
+    margin: 0;
+    padding: 0;
+}
+#globalheader #globalnav li
+{
+    display: inline;
+}
+
+#globalheader #globalnav li a
+{
+    border-left: thin solid silver;
+    float: left;
+    height: 43px;
+    margin-left: 0;
+    margin-right: 3px;
+    overflow: hidden;
+    padding-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 129px;
+    color: #004E81;
+}
+#globalheader #globalnav li a, #globalheader #globalsearch
+{
+    background-repeat: repeat-x;
+}
+#globalheader #globalnav a:visited
+{
+    color: #004E81;
+}
+
+/* BUTTONS */
+#globalheader #globalnav li#gn-store a
+{
+    background-position: 0 0;
+    width: 80px;
+}
+#globalheader #globalnav li#gn-history
+{
+    color: #004E81;
+}
+#globalheader #globalnav li#gn-tech
+{
+    color: #004E81;
+}
+#globalheader #globalnav li#gn-store a
+{
+    background-position: -117px 0;
+    width: 108px;
+}
+#globalheader #globalnav li#gn-mac a
+{
+    background-position: -234px 0;
+    width: 180px;
+}
+#globalheader #globalnav li#gn-ipoditunes a
+{
+    background-position: -351px 0;
+    width: 133px;
+}
+#globalheader #globalnav li#gn-iphone a
+{
+    background-position: -468px 0;
+    width: 95px;
+}
+#globalheader #globalnav li#gn-downloads a
+{
+    background-position: -585px 0;
+    width: 120px;
+}
+#globalheader #globalnav li#gn-support a
+{
+    background-position: -702px 0;
+    width: 80px;
+}
+
+/* OVER STATES */
+#globalheader #globalnav li#gn-apple a:hover
+{
+    background-position: 0 -38px;
+}
+#globalheader #globalnav li#gn-store a:hover
+{
+    background-position: -117px -38px;
+}
+#globalheader #globalnav li#gn-mac a:hover
+{
+    background-position: -234px -38px;
+}
+#globalheader #globalnav li#gn-ipoditunes a:hover
+{
+    background-position: -351px -38px;
+}
+#globalheader #globalnav li#gn-iphone a:hover
+{
+    background-position: -468px -38px;
+}
+#globalheader #globalnav li#gn-downloads a:hover
+{
+    background-position: -585px -38px;
+}
+#globalheader #globalnav li#gn-support a:hover
+{
+    background-position: -702px -38px;
+}
+
+/* PRESSED STATES */
+
+#globalheader #globalnav li#gn-apple a:active
+{
+    background-position: 0 -76px;
+    color: #004E81;
+}
+#globalheader #globalnav li#gn-history a:active
+{
+    color: #004E81;
+}
+#globalheader #globalnav li#gn-tech a:active
+{
+    color: #004E81;
+}
+#globalheader #globalnav li#gn-store a:active
+{
+    color: #004E81;
+    background-position: -117px -76px;
+}
+#globalheader #globalnav li#gn-mac a:active
+{
+    color: #004E81;
+    background-position: -234px -76px;
+}
+#globalheader #globalnav li#gn-ipoditunes a:active
+{
+    color: #004E81;
+    background-position: -351px -76px;
+}
+#globalheader #globalnav li#gn-iphone a:active
+{
+    color: #004E81;
+    background-position: -468px -76px;
+}
+#globalheader #globalnav li#gn-downloads a:active
+{
+    color: #004E81;
+    background-position: -585px -76px;
+}
+#globalheader #globalnav li#gn-support a:active
+{
+    color: #004E81;
+    background-position: -702px -76px;
+}
+
+/* ON STATES */
+#globalheader.home #globalnav li#gn-apple a:hover
+{
+    background-position: 0 0;
+    cursor: default;
+}
+#globalheader.store #globalnav li#gn-store a
+{
+    background-position: -117px -114px !important;
+}
+#globalheader.mac #globalnav li#gn-mac a
+{
+    background-position: -234px -114px !important;
+}
+#globalheader.ipoditunes #globalnav li#gn-ipoditunes a
+{
+    background-position: -351px -114px !important;
+}
+#globalheader.iphone #globalnav li#gn-iphone a
+{
+    background-position: -468px -114px !important;
+}
+#globalheader.downloads #globalnav li#gn-downloads a
+{
+    background-position: -585px -114px !important;
+}
+#globalheader.support #globalnav li#gn-support a
+{
+    background-position: -702px -114px !important;
+}
+#globalheader #globalnav li a#current
+{
+    color: darkcyan !important;
+}
+body
+{
+    margin: 0;
+}
+
+#logo
+{
+    background: url("../SiteImages/tnc-smalllogo.jpg") no-repeat scroll 0 0 #EFFDEE;
+    height: 119px;
+    padding: 0;
+    position: relative;
+}
+.tooltip
+{
+   
+    text-decoration: none;
+}
+.tooltip span
+{
+    margin-left: -999em;
+    position: absolute;
+}
+.tooltip:hover span
+{
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    font-family:Myriad, "Trebuchet MS", Sans-Serif;
+    left: 5px;
+    margin-left: 0;
+    position: absolute;
+    top: -68px;
+    width: 250px;
+    z-index: 99;
+}
+.tooltip a
+{
+    text-decoration: none;
+}
+.tooltip:hover img
+{
+    border: 0 none;
+    float: left;
+    margin: -10px 0 0 -55px;
+    position: absolute;
+}
+.tooltip:hover em
+{
+    display: block;
+    font-family:Myriad, "Trebuchet MS", Sans-Serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.2em 0 0.6em;
+}
+.classic
+{
+    padding: 0.8em 1em;
+}
+.custom
+{
+    padding: 0.5em 0.8em 0.8em 2em;
+}
+.displayed
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container
+{
+    background-color: #EFFDEE;
+    margin-top: -22px;
+    padding-left: 92px;
+    padding-right: 67px;
+    padding-top: 20px;
+    height: auto;
+}
+.container2
+{
+     background-image: url("../SiteImages/Ferry05trucktowater.jpg");
+    
+    margin-top: -22px;
+    padding-left: 92px;
+    
+    padding-top: 20px;
+   width:auto;
+}
+#defaultContainer
+{
+    background-image: url("../SiteImages/sustaincycle.jpg");
+    background-repeat: no-repeat;
+    font-family:Myriad, "Trebuchet MS", Sans-Serif;
+    font-weight: bold;
+    width: auto;
+    margin-top: 35px;
+    height: 1000px;
+}
+
+.panel
+{
+    background: -moz-linear-gradient(center top , #EFFDEE, white 95%) repeat scroll 0 0 transparent;
+    border-color: lightgray;
+    border-radius: 26px 26px 26px 26px;
+    border-top: 1px solid lightgray;
+    box-shadow: 0 0 5px #888888;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 10px 20px 14px;
+}
+.panel h2
+{
+    color: #004E81;
+    font: 17px ms-trebuchet,myriad pro,myriad,sans-serif;
+}
+.panel h3
+{
+    color: #004E81;
+    font: 17px ms-trebuchet,myriad pro,myriad,sans-serif;
+}
+.panel h4
+{
+    color: #004E81;
+    font: 14px ms-trebuchet,myriad pro,myriad,sans-serif;
+}
+
+.panel p
+{
+    font: 15px/18px arial,sans-serif;
+}
+.panel p.small
+{
+    font-size: 10px;
+    line-height: 10px;
+    color: indigo;
+}
+.panel p a
+{
+    color: #004E81;
+}
+.panel ul
+{
+    font: 12px arial, sans-serif;
+}
+
+.panel ul li
+{
+    list-style-type: none;
+}
+#emailMessage
+{
+    width: 390px;
+    position: relative;
+    margin-left: 374px;
+}
+
+#colors {
+    color: #010178;
+    height: 785px;
+  
+}
+#homeback
+{
+    
+
+}
+    #techpanel
+    {
+        height: 546px;
+    }
+    #imgs
+    {
+        float:left;
+        position:relative;
+        left:88px;
+    }
+.highlight
+{
+    color: darkcyan;
+    font-weight: bold;
+}
+#highlight
+{
+    color: #004E81;
+    font-weight: bold;
+}
+#paragraphs
+{
+    width:870px;
+}
+#contactinfo
+{
+    color: #010178;
+    height: auto;
+    left: 406px;
+    position: relative;
+    text-align: center;
+    width: 288px;
+}
+
+
+.imagesize {
+    margin-left: 68px;
+    width: 150px;
+}
+
+#rightsidepic {
+    left: 913px;
+    position: absolute;
+    top: 225px;
+}
+.rightpic
+{
+    width: 142px;
+    float: right;
+}
+
+#top {
+    position: relative;
+    top: -640px;
+}
+
+#top2
+{
+  left: 142px;
+    position: relative;
+    top: -513px;
+}
+
+#middle
+{
+    position: relative;
+    right: -284px;
+    top: -389px;
+}
+
+#middle2
+{
+   left: 425px;
+    position: relative;
+    top: -275px;
+}
+
+#bottom {
+   left: 566px;
+    position: relative;
+    top: -128px;
+}
+
+.middlepic {
+   float: right;
+    margin-right: 461px;
+    position: relative;
+    top: -180px;
+    width: 200px;
+}
+.rightpan
+{
+    width:200px;
+    float:right;
+}
+#homestuff
+{
+    padding: 31px;
+}
+.tooltip span
+{
+    margin-left: -999em;
+    position: absolute;
+}
+.classic
+{
+    background: none repeat scroll 0 0 #B4D6C8;
+    border: 1px solid #69A9CD;
+    color: Black;
+    font-size: 16px;
+}
+.tooltip span p
+{
+    line-height: 16px;
+}
+
+#prompt
+{
+    color: #010178;
+   font: 15px/18px arial,sans-serif;
+    left: 68px;
+    position: relative;
+    top: -42px;
+    width:900px;
+    
+}
+
+#smaller
+{
+    font-size:12px;
+}
+#waste
+{
+    color: #6699FF;
+    font-size: 34px;
+    left: 170px;
+    line-height: 38px;
+    position: absolute;
+    top: 364px;
+    width: 272px;
+}
+#waste a:link
+{
+    color: #6699FF;
+}
+#waste a:visited
+{
+    color: #6699FF;
+}
+
+#infra
+{
+    color: #013E0B;
+    font-size: 50px;
+    left: -112px;
+    position: relative;
+    top: -19px;
+}
+#trans a:link
+{
+    color: navy;
+}
+#trans a:visited
+{
+    color: navy;
+}
+#trans
+{
+    color: darkolivegreen;
+    font-size: 36px;
+    left: -99px;
+    position: absolute;
+    top: 30px;
+}
+#marine
+{
+    color: #3BA393;
+    font-size: 36px;
+    left: 39px;
+    position: absolute;
+    top: 69px;
+}
+#home
+{
+    color: Green;
+    font-size: 33px;
+    left: 281px;
+    line-height: 29px;
+    position: absolute;
+    top: 535px;
+    width: 40px;
+}
+#bus
+{
+    color: #006633;
+    font-size: 33px;
+    left: 220px;
+    position: absolute;
+    top: 559px;
+}
+#bus a:link
+{
+    color: #006633;
+}
+#bus a:visited
+{
+    color: #006633;
+}
+
+#comm
+{
+    color: #003399;
+    font-size: 50px;
+    left: 184px;
+    position: absolute;
+    top: 584px;
+}
+
+#agri
+{
+    color: darkolivegreen;
+    font-size: 33px;
+    left: 678px;
+    line-height: 28px;
+    position: absolute;
+    top: 450px;
+    width: 234px;
+}
+#agri a:link
+{
+    color: #003300;
+}
+#agri a:visited
+{
+    color: #003300;
+}
+.tooltip h5
+{
+    color: #3BA393;
+    left: 30px;
+    position: relative;
+    top: -82px;
+    font-size: 34px;
+}
+
+.tooltip h6
+{
+    font-size: 34px;
+    left: 10px;
+    position: relative;
+    top: -246px;
+}
+
+.tooltip h7
+{
+    font-size: 34px;
+    left: 27px;
+    position: relative;
+    top: -347px;
+}
+#pfd
+{
+    color: #3333CC;
+    font-size: 34px;
+    left: 632px;
+    line-height: 26px;
+    position: absolute;
+    top: 671px;
+    width: 170px;
+}
+#energy
+{
+    color: #CC6600;
+    font-size: 50px;
+    position: absolute;
+}
+#energy a:link
+{
+    color: #CC6600;
+}
+#energy a:visited
+{
+    color: #CC6600;
+}
+#wind
+{
+    color: #CC6600;
+    font-size: 34px;
+    left: 40px;
+    position: absolute;
+    top: 52px;
+    width: 224px;
+}
+#container2
+{
+    font-family:Myriad, "Trebuchet MS", Sans-Serif;
+    font-size: 34px;
+    line-height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 100px;
+    width: 400px;
+}
+#ewh
+{
+    color: #FF6600;
+    left: 502px;
+    position: absolute;
+    top: 257px;
+}
+
+#itm
+{
+    left: 232px;
+    position: absolute;
+    top: 493px;
+}
+#hbc
+{
+    left: 365px;
+    position: absolute;
+    top: 63px;
+}
+#gn-home
+{
+    top: 100px;
+}

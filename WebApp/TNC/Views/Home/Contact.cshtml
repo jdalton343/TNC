@@ -1,0 +1,42 @@
+﻿@model TNCMVC.Models.ContactUsFieldChecker
+@{
+    ViewBag.Title = "Contact";
+    ViewBag.Current = "Contact";
+    ViewBag.CurrentPageForNavBar = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="contactinfo" class="panel">
+<p>True North Composites</p>
+<p>4318 Dudley Blvd Bldg 475 F 3</p>
+<p>McClellan, CA 95652</p>
+<br />
+<br />
+<p>Tel: 916-546-3608 or 775-421-6100</p>
+<p>Fax: 206-299-9533</p>
+<p>Skype: vsmith8587</p>
+<p>email: admin@true-nc.com</p>
+</div>
+
+@*<div id="emailMessage" class="panel">
+ 
+ <form id="emailForm" method="post" action="@Url.Content("~/Contact/SubmitContact")">
+ <p>Contact Name:
+ <input type="text" name ="contactName" /></p>
+ <p>Email:
+ <input type="text" name ="contactEmail" /></p>
+ <p>Message to send:<br />
+ <textarea cols="50" rows="4" name="contactMessage"></textarea>
+ <p>
+ <input type="submit" name="submit" value="Submit Message" />
+ <input type="reset" name="reset" value="Reset Form" /></p>
+ </form>
+ @Html.ValidationSummary(true, "There were errors on your form, please correct before submitting")
+ @using (Html.BeginForm("SubmitContact", "Contact"))
+ {
+
+@Html.LabelFor(m => m.ContactEmail)
+@Html.TextBoxFor(m => m.ContactEmail)
+<input type="submit" value="Submit Comments" />*@
+@* }*@
+
