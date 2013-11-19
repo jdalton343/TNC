@@ -20,6 +20,19 @@
     #waste { float: left; }
     
     
+        float: left;
+    margin-left: 21%;
+    margin-top: -29%;
+
+
+    #pop-top 
+    {
+        float: left;
+        margin-left: 21%;
+        margin-top: -29%;
+    }
+
+
     </style>
    
 
@@ -164,10 +177,10 @@
         </div>
         </div>
 
-        <div class="bs-docs-example tooltip-demo">
+        <div class="bs-docs-example tooltip-demo model">
         <img alt="sustainability model" src="@Url.Content("~/Assets/TNC/SiteImages/sustaincycle.jpg")" />
           @*<ul class="bs-docs-tooltip-examples">*@
-            <a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-toggle="popover" class="btn" href="#" data-original-title="Popover on top">Popover on top</a>
+            <a id="pop-top" title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-toggle="popover" class="btn" href="#" data-original-title="Popover on top">Popover on top</a>
             <a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="right" data-toggle="popover" class="btn" href="#" data-original-title="Popover on right">Popover on right</a>
 @*                <div class="popover fade right in" style="top: 5.5px; left: 415px; display: block;">
                     <div class="arrow"></div>
@@ -213,7 +226,7 @@
     <script type="text/javascript">
         //$('#tooltip1').tooltip("delay",  "{ show: 500, hide: 300 }");
 
-        $(".bs-docs-tooltip-examples li a").click(function (event) {
+        $(".model a").click(function (event) {
             event.preventDefault();
             //        $( "<div>" )
             //        .append( "default " + event.type + " prevented" )
@@ -223,7 +236,7 @@
             //        
         });
 
-        $('.bs-docs-tooltip-examples li a').popover();
+        //$('.bs-docs-tooltip-examples li a').popover();
     </script>
 
   </body>
