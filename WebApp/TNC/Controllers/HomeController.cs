@@ -17,5 +17,11 @@ namespace TNC.Controllers
         {
             return View();
         }
+
+        public ActionResult Sustainability_Model()
+        {
+            return View();
+        }
+
     }
 }
