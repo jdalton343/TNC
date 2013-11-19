@@ -3,3 +3,10 @@ C:\Users\Transfer\Documents\true-north-composites\WebApp\TNC\bin\TNC.pdb
 C:\Users\Transfer\Documents\true-north-composites\WebApp\TNC\obj\Debug\TNC.csprojResolveAssemblyReference.cache
 C:\Users\Transfer\Documents\true-north-composites\WebApp\TNC\obj\Debug\TNC.dll
 C:\Users\Transfer\Documents\true-north-composites\WebApp\TNC\obj\Debug\TNC.pdb
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\bin\TNC.dll
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\bin\TNC.pdb
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\bin\EntityFramework.dll
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\bin\EntityFramework.xml
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\obj\Debug\TNC.csprojResolveAssemblyReference.cache
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\obj\Debug\TNC.dll
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\obj\Debug\TNC.pdb

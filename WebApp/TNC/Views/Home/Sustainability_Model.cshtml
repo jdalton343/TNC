@@ -10,6 +10,7 @@
     <!-- Le styles -->
     <link href="@Url.Content("~/Assets/Bootstrap/css/bootstrap.css")" rel="stylesheet"> 
     <link href="@Url.Content("~/assets/Bootstrap/css/bootstrap-responsive.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Assets/Bootstrap/css/docs.css")" rel="stylesheet">
     <style>
         
       body {
@@ -163,6 +164,18 @@
         </div>
         </div>
         <img alt="sustainability model" src="@Url.Content("~/Assets/TNC/SiteImages/sustaincycle.jpg")" />
+
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-toggle="popover" class="btn" href="#" data-original-title="Popover on top">Popover on top</a></li>
+            <li><a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="right" data-toggle="popover" class="btn" href="#" data-original-title="Popover on right">Popover on right</a><div class="popover fade right in" style="top: 5.5px; left: 415px; display: block;"><div class="arrow"></div><h3 class="popover-title">Popover on right</h3><div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</div></div></li>
+            <li><a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="bottom" data-toggle="popover" class="btn" href="#" data-original-title="Popover on bottom">Popover on bottom</a></li>
+            <li><a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="left" data-toggle="popover" class="btn" href="#" data-original-title="Popover on left">Popover on left</a></li>
+          </ul>
+        </div>
+
+
+
     
     
     </div>
@@ -183,16 +196,16 @@
     <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-dropdown.js")"></script>
     <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-scrollspy.js")"></script>
     <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-tab.js")"></script>*@
-@*    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-tooltip.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-popover.js")"></script>*@
-   @*<script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-button.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-collapse.js")"></script>
+@*    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-tooltip.js")"></script>*@
+    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-popover.js")"></script>
+    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-button.js")"></script>
+    @*<script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-collapse.js")"></script>
     <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-carousel.js")"></script>
     <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-typeahead.js")"></script> *@
 
     <script type="text/javascript">
         //$('#tooltip1').tooltip("delay",  "{ show: 500, hide: 300 }");
-    
+        $('.bs-docs-tooltip-examples li a').popover();
     </script>
 
   </body>
