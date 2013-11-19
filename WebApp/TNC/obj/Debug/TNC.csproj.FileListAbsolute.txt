@@ -10,3 +10,7 @@ C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\bin\En
 C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\obj\Debug\TNC.csprojResolveAssemblyReference.cache
 C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\obj\Debug\TNC.dll
 C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\obj\Debug\TNC.pdb
+C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\bin\TNC.dll
+C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\bin\TNC.pdb
+C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\obj\Debug\TNC.dll
+C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\obj\Debug\TNC.pdb
