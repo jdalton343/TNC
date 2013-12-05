@@ -1,23 +1,59 @@
-﻿@model TNCMVC.Models.ContactUsFieldChecker
-@{
+﻿@{
     ViewBag.Title = "Contact";
     ViewBag.Current = "Contact";
     ViewBag.CurrentPageForNavBar = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div id="contactinfo" class="panel">
-<p>True North Composites</p>
-<p>4318 Dudley Blvd Bldg 475 F 3</p>
-<p>McClellan, CA 95652</p>
-<br />
-<br />
-<p>Tel: 916-546-3608 or 775-421-6100</p>
-<p>Fax: 206-299-9533</p>
-<p>Skype: vsmith8587</p>
-<p>email: admin@true-nc.com</p>
+@section PageCSS
+{
+    <style type="text/css">
+        .form-signin
+        {
+            background-color: #eee;
+            border: 1px solid #E5E5E5;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            margin: 0 auto 20px;
+            max-width: 300px;
+            padding: 19px 29px 29px;
+        }
+    </style>
+}
+@section PageJavascript{}
+<div class="container">
+    <form class="form-signin">
+    <address>
+        <strong>Twitter, Inc.</strong><br>
+        795 Folsom Ave, Suite 600<br>
+        San Francisco, CA 94107<br>
+        <abbr title="Phone">
+            P:</abbr>
+        (123) 456-7890
+    </address>
+    <address>
+        <strong>Full Name</strong><br>
+        <a href="mailto:#">first.last@example.com</a>
+    </address>
+    </form>
+    <div id="contactinfo" class="panel">
+        <p>
+            True North Composites</p>
+        <p>
+            4318 Dudley Blvd Bldg 475 F 3</p>
+        <p>
+            McClellan, CA 95652</p>
+        <br />
+        <br />
+        <p>
+            Tel: 916-546-3608 or 775-421-6100</p>
+        <p>
+            Fax: 206-299-9533</p>
+        <p>
+            Skype: vsmith8587</p>
+        <p>
+            email: admin@true-nc.com</p>
+    </div>
 </div>
-
 @*<div id="emailMessage" class="panel">
  
  <form id="emailForm" method="post" action="@Url.Content("~/Contact/SubmitContact")">
@@ -37,6 +73,4 @@
 
 @Html.LabelFor(m => m.ContactEmail)
 @Html.TextBoxFor(m => m.ContactEmail)
-<input type="submit" value="Submit Comments" />*@
-@* }*@
-
+<input type="submit" value="Submit Comments" />*@ @* }*@ 
