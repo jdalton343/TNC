@@ -107,9 +107,8 @@
     <Content Include="Assets\Elastislide\jquery.tmpl.min.js" />
     <Content Include="Assets\jQueryUI\jquery-ui-1.8.11.js" />
     <Content Include="Assets\jQueryUI\jquery-ui-1.8.11.min.js" />
-    <Content Include="Assets\jQuery\jquery-1.5.1-vsdoc.js" />
-    <Content Include="Assets\jQuery\jquery-1.5.1.js" />
-    <Content Include="Assets\jQuery\jquery-1.5.1.min.js" />
+    <Content Include="Assets\jQuery\jquery-1.10.2.js" />
+    <Content Include="Assets\jQuery\jquery-1.9.1.js" />
     <Content Include="Assets\jQuery\jquery.min.js" />
     <Content Include="Assets\jQuery\jquery.unobtrusive-ajax.js" />
     <Content Include="Assets\jQuery\jquery.unobtrusive-ajax.min.js" />
