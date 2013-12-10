@@ -377,9 +377,6 @@
     <Folder Include="Assets\TNC\JavaScript\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\Bootstrap\font-awesome\font\fontawesome-webfont.eot" />
     <None Include="Assets\Bootstrap\font-awesome\font\fontawesome-webfont.ttf" />
     <None Include="Assets\Bootstrap\font-awesome\font\fontawesome-webfont.woff" />

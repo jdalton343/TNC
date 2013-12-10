@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Sustainability Model</title>
-    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">* @
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -11,6 +15,10 @@
     <link href="@Url.Content("~/Assets/Bootstrap/css/bootstrap.css")" rel="stylesheet"> 
     <link href="@Url.Content("~/assets/Bootstrap/css/bootstrap-responsive.css")" rel="stylesheet">
     <link href="@Url.Content("~/Assets/Bootstrap/css/docs.css")" rel="stylesheet">
+*@    
+
+@section PageCSS
+{
     <style>
         
       body {
@@ -19,11 +27,7 @@
     @*.tooltip-demo { margin-top: 74px; }*@
     #waste { float: left; }
     
-    
-        float: left;
-    margin-left: 21%;
-    margin-top: -29%;
-
+    #earth-image { float: left; }
 
     #pop-top 
     {
@@ -31,51 +35,28 @@
         margin-left: 21%;
         margin-top: -29%;
     }
-
-
+    #pop-right
+    {
+        float: left;
+        margin-left: 65%;
+        margin-top: -29%;
+    }
+    #pop-bottom
+    {
+       float: left;
+       margin-top: -48%;
+       margin-left: 39%;
+       
+    }
+    #pop-left
+    {
+       float: left;
+       margin-top: -11%;
+       margin-left: 41%;
+       }
     </style>
-   
+ }  
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-@*    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">*@
-
-    @*<link href="@Url.Content("~/Assets/TNC/CSS/Style.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Assets/TNC/CSS/Style1.css")" rel="stylesheet" type="text/css" />*@
-    @*<link href="@Url.Content("~/Assets/Elastislide/elastislide.css")" rel="stylesheet" type="text/css" />*@
-
-
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="@Url.Content("~/")">TNC Home</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="@Url.Content("~/Home/Sustainability_Model")">Sustainability</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
 
     <div class="container">
     <div class="row">
@@ -85,7 +66,7 @@
             <p>Please hover over text for more information about product lines</p>
         </div>
     </div>
-    <div>
+    @*<div>
         <div id="waste">
             <div class="tooltip">
                 Waste to Energy<span class="classic">Waste and Water Recycle Systems </span>
@@ -175,22 +156,58 @@
             <div id="wind">
                 Wind &amp; Hydro</div>
         </div>
-        </div>
+        </div>*@
 
         <div class="bs-docs-example tooltip-demo model">
-        <img alt="sustainability model" src="@Url.Content("~/Assets/TNC/SiteImages/sustaincycle.jpg")" />
-          @*<ul class="bs-docs-tooltip-examples">*@
-            <a id="pop-top" title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="top" data-toggle="popover" class="btn" href="#" data-original-title="Popover on top">Popover on top</a>
-            <a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="right" data-toggle="popover" class="btn" href="#" data-original-title="Popover on right">Popover on right</a>
+        <img id="earth-image" alt="sustainability model" src="@Url.Content("~/Assets/TNC/SiteImages/sustaincycle.jpg")" />
+          @*<ul class="bs-docs-tooltip-examples">*@>
+            <a id="pop-top" title="" data-content="Housing & Commercial Bldgs<br>Community Infrastructure<br>Remote Sheltering and Resorts<br>Garages, Carports, Storage Sheds, and Decks<br>20'-40' Containers - Shipping and Storage<br>"
+                        
+                    data-placement="top" data-toggle="popover" class="btn" href="#" data-original-title="">Businesses</a>
+            <a id="pop-right" title="" data-content="<a href='http://revairwind.com'>Cylindrical Axis Wind Turbines</a><br>Hydro Power Turbines<br>Pipelines<br><Fuel Tanks<br>20'-40' Containers - Shipping and Control Centers<br>" data-placement="right" data-toggle="popover" class="btn" href="#" data-original-title="">Energy</a>
 @*                <div class="popover fade right in" style="top: 5.5px; left: 415px; display: block;">
                     <div class="arrow"></div>
                         <h3 class="popover-title">Popover on right</h3>
                         <div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
                     </div>
                 </div>
-*@            
-            <a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="bottom" data-toggle="popover" class="btn" href="#" data-original-title="Popover on bottom">Popover on bottom</a>
-            <a title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-placement="left" data-toggle="popover" class="btn" href="#" data-original-title="Popover on left">Popover on left</a>
+*@
+
+<a  id="pop-bottom" data-original-title="" href="#" class="btn" data-toggle="popover" data-placement="bottom" 
+    data-content="Charter and Ferry Passenger Transport Vessels<br>Mobile Clinic and Hospital Ships<br>Workboats and Barges<br>Marinas<br>Patrol Boats<br>Seawalls<br>Storage Tanks<br>20'-40' Containers - Shipping and Storage<br>"
+@*                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Workboats and Barges&lt;/p&gt;
+                        &lt;p&gt;
+                            Marinas &amp; Ports&lt;/p&gt;
+                        &lt;p&gt;   
+                            Patrol Boats&lt;/p&gt;
+                        &lt;p&gt;
+                            Seawalls&lt;/p&gt;
+                        &lt;p&gt;
+                            Storage Tanks&lt;/p&gt;
+                        &lt;p&gt;
+                            20'-40' Containers - Shipping and Storage&lt;/p&gt;*@ title="" id="pop-bottom">Transportation</a>
+            
+@*            <a  title="" data-content="">
+                <ul>
+                    <li>Charter and Ferry Passenger Transport Vessels</li>
+                    <li>Mobile Clinic and Hospital Ships</li>
+                        <p>
+                            Workboats and Barges</p>
+                        <p>
+                            Marinas & Ports</p>
+                        <p>
+                            Patrol Boats</p>
+                        <p>
+                            Seawalls</p>
+                        <p>
+                            Storage Tanks</p>
+                        <p>
+                            20'-40' Containers - Shipping and Storage
+                </ul>
+            </a>
+*@            <a id="pop-left" title="" data-content="Food Towers and Livestock Sheltering<br>Irrigation Systems<br>Food and Water Storage Containers<br>Aquaculture - Food Wells and Repopulation<br>20'-40' Containers - Shipping and Storage" data-placement="left" data-toggle="popover" class="btn" href="#" data-original-title="">Water and Agriculture</a>
           
         </div>
 
@@ -200,45 +217,24 @@
     
     </div>
 
-@*    <div class="bs-docs-example tooltip-demo">
-            <p style="margin-bottom: 0;" class="muted">Tight pants next level keffiyeh <a id="tooltip1" title="" data-toggle="tooltip" href="#" data-original-title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a title="" data-toggle="tooltip" href="#" data-original-title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a title="" data-toggle="tooltip" href="#" data-original-title="A much longer tooltip belongs right here to demonstrate the max-width we apply.">whatever keytar</a>, scenester farm-to-table banksy Austin <a title="" data-toggle="tooltip" href="#" data-original-title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
-            </p>
-    </div>*@
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-   <script src="@Url.Content("~/Assets/jQuery/jquery.min.js")"></script>
-     @*<script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-transition.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-alert.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-modal.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-dropdown.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-scrollspy.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-tab.js")"></script>*@
-@**@    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-tooltip.js")"></script>
+@section PageJavascript
+{
     <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-popover.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-button.js")"></script>
-    @*<script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-collapse.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-carousel.js")"></script>
-    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-typeahead.js")"></script> *@
-
+    <script src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-tooltip.js")"></script>
     <script type="text/javascript">
         //$('#tooltip1').tooltip("delay",  "{ show: 500, hide: 300 }");
-
+        $(".model a").popover({ html: true });
         $(".model a").click(function (event) {
             event.preventDefault();
             //        $( "<div>" )
             //        .append( "default " + event.type + " prevented" )
             //        .appendTo( "#log" );
             console.info(this);
-            $(this).popover();
+
             //        
         });
 
         //$('.bs-docs-tooltip-examples li a').popover();
     </script>
 
-  </body>
-</html>
-
+}
