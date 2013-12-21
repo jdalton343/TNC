@@ -1,0 +1,294 @@
+﻿@using System.Collections.Generic
+@{
+    ViewBag.Title = "Gallery";
+    ViewBag.Current = "Gallery";
+    ViewBag.CurrentPageForNavBar = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section PageCSS{}
+@section PageJavascript{}
+
+@{
+    List<Tuple<string,string,string>>myList = new List<Tuple<string,string,string>>()
+    {
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/wind3.jpg","/Assets/TNC/ContentImages/wind3.jpg","3-5 kW prototype at McClellan Exhibit 2012"),  @*Item 1 is Img src, Item 2 is href, Item 3 is title*@
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/wind1.jpg","~/Assets/TNC/ContentImages/wind1.jpg","Power in a Box – Launched 2012"),  
+        Tuple.Create("/Assets/TNC/ContentImages/thumbs/wind2.jpg","/Assets/TNC/ContentImages/wind2.jpg","5 -30 kW 2012 prototype under construction 12’ (3.6 m)"),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/container1.jpg","~/Assets/TNC/ContentImages/container1.jpg","Flat-stock product infused for container  2012 "),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/container2","~/Assets/TNC/ContentImages/container2","Container 2012 – offering 20’ (6 m) and 40’ (12 m) standard shipping sizes and sold as refrigeration food or water storage, control centers, remote labs, fuel tanks, shipping, or housing."),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/container3.jpg","~/Assets/TNC/ContentImages/cont3.jpg","Container with waterproof door and hatches"),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/container4.jpg","~/Assets/TNC/ContentImages/container4.jpg","Container with waterproof door and hatches – note the cutout for the AC unit or refrigeration unit or fuel dispenser."),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/wind1.jpg","~/Assets/TNC/ContentImages/wind1.jpg","Power in a Box – Container and turbine packages for remote power applications"),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat1.jpg","~/Assets/TNC/ContentImages/sailcat1.jpg","65’ (20m) Sailing catamaran built in 2004"),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat2.jpg","~/Assets/TNC/ContentImages/sailcat2.jpg","65’ (20m) Sailing catamaran built in 2004"),  
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat3.jpg","~/Assets/TNC/ContentImages/sailcat3.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – bulkheads and molds"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat4.jpg","~/Assets/TNC/ContentImages/sailcat4.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – exterior hull view"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat5.jpg","~/Assets/TNC/ContentImages/sailcat5.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – inner hull view"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat6.jpg","~/Assets/TNC/ContentImages/sailcat6.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – assembly"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat7.jpg","~/Assets/TNC/ContentImages/sailcat7.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – assembly"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat8.jpg","~/Assets/TNC/ContentImages/sailcat8.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – painting"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat9.jpg","~/Assets/TNC/ContentImages/sailcat9.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – painting – added nonskid"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat10.jpg","~/Assets/TNC/ContentImages/sailcat10.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – attached the nets forward"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat11.jpg","~/Assets/TNC/ContentImages/sailcat11.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – view underside of bow"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat12.jpg","~/Assets/TNC/ContentImages/sailcat12.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – inside charter version"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat13.jpg","~/Assets/TNC/ContentImages/sailcat13.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – inside charter version - windows"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat14.jpg","~/Assets/TNC/ContentImages/sailcat14.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – inside charter version - looking forward"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat15.jpg","~/Assets/TNC/ContentImages/sailcat15.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – charter version – navigation station "),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat16.jpg","~/Assets/TNC/ContentImages/sailcat16.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – charter version – navigation station(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat17.jpg","~/Assets/TNC/ContentImages/sailcat17.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – charter version – galley"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat18.jpg","~/Assets/TNC/ContentImages/sailcat18.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – charter version – electrical panel"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/sailcat19.jpg","~/Assets/TNC/ContentImages/sailcat19.jpg","65’ (20m) Sailing catamaran built in 2004 – construction photo – charter version – electrical panel(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry1.jpg","~/Assets/TNC/ContentImages/ferry1.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – HSC 2000 – 204 passenger capacity – Subchapter T certified for 149 passengers – 30 knots"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry2.jpg","~/Assets/TNC/ContentImages/ferry2.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – Construction photo - flipping the hulls"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry3.jpg","~/Assets/TNC/ContentImages/ferry3.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – Construction photo - aft"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry5.jpg","~/Assets/TNC/ContentImages/ferry5.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – Construction photo - port"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry6.jpg","~/Assets/TNC/ContentImages/ferry6.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – launch – over ground"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry7.jpg","~/Assets/TNC/ContentImages/ferry7.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – Ollie and Dingo"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry8.jpg","~/Assets/TNC/ContentImages/ferry8.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – launch - crane into the water"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry9.jpg","~/Assets/TNC/ContentImages/ferry9.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – launch - crane into the water(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry10.jpg","~/Assets/TNC/ContentImages/ferry10.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – dockside after launch"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry11.jpg","~/Assets/TNC/ContentImages/ferry11.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – dockside after launch(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry12.jpg","~/Assets/TNC/ContentImages/ferry12.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – after launch - not the underside foil"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry13.jpg","~/Assets/TNC/ContentImages/ferry13.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – no wake"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry13a.jpg","~/Assets/TNC/ContentImages/ferry13a.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – port view"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry14.jpg","~/Assets/TNC/ContentImages/ferry14.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – jet driven - shallow shaft"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry15.jpg","~/Assets/TNC/ContentImages/ferry15.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – no wake(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry15a.jpg","~/Assets/TNC/ContentImages/ferry15a.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – jet driven - shallow shaft(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry16.jpg","~/Assets/TNC/ContentImages/ferry16.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – port profile"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry16a.jpg","~/Assets/TNC/ContentImages/ferry16a.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – topside"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry17.jpg","~/Assets/TNC/ContentImages/ferry17.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials - topside Ollie and Ringo"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry18.jpg","~/Assets/TNC/ContentImages/ferry18.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – jet driven - forward deck"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry19.jpg","~/Assets/TNC/ContentImages/ferry19.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – upper deck - port steering station"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry20.jpg","~/Assets/TNC/ContentImages/ferry20.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials - inside pilot house"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry21.jpg","~/Assets/TNC/ContentImages/ferry21.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials - inside pilot house(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry22.jpg","~/Assets/TNC/ContentImages/ferry22.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – dual navigation and radar"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry23.jpg","~/Assets/TNC/ContentImages/ferry23.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – dual navigation and radar(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry24.jpg","~/Assets/TNC/ContentImages/ferry24.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - aft looking forward"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry25.jpg","~/Assets/TNC/ContentImages/ferry25.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - forward looking aft"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry26.jpg","~/Assets/TNC/ContentImages/ferry26.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - forward seats"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry27.jpg","~/Assets/TNC/ContentImages/ferry27.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - forward windows and center door"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry29.jpg","~/Assets/TNC/ContentImages/ferry29.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - mid ship port doors"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry30.jpg","~/Assets/TNC/ContentImages/ferry30.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - windows port"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry31.jpg","~/Assets/TNC/ContentImages/ferry31.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside VIP lounge in the pilot house - see outside aft deck"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry32.jpg","~/Assets/TNC/ContentImages/ferry32.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - galley aft"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry33.jpg","~/Assets/TNC/ContentImages/ferry33.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - galley aft(2)"), 
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/ferry34.jpg","~/Assets/TNC/ContentImages/ferry34.jpg","85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside cabin - Build crew bidding farewell"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/special1.jpg","~/Assets/TNC/ContentImages/spec1.jpg","Special Ops vessel – 1997"),   
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/special2.jpg","~/Assets/TNC/ContentImages/spec2.jpg","Special Ops vessel – 1997(2)"),    
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/special3.jpg","~/Assets/TNC/ContentImages/spec3.jpg","Special Ops vessel – 1997(3)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing1.jpg","~/Assets/TNC/ContentImages/house1.jpg","Housing sample for exhibition 2007 – exterior"),    
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing2.jpg","~/Assets/TNC/ContentImages/house2.jpg","Housing sample for exhibition 2007 – cut view"), 
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing3.jpg","~/Assets/TNC/ContentImages/house3.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – under construction"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing4.jpg","~/Assets/TNC/ContentImages/house4.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – assembled on site"),    
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing6.jpg","~/Assets/TNC/ContentImages/house6.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly - we floated the parts ashore"), 
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing7.jpg","~/Assets/TNC/ContentImages/house7.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly - during assembly on site"), 
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing5.jpg","~/Assets/TNC/ContentImages/house5.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly - during assembly on site(2)"),                    
+    }
+    
+}
+ <div class="container">
+        <div class="header">
+           
+                                                                                     
+            <div class="clr">
+            </div>
+        </div>
+        <!-- header -->
+        <div class="content">
+            <h1>
+                True North Composites Image Gallery
+            </h1>
+            
+            <div id="rg-gallery" class="rg-gallery">
+                <div class="rg-thumbs">
+                    <!-- Elastislide Carousel Thumbnail Viewer -->
+                    <div class="es-carousel-wrapper">
+                        <div class="es-nav">
+                            <span class="es-nav-prev">Previous</span> <span class="es-nav-next">Next</span>
+                        </div>
+                        <div class="es-carousel">
+                            <ul style="width: 3888px; margin-left: 0px; display: block;">
+                             <link rel="stylesheet" href="/Assets/Fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/wind3.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/wind3.jpg")" alt="image23" data-description="3-5 kW prototype at McClellan Exhibit 2012" /></a></li>
+                               <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/wind1.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/wind1.jpg")" alt="image19" data-description="Power in a Box – Launched 2012" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/wind2.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/wind2.jpg")" alt="image10" data-description="5 -30 kW 2012 prototype under construction 12’ (3.6 m) " /></a></li>
+                               <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/container1.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/container1.jpg")" alt="image11" data-description="Flat-stock product infused for container  2012 " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/container2.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/container2.jpg")" alt="image12" data-description="Container 2012 – offering 20’ (6 m) and 40’ (12 m) standard shipping sizes and sold as refrigeration food or water storage, control centers, remote labs, fuel tanks, shipping, or housing. " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/container3.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/cont3.jpg")" alt="image13" data-description="Container with waterproof door and hatches " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/container4.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/container4.jpg")" alt="image14" data-description="Container with waterproof door and hatches – note the cutout for the AC unit or refrigeration unit or fuel dispenser." /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/wind1.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/wind1.jpg")" alt="image23" data-description="Power in a Box – Container and turbine packages for remote power applications " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat1.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat1.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat2.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat2.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat3.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat3.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – bulkheads and molds " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat4.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat4.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – exterior hull view " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat5.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat5.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – inner hull view" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat6.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat6.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – assembly " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat7.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat7.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – assembly " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat8.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat8.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – painting " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat9.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat9.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – painting – added nonskid" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat10.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat10.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – attached the nets forward " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat11.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat11.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – view underside of bow" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat12.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat12.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – inside charter version  " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat13.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat13.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – inside charter version - windows" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat14.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat14.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – inside charter version  looking forward" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat15.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat15.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – charter version – navigation station " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat16.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat16.jpg")" alt="image23" data-description=" 65’ (20m)  Sailing catamaran built in 2004 – construction photo – charter version – navigation station(2) " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat17.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat17.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – charter version – galley" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat18.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat18.jpg")" alt="image23" data-description="65’ (20m)  Sailing catamaran built in 2004 – construction photo – charter version – electrical panel " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/sailcat19.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/sailcat19.jpg")" alt="image23" data-description=" 65’ (20m)  Sailing catamaran built in 2004 – construction photo – charter version – electrical panel(2)" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry1.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry1.jpg")" alt="image16" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – HSC 2000 – 204 passenger capacity – Subchapter T certified for 149 passengers – 30 knots " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry2.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry2.jpg")" alt="image17" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – construction photo – flipping the hulls " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry3.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry3.jpg")" alt="image18" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – construction photo – aft" /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry5.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry5.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – construction photo – port " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry6.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry6.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – launch – over ground" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry7.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry7.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – Ollie and Dingo" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry8.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry8.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – launch – crane into the water " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry9.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry9.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – launch – crane into the water(2)" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry10.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry10.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – dockside after launch " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry11.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry11.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – dockside after launch(2)" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry12.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry12.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials -  after launch – note the underside foil " /></a></li>
+                                  <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry13.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry13.jpg")" alt="image21" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – no wake" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry13a.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry13a.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – port view" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry14.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry14.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – jet driven – shallow draft " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry15.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry15.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – no wake(2) " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry15a.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry15a.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – jet driven – shallow draft(2) " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry16.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry16.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – port profile " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry16a.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry16a.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – topside " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry17.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry17.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – topside Ollie and Dingo " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry18.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry18.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – forward deck " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry19.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry19.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – upper deck – port steering station " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry20.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry20.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside pilot house " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry21.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry21.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – inside pilot house (2) " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry22.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry22.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – dual navigation and radar " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry23.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry23.jpg")" alt="image20" data-description=" 85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – sea trials – dual navigation and radar (2)" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry24.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry24.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin – aft looking forward " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry25.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry25.jpg")" alt="image20" data-description=" 85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin forward looking aft " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry26.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry26.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin forward seats " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry27.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry27.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin forward windows and center door   " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry28.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry29.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin mid-ship port doors" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry30.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry30.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin windows port" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry31.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry31.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside VIP lounge in the pilot house – see outside aft deck " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry32.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry32.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin galley aft " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry33.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry33.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – inside cabin galley aft (2) " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/ferry34.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/ferry34.jpg")" alt="image20" data-description="85’ (26 m) Foil assisted high-speed catamaran passenger ferry built in 2005 – Build crew bidding farewell " /></a></li>
+                                  <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/special1.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/spec1.jpg")" alt="image15" data-description="Special Ops vessel – 1997 " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/special2.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/spec2.jpg")" alt="image15" data-description="Special Ops vessel – 1997 (2) " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/special3.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/spec3.jpg")" alt="image15" data-description="SSpecial Ops vessel – 1997 (3) " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/housing1.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/house1.jpg")" alt="image21" data-description="Housing sample for exhibition 2007 – exterior " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/housing2.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/house2.jpg")" alt="image21" data-description="Housing sample for exhibition 2007 – cut view " /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/housing3.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/house3.jpg")" alt="image21" data-description="Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – under construction" /></a></li>
+                                 <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/housing4.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/house4.jpg")" alt="image21" data-description="Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – assembled on site " /></a></li>
+                                     <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/housing6.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/house6.jpg")" alt="image21" data-description="Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly – we floated the parts ashore " /></a></li>
+                                <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/housing7.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/house7.jpg")" alt="image22" data-description="Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly – during assembly on site " /></a></li>
+                               <li><a href="#">
+                                    <img src="@Url.Content("~/Assets/TNC/ContentImages/thumbs/housing5.jpg")" data-large="@Url.Content("~/Assets/TNC/ContentImages/house5.jpg")" alt="image21" data-description="Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly – during assembly on site (2) " /></a></li>
+                                   
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Elastislide Carousel Thumbnail Viewer -->
+                </div>
+                <!-- rg-thumbs -->
+            </div>
+            <!-- rg-gallery -->
+            <p class="sub">
+            </p>
+        </div>
+        <!-- content -->
+    </div>
+    <!-- container -->
+    <script type="text/javascript" src="/Assets/jQuery/jquery.min.js"></script>
+    <script type="text/javascript" src="/Assets/Fancybox/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/Assets/Fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+  @*  <script type="text/javascript" src="/Assets/Elastislide/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="/Assets/Elastislide/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Assets/Elastislide/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="/Assets/Elastislide/gallery.js"></script>
+*@
+$(document).ready(function() {
+	$(".fancybox-thumb").fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+			}
+		}
+	});
+});
