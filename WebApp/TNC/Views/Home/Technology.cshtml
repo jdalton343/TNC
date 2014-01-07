@@ -1,26 +1,37 @@
-﻿@{
+﻿<head>
+@{
     ViewBag.Title = "Technology";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section PageCSS{}
 @section PageJavascript{}
-<head>
+<script type="text/javascript" src="~/Assets/jQuery/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="~/Assets/Fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="~/Assets/Fancybox/source/jquery.fancybox.pack.js"></script>
+</head>
  <div id="colors" class="container"><div id="techpanel" class="panel">
     <h3>True North Composites Materials Technology</h3>
 <div></div><p>The proprietary designs, material formulas, and manufacturing processes are the result of over a decade of research and development. The structural material was developed with real environmental forces in mind (such as tsunamis, earth quakes, natural disasters and other hazards) without compromise to its integrity or structural durability.  
 </p><p>Our composites materials are engineered with proprietary blended resins, cores, and fabrics made of similar molecular structure; thus, conducive for chemical crosslinking. This crosslinking technology provides for dynamic strength, durability and versatility. The blended resins are formulated to exotherm during infusion at a predetermined temperature, consequently curing at room temperature. No expensive autoclave equipment or post curing processes are required. Product is ready for service as soon as process is completed.  Both the ease of production and crosslinking technology provide for scalable and replicable manufacturing processes. Structural testing and observable application affirms the materials’ capabilities.
-
-</p><img class="rightpan" alt="Tech Panel" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto.jpg")" style = "position: absolute; top: 300px; right: 1097px;" height = "190" width = "190" /></div><p><div id="imgs"><img class="rightpan" alt="Tech Panel2" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto2.jpg")"style = "position: absolute; top: 308px; right: 939px;" height = "190" width = "160" /><img class="rightpan" alt="Tech Panel3" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto3.jpg")"style = "position: absolute; top: 300px; right: 750px;" height = "187" width = "187" /><img class="rightpan" alt="Tech Panel4" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto4.jpg")"style = "position: absolute; top: 300px; right: 600px;" height = "160" width = "160" /><img class="rightpan" alt="Tech Panel5" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto5.jpg")"style = "position: absolute; top: 300px; right: 418px;" height = "190" width = "190"/>
+</p>
+<a class="fancybox" rel="group"  href="~/Assets/TNC/ContentImages/materialsphoto.jpg" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto.jpg")" alt="" style = "position: absolute; top: 300px; right: 1097px;" height = "190" width = "190" /></div><p><div id="imgs"><img class="rightpan" alt="Tech Panel2" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto2.jpg")"style = "position: absolute; top: 308px; right: 939px;" height = "190" width = "160" /><img class="rightpan" alt="Tech Panel3" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto3.jpg")"style = "position: absolute; top: 300px; right: 750px;" height = "187" width = "187" /><img class="rightpan" alt="Tech Panel4" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto4.jpg")"style = "position: absolute; top: 300px; right: 600px;" height = "160" width = "160" /><img class="rightpan" alt="Tech Panel5" src="@Url.Content("~/Assets/TNC/ContentImages/materialsphoto5.jpg")"style = "position: absolute; top: 300px; right: 418px;" height = "190" width = "190"/>
   </div> <br />
    <br />
    <br />   <br />
    <br />   <br /><br /><br />
-   <br /><p>Although rigid, material elongation characteristic provide for exceptional recovery when stressed. Evolutions of the materials are demonstrative of blunt impact resistance and fire retardant properties. High density cores retain inherent thermal and acoustical advantage. The closed molecular structure prevents reaction or bonding with other elements once cured, making the end product virtually maintenance free.  Acids, alkaline, and ethanol will not deteriorate the material.  Additionally the material is dielectric eliminating the issues of corrosion and electrolysis.  Our distinct composites technologies are suitable for a variety of environments, such as desert, rain forest, salt-water coastal region, arctic, and high-velocity wind.  
+   <br />
+   <p>Although rigid, material elongation characteristic provide for exceptional recovery when stressed. Evolutions of the materials are demonstrative of blunt impact resistance and fire retardant properties. High density cores retain inherent thermal and acoustical advantage. The closed molecular structure prevents reaction or bonding with other elements once cured, making the end product virtually maintenance free.  Acids, alkaline, and ethanol will not deteriorate the material.  Additionally the material is dielectric eliminating the issues of corrosion and electrolysis.  Our distinct composites technologies are suitable for a variety of environments, such as desert, rain forest, salt-water coastal region, arctic, and high-velocity wind.  
    </p>
    
    @*<p>To view some of our concepts @Html.Raw(ViewBag.Current == "Concepts" ? "<a id=\"current\" href=\"" + Url.Content("~/Home/Concepts") + "\" >click here!</a>" : "<a href=\"" + Url.Content("~/Home/Concepts") + "\" >click here!</a>")</p>*@
-   </div> 
+  
 
+   </div> 
+   <script type="text/javascript">
+       $(document).ready(function () {
+           $(".fancybox").fancybox();
+       });
+</script>
     
-   <
+   
