@@ -117,6 +117,14 @@
     <Content Include="Assets\Fancybox\demo\5_s.jpg" />
     <Content Include="Assets\Fancybox\demo\ajax.txt" />
     <Content Include="Assets\Fancybox\demo\iframe.html" />
+    <Content Include="Assets\Fancybox\demo\Image1Large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image1small.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image2large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image2small .jpg" />
+    <Content Include="Assets\Fancybox\demo\Image3large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image3small .jpg" />
+    <Content Include="Assets\Fancybox\demo\Image4large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image4small .jpg" />
     <Content Include="Assets\Fancybox\demo\index.html" />
     <Content Include="Assets\Fancybox\lib\jquery-1.10.1.min.js" />
     <Content Include="Assets\Fancybox\lib\jquery-1.9.0.min.js" />
@@ -141,6 +149,7 @@
     <Content Include="Assets\jQuery\jquery-1.10.2.js" />
     <Content Include="Assets\jQuery\jquery-1.9.1.js" />
     <Content Include="Assets\jQuery\jquery.min.js" />
+    <Content Include="Assets\jQuery\jquery.mousewheel-3.0.6.pack.js" />
     <Content Include="Assets\jQuery\jquery.unobtrusive-ajax.js" />
     <Content Include="Assets\jQuery\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Assets\jQuery\jquery.validate-vsdoc.js" />
@@ -384,6 +393,7 @@
     <Content Include="Assets\TNC\SiteImages\tnc-suscycleb.png" />
     <Content Include="Assets\TNC\SiteImages\views.png" />
     <Content Include="Global.asax" />
+    <None Include="Views\Home\GalleryTemp.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -434,11 +444,13 @@
     <Content Include="Views\Home\Concepts.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Default.cshtml" />
-    <Content Include="Views\Home\Gallery_new.cshtml" />
     <Content Include="Views\Home\History.cshtml" />
     <Content Include="Views\Home\Technology.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\Sustainability_Model.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

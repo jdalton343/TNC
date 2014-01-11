@@ -25,21 +25,31 @@ namespace TNC.Controllers
             ViewBag.HeadTitle = "Sustainability Model | True North Composites";
             return View();
         }
+
         public ActionResult Technology()
         {
             ViewBag.HeadTitle = "Technology | True North Composites";
             return View("~/Views/Home/Technology.cshtml");
         }
+
         public ActionResult Gallery()
         {
             ViewBag.HeadTitle = "Gallery | True North Composites";
             return View("~/Views/Home/Gallery.cshtml");
         }
+
+        public ActionResult GalleryTemp()
+        {
+            ViewBag.HeadTitle = "Gallery | True North Composites";
+            return View("~/Views/Home/GalleryTemp.cshtml");
+        }
+
         public ActionResult Contact()
         {
             ViewBag.HeadTitle = "Contact | True North Composites";
             return View("~/Views/Home/Contact.cshtml");
         }
+
         public ActionResult Blog()
         {
             ViewBag.HeadTitle = "Blog | True North Composites";
