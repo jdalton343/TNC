@@ -35,7 +35,7 @@ namespace TNC.Controllers
         public ActionResult Gallery()
         {
             ViewBag.HeadTitle = "Gallery | True North Composites";
-            return View("~/Views/Home/Gallery.cshtml");
+            return View("~/Views/Home/GalleryAldo.cshtml");
         }
 
         public ActionResult GalleryTemp()

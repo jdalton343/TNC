@@ -14,3 +14,4 @@ C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\bin\TNC.dll
 C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\bin\TNC.pdb
 C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\obj\Debug\TNC.dll
 C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\obj\Debug\TNC.pdb
+C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\bin\TNC.dll.config

@@ -4,11 +4,11 @@
 }
 
 @{
-    List<Tuple<string, string, string>> myList = new List<Tuple<string, string, string>>()
+    List<Tuple<string, string, string>> images = new List<Tuple<string, string, string>>()
     {
         Tuple.Create("~/Assets/TNC/ContentImages/thumbs/wind3.jpg","/Assets/TNC/ContentImages/wind3.jpg","3-5 kW prototype at McClellan Exhibit 2012"),  @*Item 1 is Img src, Item 2 is href, Item 3 is title*@
-        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/wind1.jpg","~/Assets/TNC/ContentImages/wind1.jpg","Power in a Box – Launched 2012"),
         Tuple.Create("/Assets/TNC/ContentImages/thumbs/wind2.jpg","/Assets/TNC/ContentImages/wind2.jpg","5 -30 kW 2012 prototype under construction 12’ (3.6 m)"),
+        /*Tuple.Create("~/Assets/TNC/ContentImages/thumbs/wind1.jpg","~/Assets/TNC/ContentImages/wind1.jpg","Power in a Box – Launched 2012"),
         Tuple.Create("~/Assets/TNC/ContentImages/thumbs/container1.jpg","~/Assets/TNC/ContentImages/container1.jpg","Flat-stock product infused for container  2012 "),
         Tuple.Create("~/Assets/TNC/ContentImages/thumbs/container2","~/Assets/TNC/ContentImages/container2","Container 2012 – offering 20’ (6 m) and 40’ (12 m) standard shipping sizes and sold as refrigeration food or water storage, control centers, remote labs, fuel tanks, shipping, or housing."),
         Tuple.Create("~/Assets/TNC/ContentImages/thumbs/container3.jpg","~/Assets/TNC/ContentImages/cont3.jpg","Container with waterproof door and hatches"),
@@ -77,7 +77,7 @@
         Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing4.jpg","~/Assets/TNC/ContentImages/house4.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – assembled on site"),
         Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing6.jpg","~/Assets/TNC/ContentImages/house6.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly - we floated the parts ashore"),
         Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing7.jpg","~/Assets/TNC/ContentImages/house7.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly - during assembly on site"),
-        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing5.jpg","~/Assets/TNC/ContentImages/house5.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly - during assembly on site(2)"),
+        Tuple.Create("~/Assets/TNC/ContentImages/thumbs/housing5.jpg","~/Assets/TNC/ContentImages/house5.jpg","Gazebo for remote island off the coast of Panama built in 2007 – 24’ (7.3 m) diameter, self-contained – island team during assembly - during assembly on site(2)"),*/
     };
 
 }
@@ -97,11 +97,14 @@
 
 
             }
-            @for (int i = 0; i < 20; i++)
+            @foreach(Tuple<string, string, string> image in images)
             {
-                <a class="fancybox-thumb" rel="fancybox-thumb" href="http://placehold.it/@(largeWidth + "x" + largeHeight)" title="Ayvalık, Turkey (Nejdet Düzen)">
+                @*<a style="padding-bottom:3px;" class="fancybox-thumb" rel="fancybox-thumb" href="http://placehold.it/@(largeWidth + "x" + largeHeight)" title="Ayvalık, Turkey (Nejdet Düzen)">
                     <img src="http://placehold.it//@(smallWidth + "x" + smallHeight)" alt="" />
-                </a>
+                </a>*@
+    <a style="padding-bottom:3px;" class="fancybox-thumb" rel="fancybox-thumb" href="@image.Item2" title="@image.Item3">
+        <img src="@image.Item1" alt="@image.Item3" />
+    </a>
             }
         </div>
 
@@ -110,6 +113,8 @@
     <!-- content -->
 </div>
 <!-- container -->
+
+
 @section PageCSS{
     <style type="text/css">
     </style>
@@ -133,23 +138,23 @@
     <link rel="stylesheet" href="@Url.Content("~/Assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7")" type="text/css" media="screen" />
     <script type="text/javascript" src="@Url.Content("~/Assets/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7")"></script>
 
-    <script>
-        $(document).ready(function () {
-            $(".fancybox").fancybox();
-            $(".fancybox-thumb").fancybox({
-                prevEffect: 'none',
-                nextEffect: 'none',
-                helpers: {
-                    title: {
-                        type: 'outside'
-                    },
-                    thumbs: {
-                        width: 50,
-                        height: 50
-                    }
-                }
-            });
-        });
-    </script>
+<script>
+$(document).ready(function() {
+    $(".fancybox").fancybox();
+    $(".fancybox-thumb").fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+			}
+		}
+	});
+});
+</script>
 }
 
