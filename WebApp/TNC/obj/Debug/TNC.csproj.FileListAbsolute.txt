@@ -15,3 +15,4 @@ C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\bin\TNC.pdb
 C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\obj\Debug\TNC.dll
 C:\Users\X\Documents\Projects Devry\TNC\WebApp\TNC\obj\Debug\TNC.pdb
 C:\Users\Aldo\Documents\Documents\Active projects\DeVryExt\TNC\WebApp\TNC\bin\TNC.dll.config
+C:\Users\Transfer\Documents\true-north-composites\WebApp\TNC\bin\TNC.dll.config
