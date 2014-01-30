@@ -6,11 +6,55 @@
 }
 
 @section PageCSS{}
-@section PageJavascript{}
-
+@section PageJavascript{<script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-transition.js")"></script>
+    <script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-carousel.js")"></script>}
+ 
  <div class="container">
+     <div id="myCarousel" class="carousel slide">
+         <div class="carousel-inner">
+             <div class="item active">
+                 <img src="@Url.Content("~/Assets/TNC/SiteImages/ferry-on-truck.jpg")" alt="">
+                 <div class="container">
+                     <div class="carousel-caption">
+                         @*<h1>Example headline.</h1>*@
+                         <p class="lead">True North Composites is most recognized for our innovative composite materials; tested and validated for strength as well as versatility, and especially well-suited to attain product performance for applications in extreme environments.</p>
+                         @*<a class="btn btn-large btn-primary" href="#">Sign up today</a>*@
+                     </div>
+                 </div>
+             </div>
+             <div class="item">
+                 <img src="@Url.Content("~/assets/TNC/SiteImages/ferry-on-truck.jpg")" alt="">
+                 <div class="container">
+                     <div class="carousel-caption">
+                         @*<h1>Another example headline.</h1>*@
+                         <p class="lead">Our product and system solutions are value engineered for not only superior performance but also for environment compatibility and sustainability attributes. With a focus on <span class="highlight">improving life through responsible technologies</span>, our <span id="highlight">“circle of sustainability”</span>business mission, has spawned multitudes of product solutions. Each creation originates from societal need and founded on simple but sophisticated science applications.</p>
+                         @*<a class="btn btn-large btn-primary" href="#">Learn more</a>*@
+                     </div>
+                 </div>
+             </div>
+             <div class="item">
+                 <img src="@Url.Content("~/assets/TNC/SiteImages/ferry-on-truck.jpg")" alt="">
+                 <div class="container">
+                     <div class="carousel-caption">
+                         @*<h1>One more for good measure.</h1>*@
+                         <p class="lead">Our proprietary composite material serves as the foundation that enables us to develop product lines suitable for niche markets potentially not possible with traditional construction materials, i.e. coastal environments, flood and earthquake zones, extreme temperature and humidity locations, high velocity winds, and insect incursion. With our composites, nothing is impossible.</p>
+                         @*<a class="btn btn-large btn-primary" href="#">Browse gallery</a>*@
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+         <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+     </div><!-- /.carousel -->
+     <img src="http://placehold.it/400x300" />
+     <img src="http://placehold.it/400x300" />
+     <img src="http://placehold.it/362x300" />
+     <img src="http://placehold.it/400x300" />
+     <img src="http://placehold.it/400x300" />
+     <img src="http://placehold.it/362x300" />
 
-        <h3>Brief History and Timeline</h3>
+
+                  @*<h3>Brief History and Timeline</h3>
 
     <div class="row">
             <p>
@@ -75,7 +119,7 @@
                     and ReVair turbines with new generation magnetic motors.</p>
             </p>
 
-    </div>
+    </div>*@
 </div>
 
  @*       <div id="top">
