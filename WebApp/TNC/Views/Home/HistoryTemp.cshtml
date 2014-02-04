@@ -5,7 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section PageCSS{}
+@section PageCSS{
+    <style>
+        .span4 img { margin-bottom: 12px; }
+        figure { float: left; margin: 0px;}
+    </style>    
+    
+}
 @section PageJavascript{<script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-transition.js")"></script>
     <script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-carousel.js")"></script>}
  
@@ -47,14 +53,37 @@
          <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
      </div><!-- /.carousel -->
      
-     <img src="http://placehold.it/400x300" />
-     <img src="http://placehold.it/400x300" />
-     <img src="http://placehold.it/362x300" />
-     <img src="http://placehold.it/400x300" />
-     <img src="http://placehold.it/400x300" />
-     <img src="http://placehold.it/362x300" />
+     <div class="row">
+         <div class="span4">
+             <p><figure><img src="http://placehold.it/200x100" /><figcaption>Here is the caption for this image</figcaption></figure>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum, urna non hendrerit pretium, tortor odio rutrum lacus, a lacinia nulla ligula quis orci. Etiam non fringilla augue. Aliquam erat volutpat. Ut sit amet ultrices libero. Nullam blandit suscipit lectus sed placerat. Phasellus lobortis ante est, ut aliquam metus bibendum vel. Nulla facilisi. Duis tristique ullamcorper tincidunt. Pellentesque interdum dictum lacus, non tempor sem vehicula congue. Aenean non lorem luctus libero iaculis interdum. Fusce non nulla interdum, semper elit id, luctus urna. 
+                 
+             </p>
+             <p>
+                 <figure><img src="http://placehold.it/200x100" /><figcaption>Here is the caption for this image</figcaption></figure>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum, urna non hendrerit pretium, tortor odio rutrum lacus, a lacinia nulla ligula quis orci. Etiam non fringilla augue. Aliquam erat volutpat. Ut sit amet ultrices libero. Nullam blandit suscipit lectus sed placerat. Phasellus lobortis ante est, ut aliquam metus bibendum vel. Nulla facilisi. Duis tristique ullamcorper tincidunt. Pellentesque interdum dictum lacus, non tempor sem vehicula congue. Aenean non lorem luctus libero iaculis interdum. Fusce non nulla interdum, semper elit id, luctus urna.
 
+             </p>
+         </div>
+         <div class="span4">
+             <p>
+                 <figure><img src="http://placehold.it/200x100" /><figcaption>Here is the caption for this image</figcaption></figure>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum, urna non hendrerit pretium, tortor odio rutrum lacus, a lacinia nulla ligula quis orci. Etiam non fringilla augue. Aliquam erat volutpat. Ut sit amet ultrices libero. Nullam blandit suscipit lectus sed placerat. Phasellus lobortis ante est, ut aliquam metus bibendum vel. Nulla facilisi. Duis tristique ullamcorper tincidunt. Pellentesque interdum dictum lacus, non tempor sem vehicula congue. Aenean non lorem luctus libero iaculis interdum. Fusce non nulla interdum, semper elit id, luctus urna.
 
+             </p>
+             <p>
+                 <figure><img src="http://placehold.it/200x300" /><figcaption>Here is the caption for this image</figcaption></figure>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum, urna non hendrerit pretium, tortor odio rutrum lacus, a lacinia nulla ligula quis orci. Etiam non fringilla augue. Aliquam erat volutpat. Ut sit amet ultrices libero. Nullam blandit suscipit lectus sed placerat. Phasellus lobortis ante est, ut aliquam metus bibendum vel. Nulla facilisi. Duis tristique ullamcorper tincidunt. Pellentesque interdum dictum lacus, non tempor sem vehicula congue. Aenean non lorem luctus libero iaculis interdum. Fusce non nulla interdum, semper elit id, luctus urna.
+
+             </p>
+         </div>
+         <div class="span4">
+             <p>
+                 <figure><img src="http://placehold.it/200x300" /><figcaption>Here is the caption for this image</figcaption></figure>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum, urna non hendrerit pretium, tortor odio rutrum lacus, a lacinia nulla ligula quis orci. Etiam non fringilla augue. Aliquam erat volutpat. Ut sit amet ultrices libero. Nullam blandit suscipit lectus sed placerat. Phasellus lobortis ante est, ut aliquam metus bibendum vel. Nulla facilisi. Duis tristique ullamcorper tincidunt. Pellentesque interdum dictum lacus, non tempor sem vehicula congue. Aenean non lorem luctus libero iaculis interdum. Fusce non nulla interdum, semper elit id, luctus urna.
+
+             </p>
+             <p>
+                 <figure><img src="http://placehold.it/200x300" /><figcaption>Here is the caption for this image</figcaption></figure>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum, urna non hendrerit pretium, tortor odio rutrum lacus, a lacinia nulla ligula quis orci. Etiam non fringilla augue. Aliquam erat volutpat. Ut sit amet ultrices libero. Nullam blandit suscipit lectus sed placerat. Phasellus lobortis ante est, ut aliquam metus bibendum vel. Nulla facilisi. Duis tristique ullamcorper tincidunt. Pellentesque interdum dictum lacus, non tempor sem vehicula congue. Aenean non lorem luctus libero iaculis interdum. Fusce non nulla interdum, semper elit id, luctus urna.
+
+             </p>
+         </div>
+    </div>
                   @*<h3>Brief History and Timeline</h3>
 
     <div class="row">
