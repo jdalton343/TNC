@@ -13,7 +13,40 @@
     
 }
 @section PageJavascript{<script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-transition.js")"></script>
-    <script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-carousel.js")"></script>}
+    <script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-carousel.js")"></script>
+    <script>
+    $(document).ready(function () {
+      // line height in 'px'
+      var maxheight=300;
+      var showText = "More";
+      var hideText = "Less";
+
+      $('.textContainer_Truncate').each(function () {
+        var text = $(this);
+        if (text.height() > maxheight){
+            text.css({ 'overflow': 'hidden','height': maxheight + 'px' });
+
+            var link = $('<a href="#">' + showText + '</a>');
+            var linkDiv = $('<div></div>');
+            linkDiv.append(link);
+            $(this).after(linkDiv);
+
+            link.click(function (event) {
+              event.preventDefault();
+
+              if (text.height() > maxheight) {
+                  $(this).html(showText);
+                  text.css('height', maxheight + 'px');
+              } else {
+                  $(this).html(hideText);
+                  text.css('height', 'auto');
+              }
+            });
+        }
+      });
+    });
+        </script>
+    }
  
  <div class="container">
      <div id="myCarousel" class="carousel slide">
@@ -54,7 +87,7 @@
      </div><!-- /.carousel -->
      
      <div class="row">
-         <div class="span4">
+         <div class="span4 textContainer_Truncate">
              <p><figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>True North Composites is the exclusive manufacturer of the proprietary material
                 and designs are protected under a licensing agreement with the founder Rudolph Oelofse. Originally from Cape Town, South Africa Oelofse received his education while in
                 the South African Navy at Wingfield Navy College. An avid traveler and expert yachtsman,
@@ -63,6 +96,7 @@
                
 
 </p>
+             <div class="textContainer_Truncate">
              <p>
                  <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>Oelofse settled in and opened a successful shipyard in Seattle, Washington
                  specializing in ship/yacht repair construction and remodeling projects including
@@ -76,9 +110,10 @@
                 environments but has unlimited applications potential and can be manufactured with
                 replicable and scalable production processes.
              </p>
-             </p>
+            </div>
+             
          </div>
-         <div class="span4">
+         <div class="span4 textContainer_Truncate">
              <p>
                  <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>Oelofse designed and built the world’s first ‘all composite foil assisted
                  fast ferry’ using his advanced technology described by industry experts as ‘beyond
@@ -98,7 +133,7 @@
                 successfully in operation proving the efficiency of the blade designs since 2008.
              </p>
          </div>
-         <div class="span4">
+         <div class="span4 ">
              <p>
                  <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>Oelofse fully develops magnetic technology for advanced turbine designs
                 schduled to launch first quarter 2013.  True North Composites Inc., Opens doors at McClellan Business Park, McClellan
