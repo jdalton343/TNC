@@ -8,12 +8,22 @@
 @section PageCSS{
     <style>
         .span4 img { margin-bottom: 12px; }
-        figure { float: left; margin: 0px;}
+        figure { float: left; margin: 10px;}
+        .years {
+            float: left;
+            margin: 10px;
+            font: bold 30px arial, verdana, sans-serif;
+        }
+
+        #Continued-02-03 { display: none; }
+
     </style>    
     
 }
-@section PageJavascript{<script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-transition.js")"></script>
+@section PageJavascript{
+    <script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-transition.js")"></script>
     <script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-carousel.js")"></script>
+
     <script>
     $(document).ready(function () {
       // line height in 'px'
@@ -49,15 +59,15 @@
     }
  
  <div class="container">
-     <div id="myCarousel" class="carousel slide">
+     @*<div id="myCarousel" class="carousel slide">
          <div class="carousel-inner">
              <div class="item active">
                  <img src="@Url.Content("~/Assets/TNC/SiteImages/ferry-on-truck.jpg")" alt="">
                  <div class="container">
                      <div class="carousel-caption">
-                         @*<h1>Example headline.</h1>*@
+                         @*<h1>Example headline.</h1>* @
                          <p class="lead">True North Composites is most recognized for our innovative composite materials; tested and validated for strength as well as versatility, and especially well-suited to attain product performance for applications in extreme environments.</p>
-                         @*<a class="btn btn-large btn-primary" href="#">Sign up today</a>*@
+                         @*<a class="btn btn-large btn-primary" href="#">Sign up today</a>* @
                      </div>
                  </div>
              </div>
@@ -65,9 +75,9 @@
                  <img src="@Url.Content("~/assets/TNC/SiteImages/ferry-on-truck.jpg")" alt="">
                  <div class="container">
                      <div class="carousel-caption">
-                         @*<h1>Another example headline.</h1>*@
+                         @*<h1>Another example headline.</h1>* @
                          <p class="lead">Our product and system solutions are value engineered for not only superior performance but also for environment compatibility and sustainability attributes. With a focus on <span class="highlight">improving life through responsible technologies</span>, our <span id="highlight">“circle of sustainability”</span>business mission, has spawned multitudes of product solutions. Each creation originates from societal need and founded on simple but sophisticated science applications.</p>
-                         @*<a class="btn btn-large btn-primary" href="#">Learn more</a>*@
+                         @*<a class="btn btn-large btn-primary" href="#">Learn more</a>* @
                      </div>
                  </div>
              </div>
@@ -75,32 +85,41 @@
                  <img src="@Url.Content("~/assets/TNC/SiteImages/ferry-on-truck.jpg")" alt="">
                  <div class="container">
                      <div class="carousel-caption">
-                         @*<h1>One more for good measure.</h1>*@
+                         @*<h1>One more for good measure.</h1>* @
                          <p class="lead">Our proprietary composite material serves as the foundation that enables us to develop product lines suitable for niche markets potentially not possible with traditional construction materials, i.e. coastal environments, flood and earthquake zones, extreme temperature and humidity locations, high velocity winds, and insect incursion. With our composites, nothing is impossible.</p>
-                         @*<a class="btn btn-large btn-primary" href="#">Browse gallery</a>*@
+                         @*<a class="btn btn-large btn-primary" href="#">Browse gallery</a>* @
                      </div>
                  </div>
              </div>
          </div>
          <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
          <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-     </div><!-- /.carousel -->
+     </div>*@<!-- /.carousel -->
      
      <div class="row">
-         <div class="span4 textContainer_Truncate">
-             <p><figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>True North Composites is the exclusive manufacturer of the proprietary material
+         <div class="span4"><!-- textContainer_Truncate -->
+            <div class="years">
+                '98-'01
+
+            </div>
+            <p>True North Composites is the exclusive manufacturer of the proprietary material
                 and designs are protected under a licensing agreement with the founder Rudolph Oelofse. Originally from Cape Town, South Africa Oelofse received his education while in
                 the South African Navy at Wingfield Navy College. An avid traveler and expert yachtsman,
                 Oelofse sailed around the world for six years captaining vessels from South Africa
                 to Alaska.
-               
+            </p>
+             <div class="years">
+                 '02-'03
 
-</p>
-             <div class="textContainer_Truncate">
-             <p>
-                 <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>Oelofse settled in and opened a successful shipyard in Seattle, Washington
-                 specializing in ship/yacht repair construction and remodeling projects including
-                 ferries, cruise ships, and commercial fishing vessels up to 400' in length. While
+             </div>
+                 <p>
+                     Oelofse settled in and opened a successful shipyard in Seattle, Washington
+                     specializing in ship/yacht repair construction and remodeling projects including
+                     ferries, cruise ships, and commercial fishing vessels up to 400' in length. 
+                 </p>
+                <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>     
+                <p>    
+                 While
                  operating the shipyard, Oelofse concurrently developed prototype vessels for military
                  applications and specialized competition. His respected forte: Innovation and experience in designs as well as systems and
                  material applications. Innovation and experience is also the foundation for Oelofse’s
@@ -109,40 +128,87 @@
                 versatile, and element resistant. Not only is this superior product ideal for marine
                 environments but has unlimited applications potential and can be manufactured with
                 replicable and scalable production processes.
-             </p>
-            </div>
+                </p>
+            
              
          </div>
-         <div class="span4 textContainer_Truncate">
+         <div class="span4">
+             <!-- textContainer_Truncate -->
+             <div class="years">
+                 '98-'01
+
+             </div>
              <p>
-                 <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>Oelofse designed and built the world’s first ‘all composite foil assisted
-                 fast ferry’ using his advanced technology described by industry experts as ‘beyond
-                 cutting edge’. The vessel exceeds ABS (American Bureau of Shipping), Lloyds of London,
-                 and DNV (Det Norske Veritas) standards; qualifying it also as the world’s first
-                 ‘all composite classed high speed ferry’.The vessel has been operating since 2006
-                 proving the durablity of the material and performance success of the vessel design. Another proof of concept project built with this material was erected on
-                a remote island 85 miles off the coast of Panama. This structure was specifically
-                designed to test logistics and all the systems for generating energy, making water,
-                storage, and communications. Additionally 100% self- sustaining, maintenance free,
-                and element tested.
+                 True North Composites is the exclusive manufacturer of the proprietary material
+                 and designs are protected under a licensing agreement with the founder Rudolph Oelofse. Originally from Cape Town, South Africa Oelofse received his education while in
+                 the South African Navy at Wingfield Navy College. An avid traveler and expert yachtsman,
+                 Oelofse sailed around the world for six years captaining vessels from South Africa
+                 to Alaska.
              </p>
-             </p>
+             <div class="years">
+                 '02-'03
+
+             </div>
+
              <p>
-                 <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>Oelofse developed a unique lift based foil blade design for cylindrical axis
-                wind generators. The blade design, developed on hydrodynamic principles, has been
-                successfully in operation proving the efficiency of the blade designs since 2008.
+                 Oelofse settled in and opened a successful shipyard in Seattle, Washington
+                 specializing in ship/yacht repair construction and remodeling projects including
+                 ferries, cruise ships, and commercial fishing vessels up to 400' in length.
+             </p>
+             <h3><a href="javascript:void(0);" id="summary-click">more (+)</a></h3>
+             <p id="Continued-02-03">
+
+                 While
+                 operating the shipyard, Oelofse concurrently developed prototype vessels for military
+                 applications and specialized competition. His respected forte: Innovation and experience in designs as well as systems and
+                 material applications. Innovation and experience is also the foundation for Oelofse’s
+                 / True North Composites superior composite products and processes. Recognizing and responding to the need for product innovation Oelofse has developed
+                 a composite material ten (10) times stronger than steel at six (6) % the weight,
+                 versatile, and element resistant. Not only is this superior product ideal for marine
+                 environments but has unlimited applications potential and can be manufactured with
+                 replicable and scalable production processes.
              </p>
          </div>
-         <div class="span4 ">
-             <p>
-                 <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>Oelofse fully develops magnetic technology for advanced turbine designs
-                schduled to launch first quarter 2013.  True North Composites Inc., Opens doors at McClellan Business Park, McClellan
 
-             </p>
+         <div class="span4">
+             <!-- textContainer_Truncate -->
+             <div class="years">
+                 '98-'01
+
+             </div>
              <p>
-                 <figure><img src="http://placehold.it/200x100" /><figcaption></figcaption></figure>True North developed our ‘Power in a Box” concept, composite container line,
-                    and ReVair turbines with new generation magnetic motors.
+                 True North Composites is the exclusive manufacturer of the proprietary material
+                 and designs are protected under a licensing agreement with the founder Rudolph Oelofse. Originally from Cape Town, South Africa Oelofse received his education while in
+                 the South African Navy at Wingfield Navy College. An avid traveler and expert yachtsman,
+                 Oelofse sailed around the world for six years captaining vessels from South Africa
+                 to Alaska.
              </p>
+             <div class="years">
+                 '02-'03
+
+             </div>
+             <p>
+                 Oelofse settled in and opened a successful shipyard in Seattle, Washington
+                 specializing in ship/yacht repair construction and remodeling projects including
+                 ferries, cruise ships, and commercial fishing vessels up to 400' in length.
+             </p>
+             
+
+ 
+         <script>
+
+             $("#summary-click").click(function () {
+                 if ($(this).text() == "more (+)")
+                     $(this).text("less (-)");
+                 else
+                     $(this).text("more (+)");
+                 $("#Continued-02-03").toggle("slow");
+             });
+         </script>
+
+ 
+
+
          </div>
     </div>
                   @*<h3>Brief History and Timeline</h3>
