@@ -6,19 +6,31 @@
 }
 
 @section PageCSS{
-    <style>
-        .span4 img { margin-bottom: 12px; }
-        figure { float: left; margin: 10px;}
-        .years {
-            float: left;
-            margin: 10px;
-            font: bold 30px arial, verdana, sans-serif;
-        }
+<link rel="stylesheet" href="@Url.Content("/Assets/Bitstream/webfonts/bitstreamverasans_roman_macroman/stylesheet.css")" type="text/css" charset="utf/8" />
+<style>     
+   
 
-        #Continued-02-03 { display: none; }
+    .span4 img {
+        margin-bottom: 12px;
+    }
 
-    </style>    
-    
+    figure {
+        float: left;
+        margin: 10px;
+    }
+
+    .years {
+        float: left;
+        margin: 10px;
+        font: bold 30px arial, verdana, sans-serif;
+        font-family:'bitstream_vera_sansroman' ;
+    }
+
+    #Continued-02-03 {
+        display: none;
+    }
+</style>    
+   
 }
 @section PageJavascript{
     <script src="@Url.Content("/Assets/Bootstrap/js/bootstrap-transition.js")"></script>
@@ -110,7 +122,7 @@
                 Oelofse sailed around the world for six years captaining vessels from South Africa
                 to Alaska.
              </p>
-             <div class="years">
+             <div class="years" >
                  1989
 
              </div>
@@ -304,3 +316,4 @@
             for photos
         </p>
 *@    
+&copy;<p>2003 by Bitstream, Inc.</p>
