@@ -104,7 +104,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Bitstream\Bitstream Vera License.txt" />
+    <Content Include="Assets\Bitstream\BitstreamVeraLicense.txt" />
     <Content Include="Assets\Bitstream\How_to_use_webfonts.html" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\specimen_files\easytabs.js" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\specimen_files\grid_12-825-55-15.css" />
@@ -542,7 +542,7 @@
     <Content Include="Assets\TNC\SiteImages\tnc-suscycleb.png" />
     <Content Include="Assets\TNC\SiteImages\views.png" />
     <Content Include="Global.asax" />
-    <Content Include="Views\Home\GalleryAldo.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
     <Content Include="packages.config" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.eot" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.ttf" />
@@ -556,7 +556,6 @@
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.eot" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.ttf" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.woff" />
-    <None Include="Views\Home\GalleryTemp.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -573,7 +572,6 @@
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\ViewPage1.cshtml" />
     <Content Include="Views\Home\History.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -605,16 +603,12 @@
     <None Include="Assets\Bootstrap\font-awesome\scss\_variables.scss" />
     <Content Include="Views\Contact\ContactSubmissionAcknowledgment.cshtml" />
     <Content Include="Views\Home\Blog.cshtml" />
-    <Content Include="Views\Home\Concepts.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Contact_New.cshtml" />
     <Content Include="Views\Home\Default.cshtml" />
-    <Content Include="Views\Home\History_old.cshtml" />
     <Content Include="Views\Home\Technology.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\Sustainability_Model.cshtml" />
-    <Content Include="Views\Home\Gallery.cshtml">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="Views\Home\Attributions.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

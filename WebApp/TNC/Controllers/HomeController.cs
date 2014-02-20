@@ -35,14 +35,10 @@ namespace TNC.Controllers
         public ActionResult Gallery()
         {
             ViewBag.HeadTitle = "Gallery | True North Composites";
-            return View("~/Views/Home/GalleryAldo.cshtml");
+            return View("~/Views/Home/Gallery.cshtml");
         }
 
-        public ActionResult GalleryTemp()
-        {
-            ViewBag.HeadTitle = "Gallery | True North Composites";
-            return View("~/Views/Home/GalleryTemp.cshtml");
-        }
+      
 
         public ActionResult Contact()
         {
@@ -54,6 +50,12 @@ namespace TNC.Controllers
         {
             ViewBag.HeadTitle = "Blog | True North Composites";
             return View("~/Views/Home/Blog.cshtml");
+        }
+
+        public ActionResult Attributions()
+        {
+            ViewBag.HeadTitle = "Attributions | True North Composites";
+            return View("~/Views/Home/Attributions.cshtml");
         }
     }
 }

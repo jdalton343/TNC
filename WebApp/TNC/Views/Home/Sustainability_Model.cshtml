@@ -2,20 +2,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Sustainability Model</title>
-    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">* @
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="@Url.Content("~/Assets/Bootstrap/css/bootstrap.css")" rel="stylesheet"> 
-    <link href="@Url.Content("~/assets/Bootstrap/css/bootstrap-responsive.css")" rel="stylesheet">
-    <link href="@Url.Content("~/Assets/Bootstrap/css/docs.css")" rel="stylesheet">
-*@    
 
 @section PageCSS
 {
@@ -66,148 +53,23 @@
             <p>Please hover over text for more information about product lines</p>
         </div>
     </div>
-    @*<div>
-        <div id="waste">
-            <div class="tooltip">
-                Waste to Energy<span class="classic">Waste and Water Recycle Systems </span>
-            </div>
-        </div>
-        <div id="itm">
-            <div id="infra">
-                Containers</div>
-            <div id="trans">
-                <div class="tooltip">
-                    Transportation<span class="classic"><p>
-                        Charter and Ferry Passenger Transport Vessels</p>
-                        <p>
-                            Mobile Clinic and Hospital Ships
-                        </p>
-                        <p>
-                            Workboats and Barges</p>
-                        <p>
-                            Marinas & Ports</p>
-                        <p>
-                            Patrol Boats</p>
-                        <p>
-                            Seawalls</p>
-                        <p>
-                            Storage Tanks</p>
-                        <p>
-                            20'-40' Containers - Shipping and Storage</p>
-                    </span>
-                </div>
-            </div>
-            <div id="marine">
-                Marine</div>
-        </div>
-        <div id="hbc">
-            <div id="home">
-                Homes</div>
-            <div id="bus">
-                <div class="tooltip">
-                    Businesses<span class="classic"><p>
-                        Housing & Commercial Bldgs.</p>
-                        <p>
-                            Community Infrastructure</p>
-                        <p>
-                            Remote Sheltering and Resorts</p>
-                        <p>
-                            Garages, Carports, Storage Sheds, and Decks</p>
-                        <p>
-                            20'-40' Containers - Shipping and Storage
-                        </p>
-                    </span>
-                </div>
-            </div>
-            <div id="comm">
-                Communities</div>
-        </div>
-        <div id="agri">
-            <div class="tooltip"><h5>Water</h5><br />
-               <h6> Agriculture</h6> <br /><h7>Aquaculture</h7><span class="classic"><p>
-                    Agriculture - Food Towers and Livestock Sheltering</p>
-                    <p>
-                        Irrigation Systems</p>
-                    <p>
-                        Food and Water Storage Containers</p>
-                    <p>
-                        Aquaculture - Upwells and Repopulation</p>
-                    <p>
-                        20'-40' Containers - Shipping and Storage</p>
-                </span>
-            </div>
-        </div>
-        <div id="ewh">
-            <div id="energy">
-                <div class="tooltip">
-                    Energy<span class="classic"><p>
-                        <a href="http://www.revairwind.com">Cylindrical Axis Wind Turbines</a></p>
-                        <p>
-                            Hydro Power Turbines</p>
-                        <p>
-                            Pipelines</p>
-                        <p>
-                            Fuel Tanks</p>
-                        <p>
-                            20'-40' Containers - Shipping and Control Centers</p>
-                    </span>
-                </div>
-            </div>
-            <div id="wind">
-                Wind &amp; Hydro</div>
-        </div>
-        </div>*@
+   
 
         <div class="bs-docs-example tooltip-demo model">
         <img id="earth-image" alt="sustainability model" src="@Url.Content("~/Assets/TNC/SiteImages/sustaincycle.jpg")" />
-          @*<ul class="bs-docs-tooltip-examples">*@>
+        
             <a id="pop-top" title="" data-content="Housing & Commercial Bldgs<br>Community Infrastructure<br>Remote Sheltering and Resorts<br>Garages, Carports, Storage Sheds, and Decks<br>20'-40' Containers - Shipping and Storage<br>"
                         
-                    data-placement="top" data-toggle="popover" class="btn" href="#" data-original-title="">Businesses</a>
+                    data-placement="left" data-toggle="popover" class="btn" href="#" data-original-title="">Businesses</a>
             <a id="pop-right" title="" data-content="<a href='http://revairwind.com'>Cylindrical Axis Wind Turbines</a><br>Hydro Power Turbines<br>Pipelines<br><Fuel Tanks<br>20'-40' Containers - Shipping and Control Centers<br>" data-placement="right" data-toggle="popover" class="btn" href="#" data-original-title="">Energy</a>
-@*                <div class="popover fade right in" style="top: 5.5px; left: 415px; display: block;">
-                    <div class="arrow"></div>
-                        <h3 class="popover-title">Popover on right</h3>
-                        <div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                    </div>
-                </div>
-*@
+             
 
 <a  id="pop-bottom" data-original-title="" href="#" class="btn" data-toggle="popover" data-placement="bottom" 
     data-content="Charter and Ferry Passenger Transport Vessels<br>Mobile Clinic and Hospital Ships<br>Workboats and Barges<br>Marinas<br>Patrol Boats<br>Seawalls<br>Storage Tanks<br>20'-40' Containers - Shipping and Storage<br>"
-@*                        &lt;/p&gt;
-                        &lt;p&gt;
-                            Workboats and Barges&lt;/p&gt;
-                        &lt;p&gt;
-                            Marinas &amp; Ports&lt;/p&gt;
-                        &lt;p&gt;   
-                            Patrol Boats&lt;/p&gt;
-                        &lt;p&gt;
-                            Seawalls&lt;/p&gt;
-                        &lt;p&gt;
-                            Storage Tanks&lt;/p&gt;
-                        &lt;p&gt;
-                            20'-40' Containers - Shipping and Storage&lt;/p&gt;*@ title="" id="pop-bottom">Transportation</a>
+                   title="" id="pop-bottom">Transportation</a>
             
-@*            <a  title="" data-content="">
-                <ul>
-                    <li>Charter and Ferry Passenger Transport Vessels</li>
-                    <li>Mobile Clinic and Hospital Ships</li>
-                        <p>
-                            Workboats and Barges</p>
-                        <p>
-                            Marinas & Ports</p>
-                        <p>
-                            Patrol Boats</p>
-                        <p>
-                            Seawalls</p>
-                        <p>
-                            Storage Tanks</p>
-                        <p>
-                            20'-40' Containers - Shipping and Storage
-                </ul>
-            </a>
-*@            <a id="pop-left" title="" data-content="Food Towers and Livestock Sheltering<br>Irrigation Systems<br>Food and Water Storage Containers<br>Aquaculture - Food Wells and Repopulation<br>20'-40' Containers - Shipping and Storage" data-placement="left" data-toggle="popover" class="btn" href="#" data-original-title="">Water and Agriculture</a>
+
+           <a id="pop-left" title="" data-content="Food Towers and Livestock Sheltering<br>Irrigation Systems<br>Food and Water Storage Containers<br>Aquaculture - Food Wells and Repopulation<br>20'-40' Containers - Shipping and Storage" data-placement="bottom" data-toggle="popover" class="btn" href="#" data-original-title="">Water and Agriculture</a>
           
         </div>
 
