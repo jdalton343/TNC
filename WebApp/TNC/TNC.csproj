@@ -530,6 +530,7 @@
     <Content Include="Assets\TNC\SiteImages\TNC-Case-List-More.jpg" />
     <Content Include="Assets\TNC\SiteImages\TNC-Case-Read-More.jpg" />
     <Content Include="Assets\TNC\SiteImages\TNC-Case.jpg" />
+    <Content Include="Assets\TNC\SiteImages\TNC-favicon.ico" />
     <Content Include="Assets\TNC\SiteImages\TNC-Gallery.jpg" />
     <Content Include="Assets\TNC\SiteImages\TNC-Home-PagBackground.jpg" />
     <Content Include="Assets\TNC\SiteImages\TNC-Home-Page.jpg" />

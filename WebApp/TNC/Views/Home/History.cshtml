@@ -22,7 +22,7 @@
     .years {
         float: left;
         margin: 10px;
-        font: bold 30px arial, verdana, sans-serif;
+        font: bold 50px arial, verdana, sans-serif;
         font-family:'bitstream_vera_sansroman' ;
     }
 
@@ -138,17 +138,16 @@
                  cutting edge’. The vessel exceeds ABS (American Bureau of Shipping), Lloyds of London,
                  and DNV (Det Norske Veritas) standards; qualifying it also as the world’s first
                  ‘all composite classed high speed ferry’.The vessel has been operating since 2006
-                 proving the durablity of the material and performance success of the vessel design.
+                 proving the durablity of the material and performance success of the vessel design.<a href="javascript:void(0);" class="expand">more (+)</a>
              </p>
-             @*h3><a href="javascript:void(0);" id="summary-click">more (+)</a></h3>
-             <p id="Continued-02-03">*@
-
-               <p>  Another proof of concept project built with this material was erected on
-                 a remote island 85 miles off the coast of Panama. This structure was specifically
-                 designed to test logistics and all the systems for generating energy, making water,
-                 storage, and communications. Additionally 100% self- sustaining, maintenance free,
-                 and element tested.
-                   </p>
+             
+                 <p id="summary-click" style="display:none">
+                     Another proof of concept project built with this material was erected on
+                     a remote island 85 miles off the coast of Panama. This structure was specifically
+                     designed to test logistics and all the systems for generating energy, making water,
+                     storage, and communications. Additionally 100% self- sustaining, maintenance free,
+                     and element tested.
+                 </p>
          </div>
 
          
@@ -188,13 +187,19 @@
  
          <script>
 
-             $("#summary-click").click(function () {
+             $(".expand").click(function () {
                  if ($(this).text() == "more (+)")
                      $(this).text("less (-)");
                  else
                      $(this).text("more (+)");
-                 $("#Continued-02-03").toggle("slow");
+                 $("#summary-click").toggle("slow");
              });
+
+
+
+
+
+
          </script>
 
  
