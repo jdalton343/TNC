@@ -140,6 +140,7 @@
     <Content Include="Assets\Bootstrap\css\bootstrap.css" />
     <Content Include="Assets\Bootstrap\css\bootstrap.min.css" />
     <Content Include="Assets\Bootstrap\css\datepicker.css" />
+    <Content Include="Assets\Bootstrap\css\docs.css" />
     <Content Include="Assets\Bootstrap\css\timepicker.css" />
     <Content Include="Assets\Bootstrap\font-awesome\css\font-awesome-ie7.css" />
     <Content Include="Assets\Bootstrap\font-awesome\css\font-awesome-ie7.min.css" />
@@ -505,17 +506,12 @@
     <Content Include="Assets\TNC\SiteImages\0cac6660051da17178d6487bddcb500.jpg" />
     <Content Include="Assets\TNC\SiteImages\ajax-loader.gif" />
     <Content Include="Assets\TNC\SiteImages\black.png" />
-    <Content Include="Assets\TNC\SiteImages\btnbar2.jpg" />
-    <Content Include="Assets\TNC\SiteImages\buttonbar.jpg" />
-    <Content Include="Assets\TNC\SiteImages\buttonbar2.png" />
     <Content Include="Assets\TNC\SiteImages\buttonbar3.gif" />
-    <Content Include="Assets\TNC\SiteImages\ComingSoon.JPG" />
     <Content Include="Assets\TNC\SiteImages\dots.png" />
     <Content Include="Assets\TNC\SiteImages\f951c07a72df7c337fbab49fb6ccdac0.jpg" />
+    <Content Include="Assets\TNC\SiteImages\ferry-on-truck.jpg" />
     <Content Include="Assets\TNC\SiteImages\Ferry05trucktowater.jpg" />
-    <Content Include="Assets\TNC\SiteImages\globalnavbg.png" />
     <Content Include="Assets\TNC\SiteImages\IMG_2958.jpg" />
-    <Content Include="Assets\TNC\SiteImages\map.png" />
     <Content Include="Assets\TNC\SiteImages\nav.png" />
     <Content Include="Assets\TNC\SiteImages\nav_thumbs.png" />
     <Content Include="Assets\TNC\SiteImages\panel_layup_deflection.png" />
@@ -524,23 +520,10 @@
     <Content Include="Assets\TNC\SiteImages\Seattle_shipyard.jpg" />
     <Content Include="Assets\TNC\SiteImages\steel_vs_composite.jpg" />
     <Content Include="Assets\TNC\SiteImages\store.jpg" />
-    <Content Include="Assets\TNC\SiteImages\suscyclea.png" />
     <Content Include="Assets\TNC\SiteImages\sustaincycle.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Bios.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Case-List-More.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Case-Read-More.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Case.jpg" />
+    <Content Include="Assets\TNC\SiteImages\sustaincycle2.jpg" />
     <Content Include="Assets\TNC\SiteImages\TNC-favicon.ico" />
     <Content Include="Assets\TNC\SiteImages\TNC-Gallery.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Home-PagBackground.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Home-Page.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-logo.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Press-List-More.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Press-Read-More.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-Press.jpg" />
-    <Content Include="Assets\TNC\SiteImages\TNC-smalllogo.jpg" />
-    <Content Include="Assets\TNC\SiteImages\tnc-suscycle.png" />
-    <Content Include="Assets\TNC\SiteImages\tnc-suscycleb.png" />
     <Content Include="Assets\TNC\SiteImages\views.png" />
     <Content Include="Global.asax" />
     <Content Include="Views\Home\Gallery.cshtml" />
@@ -557,7 +540,9 @@
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.eot" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.ttf" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.woff" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -610,6 +595,9 @@
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\Sustainability_Model.cshtml" />
     <Content Include="Views\Home\Attributions.cshtml" />
+    <None Include="Properties\PublishProfiles\devryext.us.pubxml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
