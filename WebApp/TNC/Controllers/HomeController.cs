@@ -57,5 +57,13 @@ namespace TNC.Controllers
             ViewBag.HeadTitle = "Attributions | True North Composites";
             return View("~/Views/Home/Attributions.cshtml");
         }
+
+        public ActionResult TestNoJavascript()
+        {
+            ViewBag.HeadTitle = "Test - don't publish";
+            return View("~/Views/Home/TestJavascript.cshtml");
+        }
+
     }
+
 }

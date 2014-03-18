@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "History";
+    ViewBag.Current = "History";
+    ViewBag.CurrentPageForNavBar = "History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="span10">
+            <div id="javascript-disabled" class="alert alert-danger" style="display:block">
+                It appears that your browser does not have Javascript enabled. In order to experience this site
+                as it was intended, please enable Javascript.
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageCSS
+{
+
+
+}
+
+@section PageJavascript
+{ 
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+            $("#javascript-disabled").attr("style", "display:none");
+
+
+        });
+
+
+    </script>
+}
