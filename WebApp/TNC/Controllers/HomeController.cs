@@ -22,7 +22,7 @@ namespace TNC.Controllers
 
         public ActionResult Sustainability_Model()
         {
-            ViewBag.HeadTitle = "Sustainability Model | True North Composites";
+            ViewBag.HeadTitle = "Sustainability Mission | True North Composites";
             return View();
         }
 
