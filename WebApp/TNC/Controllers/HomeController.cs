@@ -38,7 +38,41 @@ namespace TNC.Controllers
             return View("~/Views/Home/Gallery.cshtml");
         }
 
-      
+        public ActionResult Gallery_WindTurbines()
+        {
+            ViewBag.HeadTitle = "Wind Turbines | True North Composites";
+            return View("~/Views/Home/Gallery_WindTurbines.cshtml");
+        }
+
+        public ActionResult Gallery_Containers()
+        {
+            ViewBag.HeadTitle = "Containers | True North Composites";
+            return View("~/Views/Home/Gallery_Containers.cshtml");
+        }
+
+        public ActionResult Gallery_SailingCats()
+        {
+            ViewBag.HeadTitle = "Sailing Cats | True North Composites";
+            return View("~/Views/Home/Gallery_SailingCats.cshtml");
+        }
+
+        public ActionResult Gallery_PassengerFerries()
+        {
+            ViewBag.HeadTitle = "Passenger Ferries | True North Composites";
+            return View("~/Views/Home/Gallery_PassengerFerries.cshtml");
+        }
+
+        public ActionResult Gallery_SpecialPurposeVessels()
+        {
+            ViewBag.HeadTitle = "Special Purpose Vessels | True North Composites";
+            return View("~/Views/Home/Gallery_SpecialPurposeVessels.cshtml");
+        }
+
+        public ActionResult Gallery_HousingShelters()
+        {
+            ViewBag.HeadTitle = "Housing and Shelters | True North Composites";
+            return View("~/Views/Home/Gallery_HousingShelters.cshtml");
+        }
 
         public ActionResult Contact()
         {

@@ -526,7 +526,7 @@
     <Content Include="Assets\TNC\SiteImages\TNC-Gallery.jpg" />
     <Content Include="Assets\TNC\SiteImages\views.png" />
     <Content Include="Global.asax" />
-    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\GalleryOld.cshtml" />
     <Content Include="packages.config" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.eot" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.ttf" />
@@ -599,6 +599,13 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\TestJavascript.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Gallery_WindTurbines.cshtml" />
+    <Content Include="Views\Home\Gallery_Containers.cshtml" />
+    <Content Include="Views\Home\Gallery_SailingCats.cshtml" />
+    <Content Include="Views\Home\Gallery_PassengerFerries.cshtml" />
+    <Content Include="Views\Home\Gallery_SpecialPurposeVessels.cshtml" />
+    <Content Include="Views\Home\Gallery_HousingShelters.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
