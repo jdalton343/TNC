@@ -524,6 +524,7 @@
     <Content Include="Assets\TNC\SiteImages\TNC-favicon.ico" />
     <Content Include="Assets\TNC\SiteImages\TNC-Gallery.jpg" />
     <Content Include="Assets\TNC\SiteImages\views.png" />
+    <Content Include="Assets\TNC\SiteImages\World_Map.gif" />
     <Content Include="Global.asax" />
     <Content Include="Views\Home\GalleryOld.cshtml" />
     <Content Include="packages.config" />
@@ -605,6 +606,7 @@
     <Content Include="Views\Home\Gallery_PassengerFerries.cshtml" />
     <Content Include="Views\Home\Gallery_SpecialPurposeVessels.cshtml" />
     <Content Include="Views\Home\Gallery_HousingShelters.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

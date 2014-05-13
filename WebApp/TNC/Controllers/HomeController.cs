@@ -85,6 +85,12 @@ namespace TNC.Controllers
             ViewBag.HeadTitle = "Blog | True North Composites";
             return View("~/Views/Home/Blog.cshtml");
         }
+        public ActionResult News()
+        {
+            ViewBag.HeadTitle = "News | True North Composites";
+            return View("~/Views/Home/News.cshtml");
+        }
+
 
         public ActionResult Attributions()
         {
