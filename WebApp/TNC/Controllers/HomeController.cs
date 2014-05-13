@@ -77,7 +77,15 @@ namespace TNC.Controllers
         public ActionResult Contact()
         {
             ViewBag.HeadTitle = "Contact | True North Composites";
-            return View("~/Views/Home/Contact.cshtml");
+            return View("~/Views/Home/Contact_New.cshtml");
+        }
+
+        [HttpPost]
+        public ActionResult Contact_Received(string name)
+        {
+            ViewBag.HeadTitle = "Contact | True North Composites";
+            ViewBag.Name = name;
+            return View("~/Views/Home/Contact_Confirmed.cshtml");
         }
 
         public ActionResult Blog()
