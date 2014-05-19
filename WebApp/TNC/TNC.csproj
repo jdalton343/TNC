@@ -524,7 +524,7 @@
     <Content Include="Assets\TNC\SiteImages\TNC-favicon.ico" />
     <Content Include="Assets\TNC\SiteImages\TNC-Gallery.jpg" />
     <Content Include="Assets\TNC\SiteImages\views.png" />
-    <Content Include="Assets\TNC\SiteImages\World_Map.gif" />
+    <Content Include="Assets\TNC\SiteImages\World_Map.png" />
     <Content Include="Global.asax" />
     <Content Include="Views\Home\GalleryOld.cshtml" />
     <Content Include="packages.config" />
