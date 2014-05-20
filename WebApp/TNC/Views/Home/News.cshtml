@@ -5,15 +5,36 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section PageCSS{}
-@section PageJavascript{}
+@section PageCSS{
+    <style>
+        #map-holder {
+            margin-left: auto;
+            margin-right: auto;
+            clear: both;
+        }
+
+    </style>
+    
+    }
+@section PageJavascript{
+<script>
+    console.info("Hello map");
+    $("#map-holder").prepend("<div style='top:200px; left:150px; position:relative;z-index:999;'>X</div>");
+
+
+</script>
+    
+    
+    }
+
 
 <div class="container" >
     <div class="content">
-        <div align="center">
-        <img src="/Assets/TNC/SiteImages/World_Map.png" />
+        <div id="map-holder" align="center">
+        <img id="map" style="position:relative;" src="/Assets/TNC/SiteImages/World_Map.png" />
         </div>
 
          </div>
    
     </div>
+    
