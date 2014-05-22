@@ -526,7 +526,6 @@
     <Content Include="Assets\TNC\SiteImages\views.png" />
     <Content Include="Assets\TNC\SiteImages\World_Map.png" />
     <Content Include="Global.asax" />
-    <Content Include="Views\Home\GalleryOld.cshtml" />
     <Content Include="packages.config" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.eot" />
     <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.ttf" />

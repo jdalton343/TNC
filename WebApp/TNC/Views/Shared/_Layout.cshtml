@@ -53,11 +53,21 @@
                         <li><a href="@Url.Content("~/Home/Sustainability_Model")">Sustainability Mission</a></li>
                         <li><a href="@Url.Content("~/Home/History")">History</a></li>
                         <li><a href="@Url.Content("~/Home/Technology")">Technology</a></li>
-                        <li><a href="@Url.Content("~/Home/Gallery")">Gallery</a></li>
+                        <!--SB attempting to add drop down sub menu under gallery.5/22/2014-->
+                        <li class="dropdown"><a href="@Url.Content("~/Home/Gallery")">Gallery<b class="caret dropdown-toggle" data-toggle="dropdown"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>Wind Turbines</li>
+                                <li>Containers</li>
+                                <li>Sailing Cats</li>
+                                <li>Passenger Ferries</li>
+                                <li>Special Purpose Vessels</li>
+                                <li>Housing and Shelters</li>
+                            </ul>
+                        </li>    
                         <li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
                         <li><a href="@Url.Content("~/Home/News")">News</a></li>
                         <li><a href="@Url.Content("~/Home/Blog")">Blog</a></li>
-                 </ul>
+                    </ul>
                 </div>
                 <!--/.nav-collapse -->
             </div>
