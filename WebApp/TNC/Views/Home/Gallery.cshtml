@@ -108,12 +108,28 @@
             }
         </div>
 
+        <!--Attempting to add style to provide labels for place holders.  Place in \TNC\CSS\Style.css when completed. SB 5/22/14-->
+        <style>
+            #gallery-wind-turbine {
+                background: rgba(0, 0, 0, 0.7);
+                position: relative;
+                bottom: 70px;
+                left: -50px;
+                width: 300px;
+                height: 60px;
+                color: #fff;
+                font-size: 24px;
+                line-height: 60px;
+                padding: 0, 0, 0, 10px;
+            }
+        </style>
+
         <div align ="center">
             <div class="row">
                 <div class="span6">
                     <a href="@Url.Content("~/Home/Gallery_WindTurbines")" title="wind turbines">
                         <img src="http://placehold.it/400x150" />
-                        <h3>Wind Turbines</h3>
+                        <h3 id="gallery-wind-turbine">Wind Turbines</h3>
                     </a>
                 </div>
 
