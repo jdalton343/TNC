@@ -7,20 +7,79 @@
 
 @section PageCSS{
     <style>
-        #map-holder {
-            margin-left: auto;
-            margin-right: auto;
-            clear: both;
+    .mini-layout {
+        margin-bottom: 20px;
+        padding: 9px;
+    }
+
+    .mini-layout, .mini-layout .mini-layout-body, .mini-layout.fluid .mini-layout-sidebar {
+        height: 300px;
+    }
+
+    .mini-layout {
+        border: 1px solid #DDDDDD;
+        border-radius: 6px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+    }
+
+    .mini-layout-body img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    @@media(min-width: 768) {
+        .mini-layout {
+            width: 794px;
+            height: 384px;
         }
+    }
+
+    @@media (min-width: 992px) {
+        .mini-layout {
+            width: 1000px;
+            height: 466px;
+        }
+    }
+
+    .mini-layout-body div {
+        position: relative;
+        z-index: 999;
+    }
+
+    #africa {
+        top: 50%;
+        left: 35%;
+    }
+
+    #africa {
+        top: 50%;
+        left: 35%;
+    }
+
+    #china {
+        top: 70%;
+        left: 25%;
+    }
+
+    #australia {
+        top: 90%;
+        left: 85%;
+    }
+
+    #argentina {
+        top: 30%;
+        left: 85%;
+    }
 
     </style>
+
+    
     
     }
 @section PageJavascript{
 <script>
-    console.info("Hello map");
-    $("#map-holder").prepend("<div style='top:200px; left:150px; position:relative;z-index:999;'>X</div>");
-
+    
 
 </script>
     
@@ -28,10 +87,14 @@
     }
 
 
-<div class="container" >
-    <div class="content">
-        <div id="map-holder" align="center">
-        <img id="map" style="position:relative;" src="/Assets/TNC/SiteImages/World_Map.png" />
+<div class="container" align="center" >
+    <div class="mini-layout">
+        <div class="mini-layout-body" style="">
+            <div id="africa">X</div>
+            <div id="china">X</div>
+            <div id="australia">X</div>
+            <div id="argentina">X</div>
+        <img src="/Assets/TNC/SiteImages/World_Map.png" />
         </div>
 
          </div>
