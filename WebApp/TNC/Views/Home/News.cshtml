@@ -1,7 +1,7 @@
 ﻿@{
-    ViewBag.Title = "Blog";
-    ViewBag.Current = "Blog";
-    ViewBag.CurrentPageForNavBar = "Blog";
+    ViewBag.Title = "News";
+    ViewBag.Current = "News";
+    ViewBag.CurrentPageForNavBar = "News";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -17,14 +17,14 @@
     }
 
     .mini-layout {
-        border: 1px solid #DDDDDD;
-        border-radius: 6px;
+       
+        
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
     }
 
     .mini-layout-body img {
         width: 100%;
-        height: 100%;
+        height: 140%;
         position: relative;
     }
 
@@ -47,29 +47,29 @@
         z-index: 999;
     }
 
-    #africa {
-        top: 50%;
-        left: 35%;
-    }
 
-    #africa {
-        top: 50%;
-        left: 35%;
+    #japan {
+        top: 62%;
+        left: 85%;
+        font-size:150%;
     }
 
     #china {
-        top: 70%;
-        left: 25%;
+        top: 55%;
+        left: 75%;
+        font-size:150%;
     }
 
     #australia {
-        top: 90%;
+        top: 82%;
         left: 85%;
+        font-size:150%;
     }
 
-    #argentina {
-        top: 30%;
-        left: 85%;
+    #unitedstates {
+        top: 32%;
+        left: 15%;
+        font-size:150%;
     }
 
     </style>
@@ -87,17 +87,16 @@
     }
 
 
-<div class="container" align="center" >
+<div class="container" align="center">
     <div class="mini-layout">
         <div class="mini-layout-body" style="">
-            <div id="africa">X</div>
-            <div id="china">X</div>
-            <div id="australia">X</div>
-            <div id="argentina">X</div>
-        <img src="/Assets/TNC/SiteImages/World_Map.png" />
+            <div id="japan"><a href="http://google.com/"><ul><li></li></ul></a></div>
+            <div id="china"><ul><li></li></ul></div>
+            <div id="australia"><ul><li></li></ul></div>
+            <div id="unitedstates"><ul><li></li></ul></div>
+            <img src="/Assets/TNC/SiteImages/World_Map.png" />
         </div>
 
-         </div>
-   
     </div>
-    
+
+   </div>
