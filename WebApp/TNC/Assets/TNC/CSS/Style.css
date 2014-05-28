@@ -698,3 +698,18 @@ body
 {
     top: 100px;
 }
+
+
+/*Styles for images on Gallery page--sb*/
+/*.gallery-menu-images {
+    display: block;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.gallery-image-label {
+    color: #555555;
+    padding: 9px;
+    margin-top: -68px;
+}*/
