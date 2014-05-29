@@ -15,7 +15,6 @@
     <!-- Le styles -->
     <link href="@Url.Content("~/Assets/Bootstrap/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("~/Assets/Bootstrap/css/bootstrap-responsive.css")" rel="stylesheet">
-    <link href="@Url.Content("~/Assets/Bootstrap/csss/bootstrap.min.css")" rel="stylesheet"
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
         <script src="../assets/js/html5shiv.js"></script>
@@ -32,7 +31,7 @@
     <link rel="shortcut icon" href="~/Assets/TNC/SiteImages/TNC-favicon.ico">
 
     <script type="text/javascript" src="@Url.Content("~/Assets/jQuery/jquery-1.10.2.js")"></script>
-
+    <script type="text/javascript" src="@Url.Content("~/Assets/Bootstrap/js/bootstrap-dropdown.js")"></script>
 
     @RenderSection("PageCSS")
 
@@ -54,18 +53,23 @@
                         <li><a href="@Url.Content("~/Home/Sustainability_Model")">Sustainability Mission</a></li>
                         <li><a href="@Url.Content("~/Home/History")">History</a></li>
                         <li><a href="@Url.Content("~/Home/Technology")">Technology</a></li>
-                        <!--SB attempting to add drop down sub menu under gallery.5/22/2014-->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Wind Turbines</a></li>
-                                <li><a href="#">Containers</a></li>
-                                <li><a href="#">Sailing Cats</a></li>
-                                <li><a href="#">Passenger Ferries</a></li>
-                                <li><a href="#">Special Purpose Vessels</a></li>
-                                <li><a href="#">Housing and Shelters</a></li>
-                            </ul>
-                        </li>    
+
+                        <li>
+                            <div class="btn-group">
+                                <a href="@Url.Content("~/Home/Gallery")" class="btn btn-inverse">Gallery</a>
+                                <button class="btn btn-inverse" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Content("~/Home/Gallery_WindTurbines")">Wind Turbines</a></li>
+                                    <li><a href="@Url.Content("~/Home/Gallery_Containers")">Containers</a></li>
+                                    <li><a href="@Url.Content("~/Home/Gallery_SailingCats")">Sailing Cats</a></li>
+                                    <li><a href="@Url.Content("~/Home/Gallery_PassengerFerries")">Passenger Ferries</a></li>
+                                    <li><a href="@Url.Content("~/Home/Gallery_SpecialPurposeVessels")">Special Purpose Vessels</a></li>
+                                    <li><a href="@Url.Content("~/Home/Gallery_HousingShelters")">Housing and Shelters</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
                         <li><a href="@Url.Content("~/Home/News")">News</a></li>
                         <li><a href="@Url.Content("~/Home/Blog")">Blog</a></li>
@@ -96,6 +100,7 @@
             ================================================== -->
             <!-- Placed at the end of the document so the pages load faster -->
             @RenderSection("PageJavascript")
+
 
 </body>
 </html>

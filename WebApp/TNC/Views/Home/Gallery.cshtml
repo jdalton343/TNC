@@ -108,22 +108,7 @@
             }
         </div>
 
-        <!--Attempting to add style to provide labels for place holders.  Place in \TNC\CSS\Style.css when completed. SB 5/22/14-->
-        <style>
-            .gallery-menu-images {
-                display: block;
-                line-height: 20px;
-                margin-bottom: 10px;
-                padding: 4px;
-                transition: all 0.2s ease-in-out 0s;
-            }
-
-           .gallery-image-label {
-                color: #555555;
-                padding: 9px;
-                margin-top: -68px;
-            }
-        </style>
+    
 
         <div align ="center">
             <div class="row">
@@ -205,9 +190,23 @@
 
 
 @section PageCSS{
-    <style type="text/css">
+    <style>
+        .gallery-menu-images {
+            display: block;
+            line-height: 20px;
+            margin-bottom: 10px;
+            padding: 4px;
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .gallery-image-label {
+            color: #555555;
+            padding: 9px;
+            margin-top: -68px;
+        }
     </style>
 }
+
 @section PageJavascript{
     <!-- Add jQuery library -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
