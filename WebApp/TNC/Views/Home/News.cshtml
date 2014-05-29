@@ -7,10 +7,10 @@
 
 @section PageCSS{
     <style>
-    .mini-layout {
-        margin-bottom: 20px;
-        padding: 9px;
-    }
+        .mini-layout {
+            margin-bottom: 20px;
+            padding: 9px;
+        }
 
     .mini-layout, .mini-layout .mini-layout-body, .mini-layout.fluid .mini-layout-sidebar {
         height: 300px;
@@ -71,42 +71,29 @@
         left: 15%;
         font-size:150%;
     }
-        .container {
+        #content {
             position: relative;
-            padding: 0 0 0 55px;
         }
 
         #sidebar {
+            width: 150px;
             position: absolute;
             top: 0;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            background: #000;
-            float:right;
+            right: 0;
         }
 
-        #header {
-            border: 1px solid #000;
-            width: 100px;
-            height: 20px;
-            margin: 0 0 5px 0;
+        .noJs {
+            padding-right: 150px;
         }
 
-        #content {
-            border: 1px solid #000;
-            width: 100px;
-            height: 50px;
-            margin: 5px 0 5px 0;
-        }
+            .noJs #floatSpace {
+                display: none;
+            }
 
-        #footer {
-            border: 1px solid #000;
-            width: 100px;
-            height: 20px;
-            margin: 5px 0 0 0;
+        .js #floatSpace {
+            float: right;
+            width: 150px;
         }
-
 
     </style>
 
@@ -115,32 +102,64 @@
     }
 @section PageJavascript{
 <script>
+    $(function () {
+        // make floatSpace the same height as sidebar
+        $('#floatSpace').height($('#sidebar').height());
+        // trigger alternate layout
+        $('#content')[0].className = 'js';
+    });
+    </script>
     
-
-</script>
-    
-    
-    }
-
-
+   }
 @*<div class="container" align="center">
-      <div class="mini-layout">
-           <div class="mini-layout-body" style="">
-               <div id="japan"><a href="http://www.google.com/"><ul><li></li></ul></a></div>
-               <div id="china"><ul><li></li></ul></div>
-               <div id="australia"><ul><li></li></ul></div>
-               <div id="unitedstates"><ul><li></li></ul></div>
-               <img src="/Assets/TNC/SiteImages/World_Map.png" />
-           </div>
+    <div class="mini-layout">
+        <div class="mini-layout-body" style="">
+            <div id="japan"><a href="http://www.google.com/"><ul><li></li></ul></a></div>
+            <div id="china"><ul><li></li></ul></div>
+            <div id="australia"><ul><li></li></ul></div>
+            <div id="unitedstates"><ul><li></li></ul></div>
+            <img src="/Assets/TNC/SiteImages/World_Map.png" />
+        </div>
 
-       </div>
+    </div>
 
-    </div>*@
+</div>*@
 
-<div class="container">
-    <div id="sidebar">Test</div>
-    <div id="header"></div>
-    <div id="content"></div>
-    <div id="footer"></div>
+<div id="map">
+    <img src="/Assets/TNC/SiteImages/World_Map.png" />
 </div>
+<div id="content" class="noJs">
+<div id="floatSpace"></div>
 
+    <h3>Beautiful buildings, ingenious innovation: Africa's most exciting architects</h3>
+    <p>
+    Africa is a land under construction. Last year, over $220 billion was spent on all kinds of building projects in the continent. 
+    While foreign architects have clamored to make their mark in the region, a range of local talent has also stepped forward to shape their landscape (and in some cases, export their aesthetic abroad). <a href="http://www.cnn.com/2014/05/27/world/africa/beautiful-buildings-africas-exciting-architects/index.html?hpt=wo_mid">Read More</a>
+   </p>
+
+    <h3>400 years of beautiful, historical, and powerful globes</h3>
+    <p>
+    To look at an ancient globe is to look at the Earth as it was seen by the people of another time. It reflects their understanding of the continents and seas, and it captures political divisions that have long since shifted.
+    Even the typography and colors of a globe are indicative of the time and place of its origin, says Sylvia Sumira, a London-based conservator of ancient globes. <a href="http://www.cnn.com/2014/05/28/world/400-years-of-beautiful/index.html?hpt=wo_t4">Read More</a>
+</p>
+<div id="sidebar">
+
+<ul class="nav nav-list">
+  <li class="nav-header">Archives</li>
+    <li><a href="#">Janurary 2013</a></li>
+    <li><a href="#">Feburary 2013</a></li>
+    <li><a href="#">March 2013</a></li>
+    <li><a href="#">April 2013</a></li>
+    <li><a href="#">May 2013</a></li>
+    <li><a href="#">June 2013</a></li>
+    <li><a href="#">July 2013</a></li>
+    <li><a href="#">August 2013</a></li>
+    <li><a href="#">September 2013</a></li>
+    <li><a href="#">October 2013</a></li>
+    <li><a href="#">November 2013</a></li>
+    <li><a href="#">December 2013</a></li>
+    <li><a href="#">View Older News</a></li>
+</ul>
+    
+</div>
+</div>
