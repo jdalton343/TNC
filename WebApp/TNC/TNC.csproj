@@ -100,6 +100,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\MapViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -506,6 +507,7 @@
     <Content Include="Assets\TNC\SiteImages\ajax-loader.gif" />
     <Content Include="Assets\TNC\SiteImages\black.png" />
     <Content Include="Assets\TNC\SiteImages\buttonbar3.gif" />
+    <Content Include="Assets\TNC\SiteImages\dot.png" />
     <Content Include="Assets\TNC\SiteImages\dots.png" />
     <Content Include="Assets\TNC\SiteImages\f951c07a72df7c337fbab49fb6ccdac0.jpg" />
     <Content Include="Assets\TNC\SiteImages\ferry-on-truck.jpg" />
@@ -606,6 +608,8 @@
     <Content Include="Views\Home\Gallery_SpecialPurposeVessels.cshtml" />
     <Content Include="Views\Home\Gallery_HousingShelters.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\NewsDemo.cshtml" />
+    <Content Include="Views\Home\NewsDemoDynamic.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
