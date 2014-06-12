@@ -138,6 +138,16 @@ namespace TNC.Controllers
             ViewBag.HeadTitle = "Attributions | True North Composites";
             return View("~/Views/Home/Attributions.cshtml");
         }
+        public ActionResult News_Detail()
+        {
+            ViewBag.HeadTitle = "News Details | True North Composites";
+            return View("~/Views/Home/News_Detail.cshtml");
+        }
+        public ActionResult Edit_News()
+        {
+            ViewBag.HeadTitle = "Edit News | True North Composites";
+            return View("~/Views/Home/Edit_News.cshtml");
+        }
 
         public ActionResult TestNoJavascript()
         {

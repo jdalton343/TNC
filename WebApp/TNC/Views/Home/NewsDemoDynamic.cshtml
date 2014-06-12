@@ -147,20 +147,6 @@
             height: 20px;
             margin: 5px 0 0 0;
         }*/
-        #text-box{
-            width: 510px;
-
-        }
-        #link-box{
-          width:510px;
-        }
-        #X-box{
-           width:30px;
-        }
-        #Y-box{
-           width:30px;
-        }
-       
     </style>
 }
 
@@ -198,33 +184,27 @@
         </div>
 
     </div>
-   <div align="right">
-       <form>
-           X Coordinate:&nbsp;&nbsp;<input type="text" name="X_Cord" id="X-box"/><br />
-           Y Coordinate:&nbsp;&nbsp;<input type="text" name="Y_Cord" id="Y-box"/><br />
-       </form>
-   </div>
-    <br />
-    <br />
-    <div>
-        <form>
-            Article Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="title" />
-            <br />
-            Date Published:<input type="text" name="pub_date" value="MM/DD/YYYY" />
-            Author:<input type="text" name="auth_name" />
-            <br />
-            Summary:&nbsp;&nbsp;
-            <textarea rows="4" cols="200" id="text-box">
-            </textarea>
-            <br />
-            Main Body:
-            <textarea rows="4" cols="200" id="text-box">
-            </textarea>
-            <br />
-            Link to Article:&nbsp;<input type="text" name="link_post" id="link-box">
-            <br />
-            <input type="submit" value="Submit"/>
-        </form>
+    <div class="row">
+        <div class="span6" id="news">
+            @foreach(Tuple<string, string> item in Model.NewsItems)
+            {
+            <div class="row">
+                <h2>@item.Item1</h2>
+                    @Html.Raw(item.Item2)
+            </div>
+            }
+
+        </div>
+        <div class="span3">
+            
+            <h2>Menu</h2>
+            <ul class="nav nav-list">
+                <li class="nav-header">List header</li>
+                <li class="active"><a href="@Url.Content("~/Home/Edit_News")">Edit News</a></li>
+                <li><a href="@Url.Content("~/Home/News_Detail")">News Detail</a></li>
+            </ul>
+       </div>
+
     </div>
 
 </div>
