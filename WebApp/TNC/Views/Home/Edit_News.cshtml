@@ -167,13 +167,30 @@
 @section PageJavascript{
     <script src="~/Assets/Bootstrap/js/bootstrap-tooltip.js"></script>
     <script src="~/Assets/Bootstrap/js/bootstrap-popover.js"></script>
+    <script src="~/Assets/JQuery/jquery.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            $(".dotlink").popover({ html: true });
+            //$(".dotlink").popover({ html: true });
         });
 
+        // image coordinate function
+
+        $(document).ready(function() {
+            $("img").click(function (e) {
+                var offset = $(this).offset();
+                $("#X-box").val(e.clientX - offset.left);
+                $("#Y-box").val(e.clientY - offset.top);
+                console.info($(this).width());
+                console.info($(this).height());
+            });
+
+
+
+        }); // end image coordinate function
+
     </script>
+
 
 
 }

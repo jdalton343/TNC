@@ -606,8 +606,6 @@
     <Content Include="Views\Home\Gallery_SpecialPurposeVessels.cshtml" />
     <Content Include="Views\Home\Gallery_HousingShelters.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
-    <Content Include="Views\Home\NewsDemo.cshtml" />
-    <Content Include="Views\Home\NewsDemoDynamic.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Edit_News.cshtml" />
     <Content Include="Views\Home\Attributions.cshtml" />

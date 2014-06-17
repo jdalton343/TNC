@@ -95,19 +95,19 @@ namespace TNC.Controllers
             ViewBag.HeadTitle = "Blog | True North Composites";
             return View("~/Views/Home/Blog.cshtml");
         }
+        //public ActionResult News()
+        //{
+        //    ViewBag.HeadTitle = "News | True North Composites";
+        //    return View("~/Views/Home/News.cshtml");
+        //}
+
+        //public ActionResult NewsDemo()
+        //{
+        //    ViewBag.HeadTitle = "News | True North Composites";
+        //    return View("~/Views/Home/NewsDemo.cshtml");
+        //}
+
         public ActionResult News()
-        {
-            ViewBag.HeadTitle = "News | True North Composites";
-            return View("~/Views/Home/News.cshtml");
-        }
-
-        public ActionResult NewsDemo()
-        {
-            ViewBag.HeadTitle = "News | True North Composites";
-            return View("~/Views/Home/NewsDemo.cshtml");
-        }
-
-        public ActionResult NewsDemoDynamic()
         {
             ViewBag.HeadTitle = "News | True North Composites";
             MapViewModel map = new MapViewModel();
@@ -130,7 +130,7 @@ namespace TNC.Controllers
             };
             map.NewsItems = newsItems;
 
-            return View("~/Views/Home/NewsDemoDynamic.cshtml", map);
+            return View("~/Views/Home/News.cshtml", map);
         }
 
         public ActionResult Attributions()
