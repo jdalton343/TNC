@@ -155,10 +155,10 @@
           width:510px;
         }
         #X-box{
-           width:30px;
+           width:50px;
         }
         #Y-box{
-           width:30px;
+           width:50px;
         }
        
     </style>
@@ -179,16 +179,29 @@
         $(document).ready(function() {
             $("img").click(function (e) {
                 var offset = $(this).offset();
-                $("#X-box").val(e.clientX - offset.left);
-                $("#Y-box").val(e.clientY - offset.top);
-                console.info($(this).width());
-                console.info($(this).height());
+                var relativeX = e.clientX - offset.left;
+                var relativeY = e.clientY - offset.top;
+
+                $("#X-box").val(relativeX);
+                $("#Y-box").val(relativeY);
+
+                console.info("absolute x: " + relativeX);
+                console.info("absolute y: " + relativeY);
+
+                console.info("absolute width: " + $(this).width());
+                console.info("absolute height: " + $(this).height());
+
+                console.info("image relative x: " + relativeX / $(this).width());
+                console.info("image relative y: " + relativeY / $(this).height());
+
+
             });
 
 
 
         }); // end image coordinate function
 
+     
     </script>
 
 
