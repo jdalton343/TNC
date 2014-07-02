@@ -6,9 +6,9 @@
 }
 @section PageCSS
 {
+
     <style type="text/css">
-        .form-signin
-        {
+        .form-signin {
             background-color: #eee;
             border: 1px solid #E5E5E5;
             border-radius: 5px;
@@ -20,18 +20,37 @@
     </style>
 }
 @section PageJavascript{}
-<div class="container">
-    <form class="form-signin">
-    <address>
-        <strong>True North Composites</strong><br>
-        4318 Dudley Blvd Bldg 475 F 3<br>
-       McClellan, CA 95652<br>
-        
-        Phone: 916-546-3608 or 775-421-6100
-        <br>
-         Fax:
-        206-299-9533<br>
-        Skype: vsmith8587<br>
-        Email: admin@true-nc.com<br>
 
+
+
+<body>
+    <div class="row">
+        <div class="span5 offset1">
+            <strong>True North Composites</strong><br>
+            <p>
+                4318 Dudley Blvd Bldg 475 F 3<br>
+                McClellan, CA 95652<br>
+                Phone: 916-546-3608 or 775-421-6100<br>
+                Fax:206-299-9533<br>
+                Skype: vsmith8587<br>
+                Email: admin@true-nc.com
+            </p>
+        </div><!--end span5 offset1-->
+
+        <div class="span6">
+            <div id="sa_contactdiv">
+                <form class="form-signin" method="post" action="@Url.Content("~/Home/Contact_Received")" name=sa_htmlform style="margin:0px">
+                    <table>
+                        <tr><td>Name: <span style="color:#D70000">*</span><br><input type="text" name="name" required="true" /></td></tr>
+                        <tr><td>E-mail Address: <span style="color:#D70000">*</span><br><input type="text" name="email" required="true" /></td></tr>
+                        <tr><td>Subject: <span style="color:#D70000">*</span><br><input type="text" name="subject" required="true" /></td></tr>
+                        <tr><td>Message:<br><textarea name="message" cols="42" rows="9"></textarea></td></tr>
+                        <tr><td><input type="submit" class="btn" value="Send Message"></td></tr>
+                    </table>
+                </form>
+            </div><!--end sa-contactdiv-->
+        </div><!--end span6-->
+    </div><!--row-->
+
+</body>
 

@@ -79,7 +79,7 @@ namespace TNC.Controllers
         public ActionResult Contact()
         {
             ViewBag.HeadTitle = "Contact | True North Composites";
-            return View("~/Views/Home/Contact_New.cshtml");
+            return View("~/Views/Home/Contact.cshtml");
         }
 
         [HttpPost]
