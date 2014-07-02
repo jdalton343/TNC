@@ -182,8 +182,7 @@
                 var relativeX = e.clientX - offset.left;
                 var relativeY = e.clientY - offset.top;
 
-                $("#X-box").val(relativeX);
-                $("#Y-box").val(relativeY);
+               
 
                 console.info("absolute x: " + relativeX);
                 console.info("absolute y: " + relativeY);
@@ -195,15 +194,29 @@
                 console.info("image relative y: " + relativeY / $(this).height());
 
 
+           
+
+
+
+
+
+        
+        length = 794;
+
+        var longitude = 180 / length * relativeX - 180;
+
+    
+        height = 370;
+
+        var latitude = -90 / height * relativeY + 90;
+
+        $("#X-box").val(longitude);
+        $("#Y-box").val(latitude);
             });
-
-
-
         }); // end image coordinate function
 
-     
     </script>
-
+    
 
 
 }
