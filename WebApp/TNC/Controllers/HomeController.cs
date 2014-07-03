@@ -19,7 +19,7 @@ namespace TNC.Controllers
         public ActionResult History()
         {
             ViewBag.HeadTitle = "History | True North Composites";
-            return View("~/Views/Home/History.cshtml");
+            return View("~/Views/Home/History_New.cshtml");
         }
 
         public ActionResult Sustainability_Model()
