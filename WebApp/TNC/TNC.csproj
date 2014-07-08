@@ -95,12 +95,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\MapViewModel.cs" />
+    <Compile Include="Models\SignupNewUserRequests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -605,11 +608,11 @@
     <Content Include="Views\Home\Gallery_PassengerFerries.cshtml" />
     <Content Include="Views\Home\Gallery_SpecialPurposeVessels.cshtml" />
     <Content Include="Views\Home\Gallery_HousingShelters.cshtml" />
-    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Edit_News.cshtml" />
     <Content Include="Views\Home\Attributions.cshtml" />
-    <Content Include="Views\Home\News_Detail.cshtml" />
+    <Content Include="Views\News\News_Detail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

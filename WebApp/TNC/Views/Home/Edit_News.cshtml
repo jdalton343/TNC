@@ -190,8 +190,8 @@
                 console.info("absolute width: " + $(this).width());
                 console.info("absolute height: " + $(this).height());
 
-                console.info("image relative x: " + relativeX / $(this).width());
-                console.info("image relative y: " + relativeY / $(this).height());
+                console.info("image relative x: " + (relativeX / $(this).width() * 100).toFixed(2) + "%");
+                console.info("image relative y: " + (relativeY / $(this).height() * 100).toFixed(2) + "%");
 
 
            

@@ -36,7 +36,7 @@
         #news {
             margin-left: 0;
         }
-        
+
         #sidebar {
             float: right;
         }
@@ -45,7 +45,7 @@
             #sidebar {
                 float: none;
             }
-        }    
+        }
     </style>
 }
 
@@ -85,6 +85,13 @@
             </div>
 
         </div>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a href="">Add a new news item.</a>
+
+        }
+
         <div class="row">
             <div id="sidebar" class="span3">
 
@@ -95,14 +102,20 @@
                     <li><a href="@Url.Content("~/Home/News_Detail")">News Detail</a></li>
                 </ul>
             </div>
-            
+
             <div class="span6" id="news">
                 @foreach (Tuple<string, string> item in Model.NewsItems)
                 {
                     <div class="row">
-                        <h2>@item.Item1</h2>
+                        <h2>
+                            @item.Item1
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <span style="font-size:0.96em;"><a href="@Url.Content("~/News/EditNewsItem/" + @item.Item1)"><i class="icon-edit"></i>edit</a></span>
+                            }
+                        </h2>
                         @Html.Raw(item.Item2)
-                        <a href="@Url.Content("~/Home/News_Detail")" class="btn btn-info">Read More</a>
+                        <a href="@Url.Content("~/News/EditNewsItem/" + @item.Item1)" class="btn btn-info">Read More</a>
                     </div>
                 }
 
