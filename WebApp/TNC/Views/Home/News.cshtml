@@ -30,11 +30,11 @@
         }
 
         #nav nav-list {
-            margin-left: 0;
+            margin-right: 30px;
         }
 
         #news {
-            margin-left: 0;
+            margin-left: 0px;
         }
         
         #sidebar {
@@ -101,7 +101,7 @@
                 {
                     <div class="row">
                         <h2>@item.Item1</h2>
-                        @Html.Raw(item.Item2)
+                        @Html.Raw(item.Item2) <a href="#">Edit</a>
                         <a href="@Url.Content("~/Home/News_Detail")" class="btn btn-info">Read More</a>
                     </div>
                 }
