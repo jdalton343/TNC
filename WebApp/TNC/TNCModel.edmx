@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TNCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="NewsItems">
+          <Key>
+            <PropertyRef Name="NewsItemID" />
+            <PropertyRef Name="UrlTitle" />
+          </Key>
+          <Property Name="NewsItemID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="UrlTitle" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PublicationDate" Type="datetime" Nullable="false" />
+          <Property Name="Author" Type="nvarchar" MaxLength="255" />
+          <Property Name="Summary" Type="text" />
+          <Property Name="Body" Type="text" />
+          <Property Name="LocatorPositionX" Type="float" />
+          <Property Name="LocatorPositionY" Type="float" />
+          <Property Name="LocationPopupTitle" Type="text" />
+          <Property Name="LocationPopupDescription" Type="text" />
+        </EntityType>
+        <EntityContainer Name="TNCModelStoreContainer">
+          <EntitySet Name="NewsItems" EntityType="Self.NewsItems" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TNCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="NewsItem">
+          <Key>
+            <PropertyRef Name="NewsItemID" />
+            <PropertyRef Name="UrlTitle" />
+          </Key>
+          <Property Name="NewsItemID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UrlTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PublicationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Author" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LocatorPositionX" Type="Double" />
+          <Property Name="LocatorPositionY" Type="Double" />
+          <Property Name="LocationPopupTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LocationPopupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="TNCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NewsItems" EntityType="Self.NewsItem" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TNCModelStoreContainer" CdmEntityContainer="TNCEntities">
+          <EntitySetMapping Name="NewsItems">
+            <EntityTypeMapping TypeName="TNCModel.NewsItem">
+              <MappingFragment StoreEntitySet="NewsItems">
+                <ScalarProperty Name="NewsItemID" ColumnName="NewsItemID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="UrlTitle" ColumnName="UrlTitle" />
+                <ScalarProperty Name="PublicationDate" ColumnName="PublicationDate" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="LocatorPositionX" ColumnName="LocatorPositionX" />
+                <ScalarProperty Name="LocatorPositionY" ColumnName="LocatorPositionY" />
+                <ScalarProperty Name="LocationPopupTitle" ColumnName="LocationPopupTitle" />
+                <ScalarProperty Name="LocationPopupDescription" ColumnName="LocationPopupDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
