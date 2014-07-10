@@ -51,12 +51,12 @@ namespace TNC.Controllers
         public ActionResult News_Detail()
         {
             ViewBag.HeadTitle = "News Details | True North Composites";
-            return View("News_Detail.cshtml");
+            return View("~/Views/News/News_Detail");
         }
         public ActionResult Edit_News()
         {
             ViewBag.HeadTitle = "Edit News | True North Composites";
-            return View("Edit_News.cshtml");
+            return View("Edit_News");
         }
 
     }

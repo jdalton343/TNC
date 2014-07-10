@@ -98,8 +98,8 @@
                 <h2>Menu</h2>
                 <ul class="nav nav-list">
                     <li class="nav-header">List header</li>
-                    <li class="active"><a href="@Url.Content("~/Home/Edit_News")">Edit News</a></li>
-                    <li><a href="@Url.Content("~/Home/News_Detail")">News Detail</a></li>
+                    <li class="active"><a href="@Url.Content("~/News/Edit_News")">Edit News</a></li>
+                    <li><a href="@Url.Content("~/News/News_Detail.cshtml")">News Detail</a></li>
                 </ul>
             </div>
 
@@ -107,7 +107,7 @@
                 @foreach (Tuple<string, string> item in Model.NewsItems)
                 {
                     <div class="row">
-<<<<<<< HEAD:WebApp/TNC/Views/News/Index.cshtml
+
                         <h2>
                             @item.Item1
                             @if (User.Identity.IsAuthenticated)
@@ -117,11 +117,9 @@
                         </h2>
                         @Html.Raw(item.Item2)
                         <a href="@Url.Content("~/News/EditNewsItem/" + @item.Item1)" class="btn btn-info">Read More</a>
-=======
-                        <h2>@item.Item1</h2>
-                        @Html.Raw(item.Item2) <a href="#">Edit</a>
-                        <a href="@Url.Content("~/Home/News_Detail")" class="btn btn-info">Read More</a>
->>>>>>> origin/master:WebApp/TNC/Views/Home/News.cshtml
+
+                        
+
                     </div>
                 }
 
