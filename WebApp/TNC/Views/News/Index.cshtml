@@ -1,4 +1,4 @@
-﻿@model TNC.Models.MapViewModel
+﻿@model TNC.Models.NewsViewModel
 @{
     ViewBag.Title = "News";
     ViewBag.Current = "News";
@@ -69,7 +69,7 @@
             <div class="span12">
                 <div id="map-container">
                     <img src="http://www.wpclipart.com/geography/world_maps/world_map_simple.png">
-                    @foreach (Tuple<string, string, string> item in Model.MapItems)
+                    @*@foreach (Tuple<string, string, string> item in Model.MapItems)
                     {
                         <div style="@item.Item1" class="dot">
                             <a class="dotlink" title="@item.Item2"
@@ -79,7 +79,7 @@
                                href="#"
                                data-original-title="Popover on top"><img src="~/Assets/TNC/SiteImages/dots.png" /></a>
                         </div>
-                    }
+                    }*@
 
                 </div>
             </div>
@@ -104,19 +104,19 @@
             </div>
 
             <div class="span6" id="news">
-                @foreach (Tuple<string, string> item in Model.NewsItems)
+                @foreach (TNC.NewsItem item in Model.NewsItems)
                 {
                     <div class="row">
 
                         <h2>
-                            @item.Item1
+                            <a href="@item.UrlTitle">@item.Title</a>
                             @if (User.Identity.IsAuthenticated)
                             {
-                                <span style="font-size:0.96em;"><a href="@Url.Content("~/News/EditNewsItem/" + @item.Item1)"><i class="icon-edit"></i>edit</a></span>
+                                <span style="font-size:0.96em;"><a href="@Url.Content("~/News/EditNewsItem/" + @item.UrlTitle)"><i class="icon-edit"></i>edit</a></span>
                             }
                         </h2>
-                        @Html.Raw(item.Item2)
-                        <a href="@Url.Content("~/News/EditNewsItem/" + @item.Item1)" class="btn btn-info">Read More</a>
+                        @Html.Raw(item.Summary)
+                        <a href="@Url.Content("~/News/EditNewsItem/" + @item.UrlTitle)" class="btn btn-info">Read More</a>
 
                         
 
