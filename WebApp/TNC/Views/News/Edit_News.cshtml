@@ -165,12 +165,47 @@
 }
 
 @section PageJavascript{
+
+<script type="text/javascript" src="@Url.Content("~/Assets/TinyMCE/tinymce.min.js")"></script>
+<script type="text/javascript">
+    tinymce.init({
+        content_css: "@Url.Content("~/Assets/VivacareProviders/CSS/main.css"), @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", @*, @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", //?" + new Date().getTime(),  *@
+        selector: "textarea",
+        remove_linebreaks: false,
+        force_p_newlines: false,
+        force_br_newlines: false,
+        cleanup: false,
+        relative_urls: false,
+        remove_script_host: true,
+        document_base_url: "@Url.Content("~/")",
+
+        plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"
+        ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    });
+</script>
+
+<script>
+    $("#submit-account-setup").click(function () {
+        $("#modify-content").submit();
+    });
+
+</script>
+
+
+
     <script src="~/Assets/Bootstrap/js/bootstrap-tooltip.js"></script>
     <script src="~/Assets/Bootstrap/js/bootstrap-popover.js"></script>
     <script src="~/Assets/JQuery/jquery.min.js"></script>
 
 
     <script>
+
+
+
         $(document).ready(function () {
             //$(".dotlink").popover({ html: true });
         });
@@ -240,26 +275,24 @@
    </div>
     <br />
     <br />
-    <div>
-        <form>
+    <div>@UICulture@@">
             Article Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="title" />
             <br />
             Date Published:<input type="text" name="pub_date" value="MM/DD/YYYY" />
             Author:<input type="text" name="auth_name" />
             <br />
-            Summary:&nbsp;&nbsp;
-            <textarea rows="4" cols="200" id="text-box">
-            </textarea>
+        <form method="post" action="@Url.Content("~/News/EditNewsSubmit")">
+              summary:&nbsp;&nbsp;
+            <textarea rows="4" cols="200" id="text-box"></textarea>
             <br />
             Main Body:
-            <textarea rows="4" cols="200" id="text-box">
-            </textarea>
+            <textarea rows="4" cols="200" id="text-box"></textarea>
             <br />
-            
-            <br />
+
             <br />
             <br />
-            <input type="submit" class="btn btn-info" value="Submit"/>
+            <br />
+            <input type="submit" class="btn btn-info" value="Submit" />
         </form>
     </div>
 
