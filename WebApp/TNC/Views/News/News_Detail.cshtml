@@ -26,25 +26,31 @@
 @section PageJavascript{}
 <div class="container">
 
-    <h3>
-        @foreach (Tuple<string, string, string, string, string, string, string> newsDetails in news)
-        {
-            @newsDetails.Item5
-        }
-    </h3>
+    
 
     @foreach (Tuple<string, string, string, string, string, string, string> newsDetails in news)
     {
-        @newsDetails.Item6
-        <br />
-        <br />
-        @newsDetails.Item7<br />
-        <br />
-        <br />
+       
         <div align="center" id="image">
-        <img src="http://placehold.it/800x450"/>
+        <img src="http://placehold.it/1100x400"/>
         </div>
-        <div id="text" align="justify">@Html.Raw(newsDetails.Item4)</div>
+        <div>
+            <br />
+            <h1>
+            @newsDetails.Item5
+            </h1>
+           
+            <h5>
+            @newsDetails.Item6
+            </h5>
+            
+            <h5>
+            @newsDetails.Item7<br />
+            </h5>
+            
+            <br />
+        </div>
+        <div id="text" style="font-size:16px;" align="justify">@Html.Raw(newsDetails.Item4)</div>
 
     }
     <br />

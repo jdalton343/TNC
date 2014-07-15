@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TNCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="NewsItem">
+    <Key>
+      <PropertyRef Name="NewsItemID" />
+      <PropertyRef Name="UrlTitle" />
+    </Key>
+    <Property Name="NewsItemID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UrlTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PublicationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Author" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LocatorPositionX" Type="Double" />
+    <Property Name="LocatorPositionY" Type="Double" />
+    <Property Name="LocationPopupTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LocationPopupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="TNCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NewsItems" EntityType="Self.NewsItem" />
+  </EntityContainer>
+</Schema>
