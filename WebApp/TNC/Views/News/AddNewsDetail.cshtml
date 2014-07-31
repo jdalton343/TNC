@@ -1,0 +1,321 @@
+﻿@model TNC.Models.MapViewModel
+@{
+    ViewBag.Title = "Edit News";
+    ViewBag.Current = "Edit News";
+    ViewBag.CurrentPageForNavBar = "Edit News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section PageCSS{
+    <style>
+
+        /*.map img {
+            position: relative;
+            float: left;
+    
+        }*/
+
+        body{
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        #map-container { position: relative; }
+
+        #map-container > img { 
+            width: 200%; 
+
+        }
+
+        #map-container .dot img { width:10px; }
+
+        .dot {
+            position: absolute;
+            * float : right;
+            
+        }
+
+        #nav nav-list {
+            margin-left: 0;
+        }
+
+        #news{
+            margin-left: 0;
+        }
+
+        @@media(min-width: 768){
+            #nav nav-list{
+                float:none;
+            }
+        }
+        /*.mini-layout {
+            margin-bottom: 20px;
+            padding: 9px;
+        }
+
+            .mini-layout, .mini-layout .mini-layout-body, .mini-layout.fluid .mini-layout-sidebar {
+                height: 300px;
+            }
+
+        .mini-layout {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+        }
+
+        .mini-layout-body img {
+            width: 100%;
+            height: 140%;
+            position: relative;
+        }
+
+
+        @@media(min-width: 768) {
+            .mini-layout {
+                width: 794px;
+                height: 384px;
+            }
+        }
+
+        @@media (min-width: 992px) {
+            .mini-layout {
+                width: 1000px;
+                height: 466px;
+            }
+        }
+
+        .mini-layout-body div {
+            position: relative;
+            z-index: 999;
+        }
+
+
+        #japan {
+            top: 62%;
+            left: 85%;
+            font-size: 150%;
+        }
+
+        #china {
+            top: 55%;
+            left: 75%;
+            font-size: 150%;
+        }
+
+        #australia {
+            top: 82%;
+            left: 85%;
+            font-size: 150%;
+        }
+
+        #unitedstates {
+            top: 32%;
+            left: 15%;
+            font-size: 150%;
+        }
+
+        .container {
+            position: relative;
+            * padding: 0 0 0 55px;
+        }
+
+        #sidebar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            background: #000;
+            float: right;
+        }
+
+        #header {
+            border: 1px solid #000;
+            width: 100px;
+            height: 20px;
+            margin: 0 0 5px 0;
+        }
+
+        #content {
+            border: 1px solid #000;
+            width: 100px;
+            height: 50px;
+            margin: 5px 0 5px 0;
+        }
+
+        #footer {
+            border: 1px solid #000;
+            width: 100px;
+            height: 20px;
+            margin: 5px 0 0 0;
+        }*/
+        #text-box{
+            width: 510px;
+
+        }
+        #link-box{
+          width:510px;
+        }
+        #X-box{
+           width:50px;
+        }
+        #Y-box{
+           width:50px;
+        }
+       
+    </style>
+}
+
+@section PageJavascript{
+
+<script type="text/javascript" src="@Url.Content("~/Assets/TinyMCE/tinymce.min.js")"></script>
+<script type="text/javascript">
+    tinymce.init({
+        content_css: "@Url.Content("~/Assets/VivacareProviders/CSS/main.css"), @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", @*, @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", //?" + new Date().getTime(),  *@
+        selector: "textarea",
+        remove_linebreaks: false,
+        force_p_newlines: false,
+        force_br_newlines: false,
+        cleanup: false,
+        relative_urls: false,
+        remove_script_host: true,
+        document_base_url: "@Url.Content("~/")",
+
+        plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"
+        ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    });
+
+    tinymce.init({
+        content_css: "@Url.Content("~/Assets/VivacareProviders/CSS/main.css"), @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", @*, @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", //?" + new Date().getTime(),  *@
+        selector: "textarea",
+        editor_selector: "mceAdvanced",
+    remove_linebreaks: false,
+    force_p_newlines: false,
+    force_br_newlines: false,
+    cleanup: false,
+    relative_urls: false,
+    remove_script_host: true,
+    document_base_url: "@Url.Content("~/")",
+
+    plugins: [
+    "advlist autolink lists link image charmap print preview anchor",
+    "searchreplace visualblocks code fullscreen",
+    "insertdatetime media table contextmenu paste"
+    ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    });
+</script>
+
+<script>
+    $("#submit-account-setup").click(function () {
+        $("#modify-content").submit();
+    });
+
+</script>
+
+
+
+    <script src="~/Assets/Bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="~/Assets/Bootstrap/js/bootstrap-popover.js"></script>
+    <script src="~/Assets/JQuery/jquery.min.js"></script>
+
+
+    <script>
+
+
+
+        $(document).ready(function () {
+            //$(".dotlink").popover({ html: true });
+        });
+
+        // image coordinate function
+
+        $(document).ready(function() {
+            $("img").click(function (e) {
+                var offset = $(this).offset();
+                var relativeX = e.clientX - offset.left;
+                var relativeY = e.clientY - offset.top;
+
+               
+
+                console.info("absolute x: " + relativeX);
+                console.info("absolute y: " + relativeY);
+
+                console.info("absolute width: " + $(this).width());
+                console.info("absolute height: " + $(this).height());
+
+                console.info("image relative x: " + (relativeX / $(this).width() * 100).toFixed(2) + "%");
+                console.info("image relative y: " + (relativeY / $(this).height() * 100).toFixed(2) + "%");
+
+
+           
+
+
+
+
+
+        
+        length = 794;
+
+        var longitude = 180 / length * relativeX - 180;
+
+    
+        height = 370;
+
+        var latitude = -90 / height * relativeY + 90;
+
+        $("#X-box").val(longitude);
+        $("#Y-box").val(latitude);
+            });
+        }); // end image coordinate function
+
+    </script>
+    
+
+
+}
+
+<div class="container">
+ 
+   <div align="right">
+       <form>
+       </form>
+   </div>
+    <br />
+    <br />
+    <div>
+        @if(!String.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <h1>Error : @ViewBag.ErrorMessage</h1>
+            
+            
+        }
+
+
+        <form method="post" action="@Url.Content("~/News/NewsDetail_Add")">
+            Article Title:<input type="text" name="title" />
+            <br />
+            Date Published:<input type="text" name="pub_date" value="MM/DD/YYYY" />
+            Author:<input type="text" name="auth_name" />
+            <br />
+
+            <br />
+            Summary:
+            <textarea rows="4" cols="200" id="text1-box"></textarea>
+            <br />
+            Main body:&nbsp;&nbsp;
+            <textarea rows="4" cols="200" class="mceAdvanced" id="text-box"></textarea>
+            <br />
+
+
+            <br />
+            <br />
+            <br />
+            <input type="submit" class="btn btn-info" value="Submit" />
+        </form>
+
+    </div>
+
+</div>

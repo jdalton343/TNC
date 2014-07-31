@@ -88,7 +88,7 @@
 
         @if (User.Identity.IsAuthenticated)
         {
-            <a href="">Add a new news item.</a>
+            <a href="@Url.Content("~/News/AddNewsDetail")">Add a new news item.</a>
 
         }
 
@@ -109,14 +109,14 @@
                     <div class="row">
 
                         <h2>
-                            <a href="@item.UrlTitle">@item.Title</a>
+                            <a href="@Url.Content("~/News/NewsDetail/" + item.UrlTitle)">@item.Title</a>
                             @if (User.Identity.IsAuthenticated)
                             {
-                                <span style="font-size:0.96em;"><a href="@Url.Content("~/News/EditNewsItem/" + @item.UrlTitle)"><i class="icon-edit"></i>edit</a></span>
+                                <span style="font-size:0.56em;"><a href="@Url.Content("~/News/EditNewsDetail/" + @item.UrlTitle)"><i class="icon-edit"></i>edit</a></span>
                             }
                         </h2>
                         @Html.Raw(item.Summary)
-                        <a href="@Url.Content("~/News/EditNewsItem/" + @item.UrlTitle)" class="btn btn-info">Read More</a>
+                        <a href="@Url.Content("~/News/NewsDetail/" + item.UrlTitle)" class="btn btn-info">Read More</a>
 
                         
 

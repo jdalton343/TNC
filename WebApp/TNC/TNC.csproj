@@ -111,6 +111,7 @@
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\NewsViewModel.cs" />
     <Compile Include="Models\SignupNewUserRequests.cs" />
+    <Compile Include="Models\Utility.cs" />
     <Compile Include="NewsItem.cs">
       <DependentUpon>TNCModel.tt</DependentUpon>
     </Compile>
@@ -1100,9 +1101,9 @@
     <Content Include="Views\Home\Gallery_HousingShelters.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\News\Edit_News.cshtml" />
+    <Content Include="Views\News\EditNewsDetail.cshtml" />
     <Content Include="Views\Home\Attributions.cshtml" />
-    <Content Include="Views\News\News_Detail.cshtml" />
+    <Content Include="Views\News\NewsDetail.cshtml" />
     <EntityDeploy Include="TNCModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TNCModel.Designer.cs</LastGenOutput>
@@ -1120,6 +1121,7 @@
       <DependentUpon>TNCModel.edmx</DependentUpon>
       <LastGenOutput>TNCModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\News\AddNewsDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

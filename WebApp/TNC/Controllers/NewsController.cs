@@ -54,15 +54,72 @@ namespace TNC.Controllers
             return View(newsvm);
         }
 
-        public ActionResult News_Detail()
+        public ActionResult NewsDetail(string titleUrl)
         {
             ViewBag.HeadTitle = "News Details | True North Composites";
-            return View("~/Views/News/News_Detail.cshtml");
+            return View("~/Views/News/NewsDetail.cshtml");
         }
-        public ActionResult Edit_News()
+
+        public ActionResult EditNewsDetail(string titleUrl)
         {
-            ViewBag.HeadTitle = "Edit News | True North Composites";
-            return View("Edit_News");
+
+            return View("~/Views/News/EditNewsDetail.cshtml");
+        }
+
+        public ActionResult AddNewsDetail(string titleUrl, string errorMessage)
+        {
+            if(!String.IsNullOrEmpty(errorMessage))
+                ViewBag.ErrorMessage = errorMessage;
+            return View("~/Views/News/AddNewsDetail.cshtml");
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult NewsDetail_Edit()
+        {
+            return RedirectToAction("NewsDetail");
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult NewsDetail_Add(string title)
+        {
+            using (var context = new TNCEntities())
+            {
+                string testURLTitle = Utility.AlphanumericOnlyWithDashes(title);
+
+                int? repeatedNewsID = (from n in context.NewsItems
+                                      where n.UrlTitle.ToLower() == testURLTitle.ToLower()
+                                      select n.NewsItemID).FirstOrDefault();
+                if (repeatedNewsID != null)
+                    if (repeatedNewsID > 0)
+                    {
+                        string errorMessage = "Can't add that title. The title already exists in the database.";
+                        return RedirectToAction("AddNewsDetail", new { errorMessage });
+                    }
+
+                NewsItem item = new NewsItem()
+                {
+                    Title = title,
+                    UrlTitle = Utility.AlphanumericOnlyWithDashes(title),
+                    PublicationDate = DateTime.Now
+
+                };
+
+                context.NewsItems.Add(item);
+                context.SaveChanges();
+
+            }
+
+
+            return RedirectToAction("NewsDetail");
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult NewsDetail_Delete()
+        {
+            return RedirectToAction("Index");
         }
 
     }
