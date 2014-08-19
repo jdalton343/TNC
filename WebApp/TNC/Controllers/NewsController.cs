@@ -82,7 +82,7 @@ namespace TNC.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult NewsDetail_Add(string title)
+        public ActionResult NewsDetail_Add(string title, string auth_name,string summary, string body)
         {
             using (var context = new TNCEntities())
             {
@@ -102,7 +102,12 @@ namespace TNC.Controllers
                 {
                     Title = title,
                     UrlTitle = Utility.AlphanumericOnlyWithDashes(title),
-                    PublicationDate = DateTime.Now
+                    PublicationDate = DateTime.Now,
+                    Author = auth_name,
+                    Summary = summary,
+                    Body = body,
+
+
 
                 };
 
@@ -118,8 +123,23 @@ namespace TNC.Controllers
         [HttpPost]
         [Authorize]
         public ActionResult NewsDetail_Delete()
-        {
-            return RedirectToAction("Index");
+          {
+        //    using (var context = new TNCEntities())
+        //    {
+                //NewsItem item = (from n in context.NewsItems
+                //                 where n.UrlTitle == itemToUpdate.UrlTitle
+                //                 select n).FirstOrDefault;
+                //if (item == null)
+
+                //     item.Body = itemToUpdate.body;
+                //     item.Title = itemToUpdate.title;
+                //     item.UrlTitle = itemToUpdate.UrlTitle;
+
+                //context.SaveChanges();
+
+                return RedirectToAction("Index");
+            //}
+
         }
 
     }

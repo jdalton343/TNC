@@ -100,7 +100,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\News_Layer.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -114,24 +113,24 @@
     <Compile Include="Models\SignupNewUserRequests.cs" />
     <Compile Include="Models\Utility.cs" />
     <Compile Include="NewsItem.cs">
-      <DependentUpon>TNCModel.tt</DependentUpon>
+      <DependentUpon>NewsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TNCModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TNCModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TNCModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TNCModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TNCModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TNCModel.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Bitstream\BitstreamVeraLicense.txt" />
@@ -995,6 +994,7 @@
     <Content Include="Views\Home\History.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Assets\TNC\JavaScript\" />
   </ItemGroup>
@@ -1089,6 +1089,23 @@
     <Content Include="Assets\tinymcetemp\tests\js\qunit\QUnit.LICENSE" />
     <Content Include="Assets\tinymcetemp\tools\nuget\TinyMCE.jQuery.nuspec" />
     <Content Include="Assets\tinymcetemp\tools\nuget\TinyMCE.nuspec" />
+    <EntityDeploy Include="NewsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="NewsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewsModel.edmx</DependentUpon>
+      <LastGenOutput>NewsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NewsModel.edmx.diagram">
+      <DependentUpon>NewsModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="NewsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewsModel.edmx</DependentUpon>
+      <LastGenOutput>NewsModel.cs</LastGenOutput>
+    </Content>
     <None Include="Properties\PublishProfiles\devryext.us.pubxml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -1105,23 +1122,6 @@
     <Content Include="Views\News\EditNewsDetail.cshtml" />
     <Content Include="Views\Home\Attributions.cshtml" />
     <Content Include="Views\News\NewsDetail.cshtml" />
-    <EntityDeploy Include="TNCModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TNCModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="TNCModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TNCModel.edmx</DependentUpon>
-      <LastGenOutput>TNCModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="TNCModel.edmx.diagram">
-      <DependentUpon>TNCModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="TNCModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TNCModel.edmx</DependentUpon>
-      <LastGenOutput>TNCModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Views\News\AddNewsDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
