@@ -1,4 +1,4 @@
-﻿@model TNC.Models.MapViewModel
+﻿@model TNC.NewsItem
 @{
     ViewBag.Title = "Edit News";
     ViewBag.Current = "Edit News";
@@ -222,56 +222,6 @@
     <script src="~/Assets/JQuery/jquery.min.js"></script>
 
 
-    <script>
-
-
-
-        $(document).ready(function () {
-            //$(".dotlink").popover({ html: true });
-        });
-
-        // image coordinate function
-
-        $(document).ready(function() {
-            $("img").click(function (e) {
-                var offset = $(this).offset();
-                var relativeX = e.clientX - offset.left;
-                var relativeY = e.clientY - offset.top;
-
-               
-
-                console.info("absolute x: " + relativeX);
-                console.info("absolute y: " + relativeY);
-
-                console.info("absolute width: " + $(this).width());
-                console.info("absolute height: " + $(this).height());
-
-                console.info("image relative x: " + (relativeX / $(this).width() * 100).toFixed(2) + "%");
-                console.info("image relative y: " + (relativeY / $(this).height() * 100).toFixed(2) + "%");
-
-
-           
-
-
-
-
-
-        
-        length = 794;
-
-        var longitude = 180 / length * relativeX - 180;
-
-    
-        height = 370;
-
-        var latitude = -90 / height * relativeY + 90;
-
-        $("#X-box").val(longitude);
-        $("#Y-box").val(latitude);
-            });
-        }); // end image coordinate function
-
-    </script>
     
 
 
@@ -287,18 +237,18 @@
     <br />
     <br />
     <div>
-            Article Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="title" />
+            Article Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value="@Model.Title" name="title" />
             <br />
-            Date Published:<input type="text" name="pub_date" value="MM/DD/YYYY" />
-            Author:<input type="text" name="auth_name" />
+            Date Published:<input type="text" name="pub_date" value="@Model.PublicationDate" />
+            Author:<input type="text" name="auth_name" value="@Model.Author" />
             <br />
         <form method="post" action="@Url.Content("~/News/EditNewsSubmit")">
             <br />
             Summary:
-            <textarea rows="4" cols="200" id="text1-box"></textarea>
+            <textarea rows="4" cols="200" id="text1-box">@Model.Summary</textarea>
             <br />
              Main body:&nbsp;&nbsp;
-            <textarea rows="4" cols="200" class="mceAdvanced"id="text-box"></textarea>
+            <textarea rows="4" cols="200" class="mceAdvanced"id="text-box">@Model.Body</textarea>
             <br />
            
 

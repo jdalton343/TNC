@@ -62,8 +62,15 @@ namespace TNC.Controllers
 
         public ActionResult EditNewsDetail(string titleUrl)
         {
+            using(var context = new TNCEntities())
+            {
+                NewsItem item = (from n in context.NewsItems
+                                 where n.UrlTitle == titleUrl
+                                 select n).First();
 
-            return View("~/Views/News/EditNewsDetail.cshtml");
+                return View("~/Views/News/EditNewsDetail.cshtml", item);
+
+            }
         }
 
         public ActionResult AddNewsDetail(string titleUrl, string errorMessage)
@@ -80,8 +87,9 @@ namespace TNC.Controllers
             return RedirectToAction("NewsDetail");
         }
 
-        [HttpPost]
+        
         [Authorize]
+        [HttpPost, ValidateInput(false)]
         public ActionResult NewsDetail_Add(string title, string auth_name,string summary, string body)
         {
             using (var context = new TNCEntities())
