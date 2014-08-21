@@ -66,7 +66,7 @@ namespace TNC.Controllers
             {
                 NewsItem item = (from n in context.NewsItems
                                  where n.UrlTitle == titleUrl
-                                 select n).First();
+                                 select n.NewsItemID).FirstOrDefault();
 
                 return View("~/Views/News/EditNewsDetail.cshtml", item);
 
