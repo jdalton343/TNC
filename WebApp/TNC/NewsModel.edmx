@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="TNCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="TNCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityType Name="NewsItems">
           <Key>
             <PropertyRef Name="NewsItemID" />
@@ -21,6 +21,7 @@
           <Property Name="LocatorPositionY" Type="float" />
           <Property Name="LocationPopupTitle" Type="text" />
           <Property Name="LocationPopupDescription" Type="text" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
         <EntityContainer Name="TNCModelStoreContainer">
           <EntitySet Name="NewsItems" EntityType="Self.NewsItems" Schema="dbo" store:Type="Tables" />
@@ -45,6 +46,7 @@
           <Property Name="LocatorPositionY" Type="Double" />
           <Property Name="LocationPopupTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="LocationPopupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityContainer Name="TNCEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="NewsItems" EntityType="Self.NewsItem" />
@@ -58,6 +60,7 @@
           <EntitySetMapping Name="NewsItems">
             <EntityTypeMapping TypeName="TNCModel.NewsItem">
               <MappingFragment StoreEntitySet="NewsItems">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="NewsItemID" ColumnName="NewsItemID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="UrlTitle" ColumnName="UrlTitle" />

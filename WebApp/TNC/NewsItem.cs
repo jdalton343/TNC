@@ -25,5 +25,6 @@ namespace TNC
         public Nullable<double> LocatorPositionY { get; set; }
         public string LocationPopupTitle { get; set; }
         public string LocationPopupDescription { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

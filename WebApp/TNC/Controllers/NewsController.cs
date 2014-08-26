@@ -66,7 +66,8 @@ namespace TNC.Controllers
             {
                 NewsItem item = (from n in context.NewsItems
                                  where n.UrlTitle == titleUrl
-                                 select n).FirstOrDefault();
+                                 && n.IsDeleted == false
+                                 select n).First();
 
                 return View("~/Views/News/EditNewsDetail.cshtml", item);
 
@@ -98,6 +99,7 @@ namespace TNC.Controllers
 
                 int? repeatedNewsID = (from n in context.NewsItems
                                       where n.UrlTitle.ToLower() == testURLTitle.ToLower()
+                                      && n.IsDeleted == false
                                       select n.NewsItemID).FirstOrDefault();
                 if (repeatedNewsID != null)
                     if (repeatedNewsID > 0)
@@ -128,25 +130,26 @@ namespace TNC.Controllers
             return RedirectToAction("NewsDetail");
         }
 
-        [HttpPost]
+        //[HttpPost]
         [Authorize]
-        public ActionResult NewsDetail_Delete()
+        public ActionResult NewsDetail_Delete(string urlTitle)
           {
-        //    using (var context = new TNCEntities())
-        //    {
-                //NewsItem item = (from n in context.NewsItems
-                //                 where n.UrlTitle == itemToUpdate.UrlTitle
-                //                 select n).FirstOrDefault;
+            using (var context = new TNCEntities())
+            {
+                NewsItem item = (from n in context.NewsItems
+                                 where n.UrlTitle == urlTitle
+                                 && n.IsDeleted == false
+                                 select n).First();
                 //if (item == null)
 
                 //     item.Body = itemToUpdate.body;
                 //     item.Title = itemToUpdate.title;
-                //     item.UrlTitle = itemToUpdate.UrlTitle;
+                item.IsDeleted = true;
 
-                //context.SaveChanges();
+                context.SaveChanges();
 
                 return RedirectToAction("Index");
-            //}
+           }
 
         }
 
