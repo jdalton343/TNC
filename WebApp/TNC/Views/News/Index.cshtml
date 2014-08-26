@@ -113,6 +113,8 @@
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <span style="font-size:0.56em;"><a href="@Url.Content("~/News/EditNewsDetail/" + @item.UrlTitle)"><i class="icon-edit"></i>edit</a></span>
+                                                                
+                                <span style="font-size:0.56em;"><a href="@Url.Content("~/News/EditNewsDetail/" + @item.UrlTitle)"><i class="icon-edit"></i>Delete</a></span>
                             }
                         </h2>
                         @Html.Raw(item.Summary)
