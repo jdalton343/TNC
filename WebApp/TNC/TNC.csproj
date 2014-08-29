@@ -109,6 +109,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\MapViewModel.cs" />
     <Compile Include="Models\News.cs" />
+    <Compile Include="Models\NewsDetailVM.cs" />
     <Compile Include="Models\NewsViewModel.cs" />
     <Compile Include="Models\SignupNewUserRequests.cs" />
     <Compile Include="Models\Utility.cs" />

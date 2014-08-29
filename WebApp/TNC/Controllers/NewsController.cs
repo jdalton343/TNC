@@ -10,18 +10,6 @@ namespace TNC.Controllers
 {
     public class NewsController : Controller
     {
-        //public ActionResult News()
-        //{
-        //    ViewBag.HeadTitle = "News | True North Composites";
-        //    return View("~/Views/Home/News.cshtml");
-        //}
-
-        //public ActionResult NewsDemo()
-        //{
-        //    ViewBag.HeadTitle = "News | True North Composites";
-        //    return View("~/Views/Home/NewsDemo.cshtml");
-        //}
-
         public ActionResult Index()
         {
             ViewBag.HeadTitle = "News | True North Composites";
@@ -54,15 +42,32 @@ namespace TNC.Controllers
             return View(newsvm);
         }
 
-        public ActionResult NewsDetail(string titleUrl)
+        [Authorize]
+        [ValidateInput(false)]
+        public ActionResult AddNewsDetail(string titleUrl, string errorMessage, string title, string author, string pubDate, string summary, string body)
         {
-            ViewBag.HeadTitle = "News Details | True North Composites";
-            return View("~/Views/News/NewsDetail.cshtml");
+            NewsDetailVM news = new NewsDetailVM()
+                {
+                    PublicationDate = DateTime.Now.ToShortDateString()
+                };
+
+            if (!String.IsNullOrEmpty(errorMessage))
+            { 
+                news.ErrorMessage = errorMessage;
+                news.Author = author;
+                news.Body = body;
+                news.PublicationDate = pubDate;
+                news.Summary = summary;
+                news.Title = title;
+            }
+
+            return View("~/Views/News/AddNewsDetail.cshtml", news);
         }
 
+        [Authorize]
         public ActionResult EditNewsDetail(string titleUrl)
         {
-            using(var context = new TNCEntities())
+            using (var context = new TNCEntities())
             {
                 NewsItem item = (from n in context.NewsItems
                                  where n.UrlTitle == titleUrl
@@ -74,33 +79,31 @@ namespace TNC.Controllers
             }
         }
 
-        public ActionResult AddNewsDetail(string titleUrl, string errorMessage)
+        public ActionResult NewsDetail(string titleUrl)
         {
-            if(!String.IsNullOrEmpty(errorMessage))
-                ViewBag.ErrorMessage = errorMessage;
-            return View("~/Views/News/AddNewsDetail.cshtml");
+            ViewBag.HeadTitle = "News Details | True North Composites";
+            return View("~/Views/News/NewsDetail.cshtml");
         }
 
-        [HttpPost]
-        [Authorize]
-        public ActionResult NewsDetail_Edit()
-        {
-            return RedirectToAction("NewsDetail");
-        }
-
-        
         [Authorize]
         [HttpPost, ValidateInput(false)]
-        public ActionResult NewsDetail_Add(string title, string auth_name,string summary, string body)
+        public ActionResult NewsDetail_Add(string title, string auth_name, string summary, string body)
         {
+            if(String.IsNullOrEmpty(title))
+            {
+                string errorMessage = "A title must be present to save this item.";
+                return RedirectToAction("AddNewsDetail", new { errorMessage = errorMessage, title = title, author = auth_name, summary = summary, body = body });
+            };
+
+
             using (var context = new TNCEntities())
             {
                 string testURLTitle = Utility.AlphanumericOnlyWithDashes(title);
 
                 int? repeatedNewsID = (from n in context.NewsItems
-                                      where n.UrlTitle.ToLower() == testURLTitle.ToLower()
-                                      && n.IsDeleted == false
-                                      select n.NewsItemID).FirstOrDefault();
+                                       where n.UrlTitle.ToLower() == testURLTitle.ToLower()
+                                       && n.IsDeleted == false
+                                       select n.NewsItemID).FirstOrDefault();
                 if (repeatedNewsID != null)
                     if (repeatedNewsID > 0)
                     {
@@ -127,13 +130,13 @@ namespace TNC.Controllers
             }
 
 
-            return RedirectToAction("NewsDetail");
+            return RedirectToAction("Index");
         }
 
         //[HttpPost]
         [Authorize]
         public ActionResult NewsDetail_Delete(string urlTitle)
-          {
+        {
             using (var context = new TNCEntities())
             {
                 NewsItem item = (from n in context.NewsItems
@@ -149,9 +152,18 @@ namespace TNC.Controllers
                 context.SaveChanges();
 
                 return RedirectToAction("Index");
-           }
+            }
 
         }
+        
+        [HttpPost]
+        [Authorize]
+        public ActionResult NewsDetail_Edit()
+        {
+            return RedirectToAction("NewsDetail");
+        }
+
+        
 
     }
 

@@ -15,6 +15,7 @@ namespace TNC.Models
             {
                 List<NewsItem> news = (from n in context.NewsItems
                                        where n.IsDeleted == false
+                                       orderby n.PublicationDate descending
                                        select n).ToList();
 
                 return news;
