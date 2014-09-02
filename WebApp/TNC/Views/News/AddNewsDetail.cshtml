@@ -59,7 +59,11 @@
     });
 
 </script>
-
+<script type="text/javascript">
+    $('.confirmation').on('click', function () {
+        return confirm('Are you sure?');
+    });
+</script>
 
 
     <script src="~/Assets/Bootstrap/js/bootstrap-tooltip.js"></script>
@@ -81,7 +85,7 @@
                 <div class="span-6">
                     <div class="alert alert-error">
                         <button data-dismiss="alert" class="close" type="button">×</button>
-                        <strong>Error</strong> Model.ErrorMessage
+                        <strong>Error</strong> A title is Needed for the article to be published.
                     </div>
                 </div>
             </div>
@@ -100,19 +104,17 @@
                     <label>Author:</label>
                     <input type="text" value="@Model.Author" name="auth_name" />
                 </div>
-
+                <div class="control-group">
                     Summary:
-                    <textarea rows="4" cols="200" name="summary" id="text1-box">@Model.Summary</textarea>
-                    <br />
+                    <textarea rows="4" cols="200" name="summary" id="text1-box">@Model.Summary</textarea>  
+                </div>
+                <div class="control-group">
                     Main body:
                     <textarea rows="4" cols="200" name="body" class="mceAdvanced" id="text-box"></textarea>
-                    <br />
-
-
-                    <br />
-                    <br />
-                    <br />
-                    <input type="submit" class="btn btn-info" value="Add a news item" />
+                </div>
+                <div class="control-group">
+                    <input type="submit" class="btn btn-info, confirmation" value="Add Article" />
+                </div>
 </fieldset>
         </form>
 
