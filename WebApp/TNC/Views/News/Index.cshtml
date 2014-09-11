@@ -95,44 +95,44 @@
             <a href="@Url.Content("~/News/AddNewsDetail")">Add a new news item.</a>
 
         }
+        <div class="span12">
+            <div class="row">
+                <div id="sidebar" class="span6">
 
-        <div class="row">
-            <div id="sidebar" class="span3">
+                    <h2>Menu</h2>
+                    <ul class="nav nav-list">
+                        <li class="nav-header">List header</li>
+                        <li class="active"><a href="@Url.Content("~/News/EditNewsDetail")">Edit News</a></li>
+                        <li><a href="@Url.Content("~/News/NewsDetail")">News Detail</a></li>
+                    </ul>
+                </div>
 
-                <h2>Menu</h2>
-                <ul class="nav nav-list">
-                    <li class="nav-header">List header</li>
-                    <li class="active"><a href="@Url.Content("~/News/EditNewsDetail")">Edit News</a></li>
-                    <li><a href="@Url.Content("~/News/NewsDetail")">News Detail</a></li>
-                </ul>
+                <div class="span6" id="news">
+                    @foreach (TNC.NewsItem item in Model.NewsItems)
+                    {
+                        <div class="row">
+
+                            <h2>
+                                <a href="@Url.Content("~/News/NewsDetail/" + item.UrlTitle)">@item.Title</a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <span style="font-size:0.56em;"><a href="@Url.Content("~/News/EditNewsDetail?titleUrl=" + @item.UrlTitle)"><i class="icon-edit"></i>edit</a></span>
+
+                                    <span style="font-size:0.56em;"><a href="@Url.Content("~/News/NewsDetail_Delete?urlTitle=" + @item.UrlTitle)" class="confirmation"><i class="icon-edit"></i>Delete</a></span>
+                                }
+                            </h2>
+                            @Html.Raw(item.Summary)
+                            <a href="@Url.Content("~/News/NewsDetail/" + item.UrlTitle)" class="btn btn-info">Read More</a>
+
+
+
+                        </div>
+                    }
+
+                </div>
+
+
             </div>
-
-            <div class="span6" id="news">
-                @foreach (TNC.NewsItem item in Model.NewsItems)
-                {
-                    <div class="row">
-
-                        <h2>
-                            <a href="@Url.Content("~/News/NewsDetail/" + item.UrlTitle)">@item.Title</a>
-                            @if (User.Identity.IsAuthenticated)
-                            {
-                                <span style="font-size:0.56em;"><a href="@Url.Content("~/News/EditNewsDetail?titleUrl=" + @item.UrlTitle)"><i class="icon-edit"></i>edit</a></span>
-                                                                
-                                <span style="font-size:0.56em;"><a href="@Url.Content("~/News/NewsDetail_Delete?urlTitle=" + @item.UrlTitle)" class="confirmation"><i class="icon-edit"></i>Delete</a></span>
-                            }
-                        </h2>
-                        @Html.Raw(item.Summary)
-                        <a href="@Url.Content("~/News/NewsDetail/" + item.UrlTitle)" class="btn btn-info">Read More</a>
-
-                        
-
-                    </div>
-                }
-
-            </div>
-
-
         </div>
-
     </div>
 </body>
