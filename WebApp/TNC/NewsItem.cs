@@ -17,7 +17,7 @@ namespace TNC
         public int NewsItemID { get; set; }
         public string Title { get; set; }
         public string UrlTitle { get; set; }
-        public System.DateTime PublicationDate { get; set; }
+        public DateTime PublicationDate { get; set; }
         public string Author { get; set; }
         public string Summary { get; set; }
         public string Body { get; set; }

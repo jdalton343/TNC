@@ -10,7 +10,7 @@ namespace TNC.Models
         public string Title;
         public string UrlTitle;
         public string Author;
-        public string PublicationDate;
+        public DateTime PublicationDate;
         public string Summary;
         public string Body;
         public string ErrorMessage;

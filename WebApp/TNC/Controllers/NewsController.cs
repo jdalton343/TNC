@@ -44,22 +44,22 @@ namespace TNC.Controllers
 
         [Authorize]
         [ValidateInput(false)]
-        public ActionResult AddNewsDetail(string titleUrl, string errorMessage, string title, string author, string pubDate, string summary, string body)
+        public ActionResult AddNewsDetail() //string titleUrl, string errorMessage, string title, string author, DateTime publicationDate, string summary, string body)
         {
             NewsDetailVM news = new NewsDetailVM()
                 {
-                    PublicationDate = DateTime.Now.ToShortDateString()
+                    PublicationDate = DateTime.Now
                 };
 
-            if (!String.IsNullOrEmpty(errorMessage))
-            { 
-                news.ErrorMessage = errorMessage;
-                news.Author = author;
-                news.Body = body;
-                news.PublicationDate = pubDate;
-                news.Summary = summary;
-                news.Title = title;
-            }
+            //if (!String.IsNullOrEmpty(errorMessage))
+            //{ 
+            //    news.ErrorMessage = errorMessage;
+            //    news.Author = author;
+            //    news.Body = body;
+            //    news.PublicationDate = publicationDate == null ? DateTime.Now : publicationDate;
+            //    news.Summary = summary;
+            //    news.Title = title;
+            //}
 
             return View("~/Views/News/AddNewsDetail.cshtml", news);
         }
@@ -87,7 +87,7 @@ namespace TNC.Controllers
 
         [Authorize]
         [HttpPost, ValidateInput(false)]
-        public ActionResult NewsDetail_Add(string title, string auth_name, string summary, string body)
+        public ActionResult NewsDetail_Add(string title, string auth_name, string summary, string body, DateTime publicationDate)
         {
             if(String.IsNullOrEmpty(title))
             {
@@ -115,7 +115,7 @@ namespace TNC.Controllers
                 {
                     Title = title,
                     UrlTitle = Utility.AlphanumericOnlyWithDashes(title),
-                    PublicationDate = DateTime.Now,
+                    PublicationDate = publicationDate ==new DateTime() ? DateTime.Now : publicationDate,
                     Author = auth_name,
                     Summary = summary,
                     Body = body,
