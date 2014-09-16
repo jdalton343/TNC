@@ -21,6 +21,10 @@ namespace TNC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute("NewsDetail",
+                "News/NewsDetail/{urlTitle}", new { controller = "News", action = "NewsDetail", urlTitle = UrlParameter.Optional });
+
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters

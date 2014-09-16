@@ -44,11 +44,13 @@ namespace TNC.Controllers
 
         [Authorize]
         [ValidateInput(false)]
-        public ActionResult AddNewsDetail() //string titleUrl, string errorMessage, string title, string author, DateTime publicationDate, string summary, string body)
+        public ActionResult AddNewsDetail(string errorMessage) //string titleUrl, string errorMessage, string title, string author, DateTime publicationDate, string summary, string body)
         {
             NewsDetailVM news = new NewsDetailVM()
                 {
-                    PublicationDate = DateTime.Now
+                    PublicationDate = DateTime.Now,
+                    ErrorMessage = errorMessage
+
                 };
 
             //if (!String.IsNullOrEmpty(errorMessage))
@@ -79,10 +81,22 @@ namespace TNC.Controllers
             }
         }
 
-        public ActionResult NewsDetail(string titleUrl)
+        public ActionResult NewsDetail(string urlTitle)
         {
-            ViewBag.HeadTitle = "News Details | True North Composites";
-            return View("~/Views/News/NewsDetail.cshtml");
+            using (var context = new TNCEntities())
+            {
+                NewsItem item = (from n in context.NewsItems
+                                 where n.UrlTitle == urlTitle
+                                 && n.IsDeleted == false
+                                 select n).First();
+
+                ViewBag.HeadTitle = "News Details | True North Composites";
+
+
+                return View("~/Views/News/NewsDetail.cshtml", item);
+
+            }
+
         }
 
         [Authorize]
