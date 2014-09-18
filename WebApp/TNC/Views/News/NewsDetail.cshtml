@@ -32,14 +32,16 @@
             <h1>
             @Model.Title
             </h1>
-           
+
             <h5>
-            @Html.Raw(Model.Summary)
+                @Model.PublicationDate.ToLongDateString()<br />
+            </h5>
+
+            <h5>
+            <i>@Html.Raw(Model.Summary)</i>
             </h5>
             
-            <h5>
-            @Model.PublicationDate.ToLongDateString()<br />
-            </h5>
+            
             
             <br />
         </div>

@@ -80,12 +80,14 @@
                 <div class="span-6">
                     <div class="alert alert-error">
                         <button data-dismiss="alert" class="close" type="button">×</button>
-                        <strong>Error</strong> A title is Needed for the article to be published.
+                        <strong>Error:</strong> @Model.ErrorMessage
                     </div>
                 </div>
             </div>
         }
-        @if (NewsDetail_Add.RepeatedNewsID > 0)
+        @*@if (Model.Title != null && Model.UrlTitle != null)
+        { 
+        if (Model.Title == Model.UrlTitle)
         {
              <div class="row">
                 <div class="span-6">
@@ -96,9 +98,10 @@
                 </div>
             </div>
         }
+        }*@
 
 
-        <form method="post" action="@Url.Content("~/News/NewsDetail_Add")">
+        <form method="post" action="@Url.Content("~/News/AddNewsDetailSubmit")">
             <fieldset>
                 <div class="control-group">
                     <label for="title">Article Title:</label><input type="text" name="title" value="@Model.Title" />
@@ -108,7 +111,7 @@
                 </div>
                 <div class="control-group">
                     <label>Author:</label>
-                    <input type="text" value="@Model.Author" name="auth_name" />
+                    <input type="text" value="@Model.Author" name="authName" />
                 </div>
                 <div class="control-group">
                     Summary:
@@ -116,7 +119,7 @@
                 </div>
                 <div class="control-group">
                     Main body:
-                    <textarea rows="4" cols="200" name="body" class="mceAdvanced" id="text-box"></textarea>
+                    <textarea rows="4" cols="200" name="body" class="mceAdvanced" id="text-box">@Model.Body</textarea>
                 </div>
                 <div class="control-group">
                     <input type="submit" class="btn btn-info" value="Add Article" />

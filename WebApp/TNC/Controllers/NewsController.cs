@@ -44,17 +44,23 @@ namespace TNC.Controllers
 
         [Authorize]
         [ValidateInput(false)]
-        public ActionResult AddNewsDetail(string errorMessage) //string titleUrl, string errorMessage, string title, string author, DateTime publicationDate, string summary, string body)
+        public ActionResult AddNewsDetail(string errorMessage, string Title, string Body, string Summary, string Author) //string titleUrl, string errorMessage, string title, string author, DateTime publicationDate, string summary, string body)
         {
             NewsDetailVM news = new NewsDetailVM()
                 {
                     PublicationDate = DateTime.Now,
-                    ErrorMessage = errorMessage
+                    ErrorMessage = errorMessage,
+                    Title = Title,
+                    Body = Body,
+                    Summary = Summary,
+                    Author = Author,
+                    
+                    
 
                 };
 
             //if (!String.IsNullOrEmpty(errorMessage))
-            //{ 
+            //{
             //    news.ErrorMessage = errorMessage;
             //    news.Author = author;
             //    news.Body = body;
@@ -65,6 +71,78 @@ namespace TNC.Controllers
 
             return View("~/Views/News/AddNewsDetail.cshtml", news);
         }
+
+        [Authorize]
+        [HttpPost, ValidateInput(false)]
+        public ActionResult AddNewsDetailSubmit(string title, string auth_name, string summary, string body, DateTime publicationDate)
+        {
+            if (String.IsNullOrEmpty(title))
+            {
+                string errorMessage = "A title must be present to save this item.";
+                return RedirectToAction("AddNewsDetail", new { errorMessage = errorMessage, title = title, author = auth_name, summary = summary, body = body });
+            };
+
+
+            using (var context = new TNCEntities())
+            {
+                string testURLTitle = Utility.AlphanumericOnlyWithDashes(title);
+
+                int? repeatedNewsID = (from n in context.NewsItems
+                                       where n.UrlTitle.ToLower() == testURLTitle.ToLower()
+                                       && n.IsDeleted == false
+                                       select n.NewsItemID).FirstOrDefault();
+                if (repeatedNewsID != null)
+                    if (repeatedNewsID > 0)
+                    {
+                        string errorMessage = "Can't add that title. The url title already exists in the database.";
+                        return RedirectToAction("AddNewsDetail", new { errorMessage });
+                    }
+
+                NewsItem item = new NewsItem()
+                {
+                    Title = title,
+                    UrlTitle = Utility.AlphanumericOnlyWithDashes(title),
+                    PublicationDate = publicationDate == new DateTime() ? DateTime.Now : publicationDate,
+                    Author = auth_name,
+                    Summary = summary,
+                    Body = body,
+
+
+
+                };
+
+                context.NewsItems.Add(item);
+                context.SaveChanges();
+
+            }
+
+
+            return RedirectToAction("Index");
+        }
+
+        //[HttpPost]
+        [Authorize]
+        public ActionResult DeleteNewsDetailSubmit(string urlTitle)
+        {
+            using (var context = new TNCEntities())
+            {
+                NewsItem item = (from n in context.NewsItems
+                                 where n.UrlTitle == urlTitle
+                                 && n.IsDeleted == false
+                                 select n).First();
+                //if (item == null)
+
+                //     item.Body = itemToUpdate.body;
+                //     item.Title = itemToUpdate.title;
+                item.IsDeleted = true;
+
+                context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+        }
+
 
         [Authorize]
         public ActionResult EditNewsDetail(string titleUrl)
@@ -79,6 +157,31 @@ namespace TNC.Controllers
                 return View("~/Views/News/EditNewsDetail.cshtml", item);
 
             }
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateInput(false)]
+        public ActionResult EditNewsDetailSubmit(string title, string body, string authName, string summary, DateTime? pubDate)
+        {
+            string urlTitle = Utility.AlphanumericOnlyWithDashes(title);
+            using(var context = new TNCEntities())
+            {
+                NewsItem item = (from n in context.NewsItems
+                                 where n.UrlTitle == urlTitle
+                                    
+                                 select n).First();
+                item.Author = authName;
+                item.Body = body;
+                item.Summary = summary;
+                
+
+                context.SaveChanges();
+
+                return RedirectToAction("NewsDetail", new { urlTitle = urlTitle });
+            }
+            
+            
         }
 
         public ActionResult NewsDetail(string urlTitle)
@@ -99,85 +202,7 @@ namespace TNC.Controllers
 
         }
 
-        [Authorize]
-        [HttpPost, ValidateInput(false)]
-        public ActionResult NewsDetail_Add(string title, string auth_name, string summary, string body, DateTime publicationDate)
-        {
-            if(String.IsNullOrEmpty(title))
-            {
-                string errorMessage = "A title must be present to save this item.";
-                return RedirectToAction("AddNewsDetail", new { errorMessage = errorMessage, title = title, author = auth_name, summary = summary, body = body });
-            };
 
-
-            using (var context = new TNCEntities())
-            {
-                string testURLTitle = Utility.AlphanumericOnlyWithDashes(title);
-
-                int? repeatedNewsID = (from n in context.NewsItems
-                                       where n.UrlTitle.ToLower() == testURLTitle.ToLower()
-                                       && n.IsDeleted == false
-                                       select n.NewsItemID).FirstOrDefault();
-                if (repeatedNewsID != null)
-                    if (repeatedNewsID > 0)
-                    {
-                        string errorMessage = "Can't add that title. The title already exists in the database.";
-                        return RedirectToAction("AddNewsDetail", new { errorMessage });
-                    }
-
-                NewsItem item = new NewsItem()
-                {
-                    Title = title,
-                    UrlTitle = Utility.AlphanumericOnlyWithDashes(title),
-                    PublicationDate = publicationDate ==new DateTime() ? DateTime.Now : publicationDate,
-                    Author = auth_name,
-                    Summary = summary,
-                    Body = body,
-
-
-
-                };
-
-                context.NewsItems.Add(item);
-                context.SaveChanges();
-
-            }
-
-
-            return RedirectToAction("Index");
-        }
-
-        //[HttpPost]
-        [Authorize]
-        public ActionResult NewsDetail_Delete(string urlTitle)
-        {
-            using (var context = new TNCEntities())
-            {
-                NewsItem item = (from n in context.NewsItems
-                                 where n.UrlTitle == urlTitle
-                                 && n.IsDeleted == false
-                                 select n).First();
-                //if (item == null)
-
-                //     item.Body = itemToUpdate.body;
-                //     item.Title = itemToUpdate.title;
-                item.IsDeleted = true;
-
-                context.SaveChanges();
-
-                return RedirectToAction("Index");
-            }
-
-        }
-        
-        [HttpPost]
-        [Authorize]
-        public ActionResult NewsDetail_Edit()
-        {
-            return RedirectToAction("NewsDetail");
-        }
-
-        
 
     }
 

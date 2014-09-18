@@ -8,44 +8,45 @@
 
 @section PageCSS{
     <style>
-
         /*.map img {
             position: relative;
             float: left;
-    
+
         }*/
 
-        body{
+        body {
             padding-top: 60px;
             padding-bottom: 40px;
         }
 
-        #map-container { position: relative; }
-
-        #map-container > img { 
-            width: 200%; 
-
+        #map-container {
+            position: relative;
         }
 
-        #map-container .dot img { width:10px; }
+            #map-container > img {
+                width: 200%;
+            }
+
+            #map-container .dot img {
+                width: 10px;
+            }
 
         .dot {
             position: absolute;
-            * float : right;
-            
+            * float: right;
         }
 
         #nav nav-list {
             margin-left: 0;
         }
 
-        #news{
+        #news {
             margin-left: 0;
         }
 
-        @@media(min-width: 768){
-            #nav nav-list{
-                float:none;
+        @@media(min-width: 768) {
+            #nav nav-list {
+                float: none;
             }
         }
         /*.mini-layout {
@@ -147,73 +148,74 @@
             height: 20px;
             margin: 5px 0 0 0;
         }*/
-        #text-box{
+        #text-box {
             width: 510px;
+        }
 
+        #link-box {
+            width: 510px;
         }
-        #link-box{
-          width:510px;
+
+        #X-box {
+            width: 50px;
         }
-        #X-box{
-           width:50px;
+
+        #Y-box {
+            width: 50px;
         }
-        #Y-box{
-           width:50px;
-        }
-       
     </style>
 }
 
 @section PageJavascript{
 
-<script type="text/javascript" src="@Url.Content("~/Assets/TinyMCE/tinymce.min.js")"></script>
-<script type="text/javascript">
-    tinymce.init({
-        content_css: "@Url.Content("~/Assets/VivacareProviders/CSS/main.css"), @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", @*, @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", //?" + new Date().getTime(),  *@
-        selector: "textarea",
-        remove_linebreaks: false,
-        force_p_newlines: false,
-        force_br_newlines: false,
-        cleanup: false,
-        relative_urls: false,
-        remove_script_host: true,
-        document_base_url: "@Url.Content("~/")",
+    <script type="text/javascript" src="@Url.Content("~/Assets/TinyMCE/tinymce.min.js")"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            content_css: "@Url.Content("~/Assets/VivacareProviders/CSS/main.css"), @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", @*, @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", //?" + new Date().getTime(),  *@
+            selector: "textarea",
+            remove_linebreaks: false,
+            force_p_newlines: false,
+            force_br_newlines: false,
+            cleanup: false,
+            relative_urls: false,
+            remove_script_host: true,
+            document_base_url: "@Url.Content("~/")",
 
-        plugins: [
-        "advlist autolink lists link image charmap print preview anchor",
-        "searchreplace visualblocks code fullscreen",
-        "insertdatetime media table contextmenu paste"
-        ],
-        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-    });
+            plugins: [
+            "advlist autolink lists link image charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
 
-    tinymce.init({
-        content_css: "@Url.Content("~/Assets/VivacareProviders/CSS/main.css"), @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", @*, @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", //?" + new Date().getTime(),  *@
-        selector: "textarea",
-        editor_selector: "mceAdvanced",
-    remove_linebreaks: false,
-    force_p_newlines: false,
-    force_br_newlines: false,
-    cleanup: false,
-    relative_urls: false,
-    remove_script_host: true,
-    document_base_url: "@Url.Content("~/")",
+        tinymce.init({
+            content_css: "@Url.Content("~/Assets/VivacareProviders/CSS/main.css"), @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", @*, @Url.Content("~/Assets/VivacareProviders/CSS/CommonLayoutStyles.css")", //?" + new Date().getTime(),  *@
+            selector: "textarea",
+            editor_selector: "mceAdvanced",
+            remove_linebreaks: false,
+            force_p_newlines: false,
+            force_br_newlines: false,
+            cleanup: false,
+            relative_urls: false,
+            remove_script_host: true,
+            document_base_url: "@Url.Content("~/")",
 
-    plugins: [
-    "advlist autolink lists link image charmap print preview anchor",
-    "searchreplace visualblocks code fullscreen",
-    "insertdatetime media table contextmenu paste"
-    ],
-        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-    });
-</script>
+            plugins: [
+            "advlist autolink lists link image charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+    </script>
 
-<script>
-    $("#submit-account-setup").click(function () {
-        $("#modify-content").submit();
-    });
+    <script>
+        $("#submit-account-setup").click(function () {
+            $("#modify-content").submit();
+        });
 
-</script>
+    </script>
 
 
 
@@ -222,35 +224,35 @@
     <script src="~/Assets/JQuery/jquery.min.js"></script>
 
 
-    
+
 
 
 }
 
 <div class="container">
- 
 
-   <div align="right">
-       <form>
-       </form>
-   </div>
+
+    <div align="right">
+        <form></form>
+    </div>
     <br />
     <br />
     <div>
-            Article Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value="@Model.Title" name="title" />
+        <form method="post" action="@Url.Content("~/News/EditNewsDetailSubmit")">
+            Article Title:<input type="text" value="@Model.Title" name="title" />
             <br />
-            Date Published:<input type="text" name="pub_date" value="@Model.PublicationDate" />
-            Author:<input type="text" name="auth_name" value="@Model.Author" />
+            Date Published:<input type="text" name="pubDate" value="@Model.PublicationDate" />
+            Author:<input type="text" name="authName" value="@Model.Author" />
             <br />
-        <form method="post" action="@Url.Content("~/News/EditNewsSubmit")">
+
             <br />
             Summary:
-            <textarea rows="4" cols="200" id="text1-box">@Model.Summary</textarea>
+            <textarea rows="4" name="summary" cols="200" id="text1-box">@Model.Summary</textarea>
             <br />
-             Main body:&nbsp;&nbsp;
-            <textarea rows="4" cols="200" class="mceAdvanced"id="text-box">@Model.Body</textarea>
+            Main body:
+            <textarea rows="4" cols="200" name="body" class="mceAdvanced" id="text-box">@Model.Body</textarea>
             <br />
-           
+
 
             <br />
             <br />
