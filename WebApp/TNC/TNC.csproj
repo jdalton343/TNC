@@ -940,6 +940,7 @@
     <Content Include="Assets\TNC\SiteImages\0cac6660051da17178d6487bddcb500.jpg" />
     <Content Include="Assets\TNC\SiteImages\ajax-loader.gif" />
     <Content Include="Assets\TNC\SiteImages\black.png" />
+    <Content Include="Assets\TNC\SiteImages\BlankMap-World-v2.png" />
     <Content Include="Assets\TNC\SiteImages\buttonbar3.gif" />
     <Content Include="Assets\TNC\SiteImages\dot.png" />
     <Content Include="Assets\TNC\SiteImages\dots.png" />

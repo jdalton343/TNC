@@ -85,6 +85,17 @@
                 </div>
             </div>
         }
+        @if (NewsDetail_Add.RepeatedNewsID > 0)
+        {
+             <div class="row">
+                <div class="span-6">
+                    <div class="alert alert-error">
+                        <button data-dismiss="alert" class="close" type="button">×</button>
+                        <strong>Error</strong> A title cannot be the same as a title from a previous article.
+                    </div>
+                </div>
+            </div>
+        }
 
 
         <form method="post" action="@Url.Content("~/News/NewsDetail_Add")">
