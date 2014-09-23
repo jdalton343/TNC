@@ -239,27 +239,27 @@
     <br />
     <div>
         <form method="post" action="@Url.Content("~/News/EditNewsDetailSubmit")">
-            Article Title:<input type="text" value="@Model.Title" name="title" />
-            <br />
-            Date Published:<input type="text" name="pubDate" value="@Model.PublicationDate" />
-            Author:<input type="text" name="authName" value="@Model.Author" />
-            <br />
-
-            <br />
-            Summary:
-            <textarea rows="4" name="summary" cols="200" id="text1-box">@Model.Summary</textarea>
-            <br />
-            Main body:
-            <textarea rows="4" cols="200" name="body" class="mceAdvanced" id="text-box">@Model.Body</textarea>
-            <br />
-
-
-            <br />
-            <br />
-            <br />
-            <input type="submit" class="btn btn-info" value="Submit" />
+            <fieldset>
+                <div class="control-group">
+                    Article Title:<input type="text" value="@Model.Title" name="title" />
+                </div>
+                <div class="control-group">
+                    Date Published:<input type="text" name="pubDate" value="@Model.PublicationDate" />
+                </div>
+                <div class="control-group">
+                    Author:<input type="text" name="authName" value="@Model.Author" />
+                </div>
+                <div class="control-group">
+                    Summary:
+                    <textarea rows="4" name="summary" cols="200" id="text1-box">@Model.Summary</textarea>
+                </div>
+                <div class="control-group">
+                    Main body:
+                    <textarea rows="4" cols="200" name="body" class="mceAdvanced" id="text-box">@Model.Body</textarea>
+                </div>
+                <input type="submit" class="btn btn-info" value="Submit" />
+            </fieldset>
         </form>
-
     </div>
 
 </div>
