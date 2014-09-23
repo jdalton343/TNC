@@ -34,17 +34,18 @@
         }
 
         #news {
-            margin-left: 0px;
+            /*margin-left: 0px;*/
         }
 
         #sidebar {
-            float: right;
+            /*float: right;*/
         }
 
-        @@media(max-width: 767px) {
+        @@media(min-width: 768px) {
             #sidebar {
-                float: none;
+                float: right;
             }
+            #news { float: left; }
         }
     </style>
 }
@@ -71,8 +72,8 @@
 
         <div class="row">
             <div class="span12">
-                <div id="map-container">
-                    <img src="Assets/TNC/SiteImages/BlankMap-World-v2.png">
+                <div id="map-container">            
+                    <img src="/Assets/TNC/SiteImages/BlankMap-World-v2.png">
                     @*Creative Commons License:http://creativecommons.org/licenses/by-sa/3.0/*@
                     @*@foreach (Tuple<string, string, string> item in Model.MapItems)
                     {
@@ -96,9 +97,10 @@
             <a href="@Url.Content("~/News/AddNewsDetail")">Add a new news item.</a>
 
         }
-        <div class="span12">
+        
             <div class="row">
-                <div id="sidebar" class="span6">
+
+                <div id="sidebar" class="span3">
 
                     <h2>Menu</h2>
                     <ul class="nav nav-list">
@@ -107,8 +109,7 @@
                         <li><a href="@Url.Content("~/News/NewsDetail")">News Detail</a></li>
                     </ul>
                 </div>
-
-                <div class="span6" id="news">
+                <div class="span9" id="news">
                     @foreach (TNC.NewsItem item in Model.NewsItems)
                     {
                         <div class="row">
@@ -131,9 +132,7 @@
                     }
 
                 </div>
-
-
             </div>
         </div>
-    </div>
+
 </body>
