@@ -1025,7 +1025,6 @@
     <None Include="Assets\Bootstrap\font-awesome\scss\_variables.scss" />
     <Content Include="Views\Contact\ContactSubmissionAcknowledgment.cshtml" />
     <Content Include="Views\Home\Blog.cshtml" />
-    <Content Include="Views\Home\Contact_New.cshtml" />
     <Content Include="Views\Home\Default.cshtml" />
     <Content Include="Views\Home\Technology.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />
