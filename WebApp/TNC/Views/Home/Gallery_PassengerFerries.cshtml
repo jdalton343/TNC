@@ -65,16 +65,18 @@
                 @*<a style="padding-bottom:3px;" class="fancybox-thumb" rel="fancybox-thumb" href="http://placehold.it/@(largeWidth + "x" + largeHeight)" title="Ayvalık, Turkey (Nejdet Düzen)">
                     <img src="http://placehold.it//@(smallWidth + "x" + smallHeight)" alt="" />
                 </a>*@
-                <a style="padding-bottom:3px;" class="fancybox-thumb" rel="fancybox-thumb" href="@image.Item2" title="@image.Item3">
+                <a style="padding-bottom:10px; padding-right:10px;" class="fancybox-thumb" rel="fancybox-thumb" href="@image.Item2" title="@image.Item3">
                     <img src="@image.Item1" alt="@image.Item3" />
+                    
                 </a>
             }
             <br />
             <br />
             <br />
-            <p>See More:<a href="@Url.Content("~/Home/Gallery_Containers")">Containers</a> · <a href="@Url.Content("~/Home/Gallery_HousingShelters")">Housing Shelters</a> · <a href="@Url.Content("~/Home/Gallery_PassengerFerries")">Passenger Ferries</a> · <a href="@Url.Content("~/Home/Gallery_SailingCats")">Sailing Cats</a> · <a href="@Url.Content("~/Home/Gallery_SpecialPurposeVessels")">Special Purpose Vessels</a> · <a href="@Url.Content("~/Home/Gallery_WindTurbines")">Wind Turbines</a></p>
+            <p style="float:left">See More:<a href="@Url.Content("~/Home/Gallery_Containers")">Containers</a> · <a href="@Url.Content("~/Home/Gallery_HousingShelters")">Housing Shelters</a> · <a href="@Url.Content("~/Home/Gallery_PassengerFerries")">Passenger Ferries</a> · <a href="@Url.Content("~/Home/Gallery_SailingCats")">Sailing Cats</a> · <a href="@Url.Content("~/Home/Gallery_SpecialPurposeVessels")">Special Purpose Vessels</a> · <a href="@Url.Content("~/Home/Gallery_WindTurbines")">Wind Turbines</a></p>
         </div>
     </div>
+    
     <!-- content -->
 </div>
 <!-- container -->
@@ -82,6 +84,11 @@
 
 @section PageCSS{
     <style type="text/css">
+        .fancybox-thumb {
+            margin-right: 5px;
+            margin-bottom: 5px;
+            float: left;
+        }
     </style>
 }
 @section PageJavascript{
