@@ -102,11 +102,11 @@
 
                 <div id="sidebar" class="span3">
 
-                    <h2>Menu</h2>
+                    
                     <ul class="nav nav-list">
-                        <li class="nav-header">List header</li>
-                        <li class="active"><a href="@Url.Content("~/News/EditNewsDetail")">Edit News</a></li>
-                        <li><a href="@Url.Content("~/News/NewsDetail")">News Detail</a></li>
+                        <li class="nav-header">Archive</li>
+                        <li class="active"><a href="@Url.Content("#")">November 2014</a></li>
+                        <li><a href="@Url.Content("#")">December 2014</a></li>
                     </ul>
                 </div>
                 <div class="span9" id="news">
@@ -120,7 +120,7 @@
                                 {
                                     <span style="font-size:0.56em;"><a href="@Url.Content("~/News/EditNewsDetail?titleUrl=" + @item.UrlTitle)"><i class="icon-edit"></i>edit</a></span>
 
-                                    <span style="font-size:0.56em;"><a href="@Url.Content("~/News/NewsDetail_Delete?urlTitle=" + @item.UrlTitle)" class="confirmation"><i class="icon-edit"></i>Delete</a></span>
+                                    <span style="font-size:0.56em;"><a href="@Url.Content("~/News/DeleteNewsDetailSubmit?urlTitle=" + @item.UrlTitle)" class="confirmation"><i class="icon-edit"></i>Delete</a></span>
                                 }
                             </h2>
                             @Html.Raw(item.Summary)

@@ -82,6 +82,7 @@
                 var offset = $(this).offset();
                 var relativeX = (e.ClientX - offset.left);
                 var relativeY = (e.ClientY - offset.top);
+                
                 console.info("absolute x: " + relativeX);
                 console.info("absoulte y: " + relativeY);
                
@@ -122,6 +123,7 @@
                 </div>
             </div>
         }
+        <img src="@Url.Content("/Assets/TNC/SiteImages/BlankMap-World-v2.png")">
         @*@if (Model.Title != null && Model.UrlTitle != null)
         { 
         if (Model.Title == Model.UrlTitle)
