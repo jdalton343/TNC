@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TNCModelStoreContainer" CdmEntityContainer="TNCEntities">
+    <EntitySetMapping Name="NewsItems">
+      <EntityTypeMapping TypeName="TNCModel.NewsItem">
+        <MappingFragment StoreEntitySet="NewsItems">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="NewsItemID" ColumnName="NewsItemID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UrlTitle" ColumnName="UrlTitle" />
+          <ScalarProperty Name="PublicationDate" ColumnName="PublicationDate" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="LocatorPositionX" ColumnName="LocatorPositionX" />
+          <ScalarProperty Name="LocatorPositionY" ColumnName="LocatorPositionY" />
+          <ScalarProperty Name="LocationPopupTitle" ColumnName="LocationPopupTitle" />
+          <ScalarProperty Name="LocationPopupDescription" ColumnName="LocationPopupDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
