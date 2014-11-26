@@ -1,0 +1,1166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D39046E-9D4D-4C85-9F47-E38557011BDC}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TNC</RootNamespace>
+    <AssemblyName>TNC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\MapViewModel.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\NewsDetailVM.cs" />
+    <Compile Include="Models\NewsViewModel.cs" />
+    <Compile Include="Models\SignupNewUserRequests.cs" />
+    <Compile Include="Models\Utility.cs" />
+    <Compile Include="NewsItem.cs">
+      <DependentUpon>NewsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Bitstream\BitstreamVeraLicense.txt" />
+    <Content Include="Assets\Bitstream\How_to_use_webfonts.html" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\specimen_files\easytabs.js" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\specimen_files\Vera-Bold-Italic-cleartype.png" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-demo.html" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.svg" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\specimen_files\easytabs.js" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\specimen_files\Vera-Bold-cleartype.png" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\Vera-Bold-demo.html" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\Vera-Bold-webfont.svg" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\specimen_files\easytabs.js" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\specimen_files\Vera-Italic-cleartype.png" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\Vera-Italic-demo.html" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\Vera-Italic-webfont.svg" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\specimen_files\easytabs.js" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\specimen_files\Vera-cleartype.png" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\stylesheet.css" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-demo.html" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.svg" />
+    <Content Include="Assets\Bootstrap\css\bootstrap-combobox.css" />
+    <Content Include="Assets\Bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Assets\Bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Assets\Bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\Bootstrap\css\datepicker.css" />
+    <Content Include="Assets\Bootstrap\css\docs.css" />
+    <Content Include="Assets\Bootstrap\css\timepicker.css" />
+    <Content Include="Assets\Bootstrap\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="Assets\Bootstrap\font-awesome\css\font-awesome-ie7.min.css" />
+    <Content Include="Assets\Bootstrap\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\Bootstrap\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\Bootstrap\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Assets\Bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Assets\Bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-alert.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-button.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-carousel.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-collapse.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-dropdown.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-modal.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-popover.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-scrollspy.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-tab.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-tooltip.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-transition.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap-typeahead.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\Bootstrap\js\holder.js" />
+    <Content Include="Assets\Elastislide\elastislide.css" />
+    <Content Include="Assets\Elastislide\gallery.js" />
+    <Content Include="Assets\Elastislide\jquery.easing.1.3.js" />
+    <Content Include="Assets\Elastislide\jquery.elastislide.js" />
+    <Content Include="Assets\Elastislide\jquery.tmpl.min.js" />
+    <Content Include="Assets\Fancybox\demo\1_b.jpg" />
+    <Content Include="Assets\Fancybox\demo\1_s.jpg" />
+    <Content Include="Assets\Fancybox\demo\2_b.jpg" />
+    <Content Include="Assets\Fancybox\demo\2_s.jpg" />
+    <Content Include="Assets\Fancybox\demo\3_b.jpg" />
+    <Content Include="Assets\Fancybox\demo\3_s.jpg" />
+    <Content Include="Assets\Fancybox\demo\4_b.jpg" />
+    <Content Include="Assets\Fancybox\demo\4_s.jpg" />
+    <Content Include="Assets\Fancybox\demo\5_b.jpg" />
+    <Content Include="Assets\Fancybox\demo\5_s.jpg" />
+    <Content Include="Assets\Fancybox\demo\ajax.txt" />
+    <Content Include="Assets\Fancybox\demo\iframe.html" />
+    <Content Include="Assets\Fancybox\demo\Image1Large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image1small.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image2large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image2small .jpg" />
+    <Content Include="Assets\Fancybox\demo\Image3large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image3small .jpg" />
+    <Content Include="Assets\Fancybox\demo\Image4large.jpg" />
+    <Content Include="Assets\Fancybox\demo\Image4small .jpg" />
+    <Content Include="Assets\Fancybox\demo\index.html" />
+    <Content Include="Assets\Fancybox\lib\jquery-1.10.1.min.js" />
+    <Content Include="Assets\Fancybox\lib\jquery-1.9.0.min.js" />
+    <Content Include="Assets\Fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Assets\Fancybox\source\blank.gif" />
+    <Content Include="Assets\Fancybox\source\fancybox_loading%402x.gif" />
+    <Content Include="Assets\Fancybox\source\fancybox_loading.gif" />
+    <Content Include="Assets\Fancybox\source\fancybox_overlay.png" />
+    <Content Include="Assets\Fancybox\source\fancybox_sprite%402x.png" />
+    <Content Include="Assets\Fancybox\source\fancybox_sprite.png" />
+    <Content Include="Assets\Fancybox\source\helpers\fancybox_buttons.png" />
+    <Content Include="Assets\Fancybox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Assets\Fancybox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Assets\Fancybox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="Assets\Fancybox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Assets\Fancybox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Assets\Fancybox\source\jquery.fancybox.css" />
+    <Content Include="Assets\Fancybox\source\jquery.fancybox.js" />
+    <Content Include="Assets\Fancybox\source\jquery.fancybox.pack.js" />
+    <Content Include="Assets\jQueryUI\jquery-ui-1.8.11.js" />
+    <Content Include="Assets\jQueryUI\jquery-ui-1.8.11.min.js" />
+    <Content Include="Assets\jQuery\jquery-1.10.2.js" />
+    <Content Include="Assets\jQuery\jquery-1.9.1.js" />
+    <Content Include="Assets\jQuery\jquery.min.js" />
+    <Content Include="Assets\jQuery\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Assets\jQuery\jquery.unobtrusive-ajax.js" />
+    <Content Include="Assets\jQuery\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Assets\jQuery\jquery.validate-vsdoc.js" />
+    <Content Include="Assets\jQuery\jquery.validate.js" />
+    <Content Include="Assets\jQuery\jquery.validate.min.js" />
+    <Content Include="Assets\jQuery\jquery.validate.unobtrusive.js" />
+    <Content Include="Assets\jQuery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets\Microsoft\MicrosoftAjax.debug.js" />
+    <Content Include="Assets\Microsoft\MicrosoftAjax.js" />
+    <Content Include="Assets\Microsoft\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Assets\Microsoft\MicrosoftMvcAjax.js" />
+    <Content Include="Assets\Microsoft\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Assets\Microsoft\MicrosoftMvcValidation.js" />
+    <Content Include="Assets\Modernizr\modernizr-1.7.js" />
+    <Content Include="Assets\Modernizr\modernizr-1.7.min.js" />
+    <Content Include="Assets\tinymcetemp\changelog.txt" />
+    <Content Include="Assets\tinymcetemp\Jakefile.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\AddOnManager.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\Compat.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\BookmarkManager.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\ControlSelection.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\DomQuery.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\DOMUtils.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\ElementUtils.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\EventUtils.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\Range.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\RangeUtils.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\ScriptLoader.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\Selection.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\Serializer.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\Sizzle.jQuery.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\Sizzle.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\StyleSheetLoader.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\TreeWalker.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\dom\TridentSelection.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\Editor.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\EditorCommands.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\EditorManager.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\EditorObservable.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\EnterKey.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\Env.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\fmt\Preview.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\FocusManager.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ForceBlocks.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\Formatter.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\DomParser.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\Entities.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\Node.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\SaxParser.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\Schema.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\Serializer.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\Styles.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\html\Writer.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\jquery.tinymce.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\LegacyInput.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\NodeChange.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\Shortcuts.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\AbsoluteLayout.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Button.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ButtonGroup.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Checkbox.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Collection.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ColorBox.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ColorButton.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ColorPicker.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ComboBox.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Container.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Control.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\DomUtils.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\DragHelper.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ElementPath.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Factory.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FieldSet.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FilePicker.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FitLayout.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FlexLayout.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FloatPanel.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FlowLayout.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Form.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FormatControls.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\FormItem.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\GridLayout.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Iframe.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\KeyboardNavigation.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Label.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Layout.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ListBox.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Menu.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\MenuBar.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\MenuButton.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\MenuItem.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\MessageBox.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Movable.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Panel.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\PanelButton.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Path.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Radio.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Resizable.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\ResizeHandle.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Scrollable.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Selector.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Spacer.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\SplitButton.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\StackLayout.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\TabPanel.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\TextBox.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Throbber.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Toolbar.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Tooltip.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Widget.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\ui\Window.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\UndoManager.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\Class.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\Color.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\EventDispatcher.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\I18n.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\JSON.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\JSONP.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\JSONRequest.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\LocalStorage.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\Observable.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\Quirks.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\Tools.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\URI.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\VK.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\util\XHR.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\classes\WindowManager.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\license.txt" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\code\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\css\dialog.css" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\img\buttons.png" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\img\icons.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\img\items.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\img\menu_arrow.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\img\menu_check.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\img\progress.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\img\tabs.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\utils\editable_selects.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\utils\form_utils.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\utils\mctabs.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\compat3x\utils\validate.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\example\dialog.html" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\example\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\example_dependency\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\hr\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\image\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\layer\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\link\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\media\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\classes\Clipboard.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\classes\Plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\classes\Quirks.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\classes\Utils.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\classes\WordFilter.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\plugin.dev.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\print\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\save\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\spellchecker\classes\DomTextMatcher.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\spellchecker\classes\Plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\spellchecker\plugin.dev.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\classes\CellSelection.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\classes\Dialogs.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\classes\Plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\classes\Quirks.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\classes\TableGrid.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\plugin.dev.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\template\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\address.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\article.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\aside.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\blockquote.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\div.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\dl.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\figure.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\h1.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\h2.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\h3.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\h4.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\h5.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\h6.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\hgroup.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\ol.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\p.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\pre.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\section.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\img\ul.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce-small.dev.svg" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce.dev.svg" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\themes\modern\theme.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\themes\modern\theme.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\tinymce.dev.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\tinymce.full.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\tinymce.jquery.dev.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\tinymce.jquery.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\tinymce.jquery.min.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\tinymce.js" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\tinymce.min.js" />
+    <Content Include="Assets\tinymcetemp\LICENSE.TXT" />
+    <Content Include="Assets\tinymcetemp\tests\coverage\index.html" />
+    <Content Include="Assets\tinymcetemp\tests\coverage\js\backbone-min.js" />
+    <Content Include="Assets\tinymcetemp\tests\coverage\js\JSCovReporter.js" />
+    <Content Include="Assets\tinymcetemp\tests\coverage\js\reporter.css" />
+    <Content Include="Assets\tinymcetemp\tests\coverage\js\reporter.js" />
+    <Content Include="Assets\tinymcetemp\tests\coverage\js\underscore-min.js" />
+    <Content Include="Assets\tinymcetemp\tests\index.html" />
+    <Content Include="Assets\tinymcetemp\tests\js\init.js" />
+    <Content Include="Assets\tinymcetemp\tests\js\qunit\qunit.css" />
+    <Content Include="Assets\tinymcetemp\tests\js\qunit\qunit.js" />
+    <Content Include="Assets\tinymcetemp\tests\js\runner.js" />
+    <Content Include="Assets\tinymcetemp\tests\js\tinymce_loader.js" />
+    <Content Include="Assets\tinymcetemp\tests\js\utils.js" />
+    <Content Include="Assets\tinymcetemp\tests\manual\accessibility.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\classic.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\css\custom_theme_content.css" />
+    <Content Include="Assets\tinymcetemp\tests\manual\css\development.css" />
+    <Content Include="Assets\tinymcetemp\tests\manual\css\gecko_caret.css" />
+    <Content Include="Assets\tinymcetemp\tests\manual\css\noneditable_manual.css" />
+    <Content Include="Assets\tinymcetemp\tests\manual\custom_theme.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\development.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\focus.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\gecko_caret.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\index.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\inline.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\jquery.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\media.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\noneditable.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\paste.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\performance.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\removeformat.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\resize.html" />
+    <Content Include="Assets\tinymcetemp\tests\manual\tests.js" />
+    <Content Include="Assets\tinymcetemp\tests\manual\visualblocks.html" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\autolink.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\autosave.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\fullpage.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\image.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\importcss.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\jquery_plugin.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\legacyoutput.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\link.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\lists.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\media.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\noneditable.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\paste.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\searchreplace.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\spellchecker.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\table.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\textpattern.js" />
+    <Content Include="Assets\tinymcetemp\tests\plugins\wordcount.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\AddOnManager.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\DomQuery.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\DOMUtils.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\EventUtils.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\Range.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\Selection.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\Serializer.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\test.css" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\dom\TridentSelection.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\Editor.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\EditorCommands.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\EditorManager.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\EnterKey.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ForceBlocks.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\Formatter_apply.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\Formatter_check.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\Formatter_remove.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\DomParser.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\Entities.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\Node.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\SaxParser.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\Schema.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\Serializer.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\Styles.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\html\Writer.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\Shortcuts.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\AbsoluteLayout.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\Button.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\Collection.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\ColorButton.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\Control.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\css\ui-overrides.css" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\FitLayout.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\FlexLayout.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\GridLayout.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\img\raster.gif" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\MenuButton.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\Panel.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\Selector.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\SplitButton.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\TabPanel.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\TextBox.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\ui\Window.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\UndoManager.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\Color.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\EventDispatcher.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\JSON.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\JSONRequest.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\json_rpc_error.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\json_rpc_ok.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\LocalStorage.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\Observable.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\Quirks_webkit.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\test.xml" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\URI.js" />
+    <Content Include="Assets\tinymcetemp\tests\tinymce\util\XHR.js" />
+    <Content Include="Assets\tinymcetemp\tools\BuildTools.js" />
+    <Content Include="Assets\tinymcetemp\tools\docs\tinymce.CommandEvent.js" />
+    <Content Include="Assets\tinymcetemp\tools\docs\tinymce.ContentEvent.js" />
+    <Content Include="Assets\tinymcetemp\tools\docs\tinymce.Editor.js" />
+    <Content Include="Assets\tinymcetemp\tools\docs\tinymce.Event.js" />
+    <Content Include="Assets\tinymcetemp\tools\docs\tinymce.FocusEvent.js" />
+    <Content Include="Assets\tinymcetemp\tools\docs\tinymce.ProgressStateEvent.js" />
+    <Content Include="Assets\tinymcetemp\tools\docs\tinymce.ResizeEvent.js" />
+    <Content Include="Assets\tinymcetemp\tools\saucelabs.js" />
+    <Content Include="Assets\TNC\ContentImages\boat.jpg" />
+    <Content Include="Assets\TNC\ContentImages\con1.JPG" />
+    <Content Include="Assets\TNC\ContentImages\con2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\con3.jpg" />
+    <Content Include="Assets\TNC\ContentImages\con4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\con5.jpg" />
+    <Content Include="Assets\TNC\ContentImages\con6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\con7.jpg" />
+    <Content Include="Assets\TNC\ContentImages\con8.jpg" />
+    <Content Include="Assets\TNC\ContentImages\con9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\cont3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\container1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\container2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\container4.JPG" />
+    <Content Include="Assets\TNC\ContentImages\DSCN3514.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry10.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry11.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry12.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry13.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry13a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry14.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry15.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry15a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry16.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry16a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry17.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry18.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry19.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry20.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry21.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry22.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry23.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry24.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry25.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry26.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry27.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry28.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry29.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry3.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry30.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry31.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry32.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry33.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry34.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry7.JPG" />
+    <Content Include="Assets\TNC\ContentImages\ferry8.jpg" />
+    <Content Include="Assets\TNC\ContentImages\ferry8.png" />
+    <Content Include="Assets\TNC\ContentImages\ferry9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\house1.JPG" />
+    <Content Include="Assets\TNC\ContentImages\house2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\house3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\house4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\house4.png" />
+    <Content Include="Assets\TNC\ContentImages\house5.jpg" />
+    <Content Include="Assets\TNC\ContentImages\house6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\house7.jpg" />
+    <Content Include="Assets\TNC\ContentImages\Image07.jpg" />
+    <Content Include="Assets\TNC\ContentImages\IMGP1991.JPG" />
+    <Content Include="Assets\TNC\ContentImages\materialsphoto.jpg" />
+    <Content Include="Assets\TNC\ContentImages\materialsphoto2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\materialsphoto3.jpg" />
+    <Content Include="Assets\TNC\ContentImages\materialsphoto4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\materialsphoto5.jpg" />
+    <Content Include="Assets\TNC\ContentImages\Picture1.png" />
+    <Content Include="Assets\TNC\ContentImages\sailcat1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat1.png" />
+    <Content Include="Assets\TNC\ContentImages\sailcat10.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat11.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat12.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat13.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat14.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat15.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat16.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat17.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat18.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat19.jpg" />
+    <Content Include="Assets\TNC\ContentImages\sailcat2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat4.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat6.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat7.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat8.JPG" />
+    <Content Include="Assets\TNC\ContentImages\sailcat9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\spec1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\spec2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\spec3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\spec4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\conc.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts3.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts5.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts7.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts8.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\concepts9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\container1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\container2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\container3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\container4.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\container5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\Ferry1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry10.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\Ferry11.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry12.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry13.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry13a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry14.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry15.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry15a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry16.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry16a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry17.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry18.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry19.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry20.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry21.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry22.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry23.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry24.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry25.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry26.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry27.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry28.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry29.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry3.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry30.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry31.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry32.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry33.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry34.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry7.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry8.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry8.png" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\ferry9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing1.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing4.png" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing5.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\housing7.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat1.png" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat10.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat11.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat12.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat13.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat14.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat15.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat16.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat17.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat18.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat19.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat4.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat6.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat7.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat8.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\sailcat9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\special1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\special2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\special3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\special4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\wind1.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\wind2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs - Copy\wind3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\conc.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts3.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts5.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts7.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts8.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\concepts9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\container1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\container2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\container3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\container4.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\container5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\Ferry1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry10.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\Ferry11.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry12.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry13.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry13a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry14.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry15.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry15a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry16.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry16a.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry17.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry18.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry19.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry20.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry21.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry22.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry23.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry24.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry25.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry26.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry27.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry28.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry29.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry3.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry30.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry31.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry32.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry33.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry34.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry7.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry8.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry8.png" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\ferry9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing1.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing4.png" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing5.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing6.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\housing7.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat1.png" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat10.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat11.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat12.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat13.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat14.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat15.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat16.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat17.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat18.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat19.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat2.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat4.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat5.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat6.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat7.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat8.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\sailcat9.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\special1.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\special2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\special3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\special4.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\wind1.JPG" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\wind2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\thumbs\wind3.JPG" />
+    <Content Include="Assets\TNC\ContentImages\turbine_blades_rings_5_kw_.jpg" />
+    <Content Include="Assets\TNC\ContentImages\wind1.JPG" />
+    <Content Include="Assets\TNC\ContentImages\wind2.jpg" />
+    <Content Include="Assets\TNC\ContentImages\wind3.JPG" />
+    <Content Include="Assets\TNC\CSS\Style.css" />
+    <Content Include="Assets\TNC\CSS\style1.css" />
+    <Content Include="Assets\TNC\SiteImages\05158340a535702b840a513b3e451373.png" />
+    <Content Include="Assets\TNC\SiteImages\0cac6660051da17178d6487bddcb500.jpg" />
+    <Content Include="Assets\TNC\SiteImages\ajax-loader.gif" />
+    <Content Include="Assets\TNC\SiteImages\black.png" />
+    <Content Include="Assets\TNC\SiteImages\BlankMap-World-v2.png" />
+    <Content Include="Assets\TNC\SiteImages\buttonbar3.gif" />
+    <Content Include="Assets\TNC\SiteImages\dot.png" />
+    <Content Include="Assets\TNC\SiteImages\dots.png" />
+    <Content Include="Assets\TNC\SiteImages\f951c07a72df7c337fbab49fb6ccdac0.jpg" />
+    <Content Include="Assets\TNC\SiteImages\ferry-on-truck.jpg" />
+    <Content Include="Assets\TNC\SiteImages\Ferry05trucktowater.jpg" />
+    <Content Include="Assets\TNC\SiteImages\IMG_2958.jpg" />
+    <Content Include="Assets\TNC\SiteImages\nav.png" />
+    <Content Include="Assets\TNC\SiteImages\nav_thumbs.png" />
+    <Content Include="Assets\TNC\SiteImages\panel_layup_deflection.png" />
+    <Content Include="Assets\TNC\SiteImages\pattern.png" />
+    <Content Include="Assets\TNC\SiteImages\Person_NoPhotoAvailable.png" />
+    <Content Include="Assets\TNC\SiteImages\Seattle_shipyard.jpg" />
+    <Content Include="Assets\TNC\SiteImages\steel_vs_composite.jpg" />
+    <Content Include="Assets\TNC\SiteImages\store.jpg" />
+    <Content Include="Assets\TNC\SiteImages\sustaincycle.jpg" />
+    <Content Include="Assets\TNC\SiteImages\sustaincycle2.jpg" />
+    <Content Include="Assets\TNC\SiteImages\TNC-favicon.ico" />
+    <Content Include="Assets\TNC\SiteImages\TNC-Gallery.jpg" />
+    <Content Include="Assets\TNC\SiteImages\views.png" />
+    <Content Include="Assets\TNC\SiteImages\World_Map.png" />
+    <Content Include="Global.asax" />
+    <Content Include="packages.config" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.eot" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.ttf" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_boldoblique_macroman\Vera-Bold-Italic-webfont.woff" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\Vera-Bold-webfont.eot" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\Vera-Bold-webfont.ttf" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_bold_macroman\Vera-Bold-webfont.woff" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\Vera-Italic-webfont.eot" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\Vera-Italic-webfont.ttf" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_oblique_macroman\Vera-Italic-webfont.woff" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.eot" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.ttf" />
+    <Content Include="Assets\Bitstream\webfonts\bitstreamverasans_roman_macroman\Vera-webfont.woff" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\History.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\TNC\JavaScript\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Bootstrap\font-awesome\font\fontawesome-webfont.eot" />
+    <None Include="Assets\Bootstrap\font-awesome\font\fontawesome-webfont.ttf" />
+    <None Include="Assets\Bootstrap\font-awesome\font\fontawesome-webfont.woff" />
+    <None Include="Assets\Bootstrap\font-awesome\font\FontAwesome.otf" />
+    <None Include="Assets\Bootstrap\font-awesome\less\bootstrap.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\core.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\extras.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\font-awesome-ie7.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\font-awesome.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\icons.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\mixins.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\path.less" />
+    <None Include="Assets\Bootstrap\font-awesome\less\variables.less" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\font-awesome-ie7.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\font-awesome.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\_bootstrap.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\_core.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\_extras.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\_icons.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\_mixins.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\_path.scss" />
+    <None Include="Assets\Bootstrap\font-awesome\scss\_variables.scss" />
+    <Content Include="Views\Contact\ContactSubmissionAcknowledgment.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Home\Default.cshtml" />
+    <Content Include="Views\Home\Technology.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Sustainability_Model.cshtml" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\langs\readme.md" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\AbsoluteLayout.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Animations.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Button.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ButtonGroup.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Checkbox.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ColorBox.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ColorButton.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ColorPicker.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ComboBox.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Container.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Content.Inline.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Content.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Content.Objects.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\FieldSet.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\FitLayout.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\FloatPanel.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\FlowLayout.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce-small.json" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce.json" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Icons.Ie7.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Icons.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Iframe.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Label.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ListBox.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Menu.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\MenuBar.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\MenuButton.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\MenuItem.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Mixins.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Panel.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Path.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Radio.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Reset.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ResizeHandle.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Scrollable.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\skin.dev.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\skin.ie7.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\skin.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Spacer.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\SplitButton.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\StackLayout.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\TabPanel.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\TextBox.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Throbber.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\TinyMCE.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\ToolTip.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Variables.less" />
+    <Content Include="Assets\tinymcetemp\js\tinymce\skins\lightgray\Window.less" />
+    <Content Include="Assets\tinymcetemp\package.json" />
+    <Content Include="Assets\tinymcetemp\readme.md" />
+    <Content Include="Assets\tinymcetemp\tests\js\qunit\QUnit.LICENSE" />
+    <Content Include="Assets\tinymcetemp\tools\nuget\TinyMCE.jQuery.nuspec" />
+    <Content Include="Assets\tinymcetemp\tools\nuget\TinyMCE.nuspec" />
+    <EntityDeploy Include="NewsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="NewsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewsModel.edmx</DependentUpon>
+      <LastGenOutput>NewsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NewsModel.edmx.diagram">
+      <DependentUpon>NewsModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="NewsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewsModel.edmx</DependentUpon>
+      <LastGenOutput>NewsModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\devryext.us.pubxml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\TestJavascript.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Gallery_WindTurbines.cshtml" />
+    <Content Include="Views\Home\Gallery_Containers.cshtml" />
+    <Content Include="Views\Home\Gallery_SailingCats.cshtml" />
+    <Content Include="Views\Home\Gallery_PassengerFerries.cshtml" />
+    <Content Include="Views\Home\Gallery_SpecialPurposeVessels.cshtml" />
+    <Content Include="Views\Home\Gallery_HousingShelters.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\News\EditNewsDetail.cshtml" />
+    <Content Include="Views\Home\Attributions.cshtml" />
+    <Content Include="Views\News\NewsDetail.cshtml" />
+    <Content Include="Views\News\AddNewsDetail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62516</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
