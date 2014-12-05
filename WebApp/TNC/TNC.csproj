@@ -1124,6 +1124,7 @@
     <Content Include="Views\Home\Attributions.cshtml" />
     <Content Include="Views\News\NewsDetail.cshtml" />
     <Content Include="Views\News\AddNewsDetail.cshtml" />
+    <Content Include="Views\Home\History_New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
