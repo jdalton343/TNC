@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Drawing;
-using System.Drawing.Imaging;
+
 using TNC.Models;
 
 namespace TNC.Controllers
@@ -39,67 +38,6 @@ namespace TNC.Controllers
         {
             ViewBag.HeadTitle = "Gallery | True North Composites";
             return View("~/Views/Home/Gallery.cshtml");
-        }
-
-        public ActionResult GalleryImageUpload()
-        {
-            ViewBag.HeadTitle = "Upload an Image | True North Composites";
-            return View("~/Views/Home/GalleryImageUpload.cshtml");
-        }
-
-        [HttpPost]
-        public ActionResult ImageUpload_Upload()
-        {
-            if (Request.Files.Count > 0 && Request.Files[0] != null)
-            {
-                HttpPostedFileBase file = Request.Files[0];
-                bool imageFormatIsValid = false;
-                string imageFormat = null;
-
-                System.IO.Stream stream = file.InputStream;
-                using (System.Drawing.Image img = Image.FromStream(file.InputStream))
-                {
-                    if (img.RawFormat.Equals(ImageFormat.Bmp))
-                    {
-                        imageFormat = "bmp";
-                        imageFormatIsValid = true;
-                    }
-                    else if (img.RawFormat.Equals(ImageFormat.Gif))
-                    {
-                        imageFormat = "gif";
-                        imageFormatIsValid = true;
-
-                    }
-                    else if (img.RawFormat.Equals(ImageFormat.Jpeg))
-                    {
-                        imageFormat = "jpg";
-                        imageFormatIsValid = true;
-
-                    }
-                    else if (img.RawFormat.Equals(ImageFormat.Png))
-                    {
-                        imageFormat = "png";
-                        imageFormatIsValid = true;
-
-                    }
-
-                    if (imageFormatIsValid)
-                    {
-
-                        var path = System.IO.Path.Combine(Server.MapPath("~/Assets/TNC/ContentImages"), "MyImage." + imageFormat);
-                        file.SaveAs(path);
-                        ViewBag.Message = "Format is valid. Image is saved.";
-
-                    }
-                    else//image format is not valid
-                    {
-                        ViewBag.Message = "Format was invalid. Not saved.";
-                    }
-
-                }
-
-            }
-            return View("~/Views/Home/UploadResponse.cshtml");
         }
 
         public ActionResult Gallery_WindTurbines()
