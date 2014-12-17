@@ -3,6 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@if (User.Identity.IsAuthenticated)
+{
+   
+    <a href="@Url.Content("~/Views/Home/GalleryImageUpload")">Add an image</a>
+
+}
+
+
 @{
     List<Tuple<string, string, string>> images = new List<Tuple<string, string, string>>()
     {
