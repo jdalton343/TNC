@@ -1,0 +1,31 @@
+﻿@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section PageCSS
+{
+    <style type="text/css">
+        .form-signin
+        {
+            background-color: #eee;
+            border: 1px solid #E5E5E5;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            margin: 0 auto 20px;
+            max-width: 300px;
+            padding: 19px 29px 29px;
+        }
+    </style>
+}
+@section PageJavascript{}
+@using (Html.BeginForm("ImageUpload_Upload", "Home", FormMethod.Post,
+                  new { enctype = "multipart/form-data" }))
+                  <h2>Upload an image</h2>
+{
+    <input type="file" name="file" /><br />
+    <input type="submit" />
+}
+
+       
+@*//test*@
+         
